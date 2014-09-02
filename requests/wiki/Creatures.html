@@ -1,0 +1,618 @@
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><p><b>Mobs</b> are in-game computer-controlled entities, including <a href="Monsters.html" title="Monsters">Monsters</a> and <a href="Animals.html" title="Animals">Animals</a>. Mob is short for "mobile". It is a term that is used in many other games, not only in <i><a href="Game_Info.html" title="Game Info">Don't Starve</a>.</i> 
+</p>
+<h2><span class="mw-headline" id="Classification">Classification</span></h2>
+<ul><li><b>Hostile</b> mobs turn aggressive towards the player as soon as they see them. (e.g. <a href="Category:Spiders.html" title="Category:Spiders">spiders</a> and <a href="Hound.html" title="Hound">hounds</a>)
+</li><li><b>Neutral</b> mobs turn aggressive towards the player when the player provokes them due to a certain action,like attacking them or one of their own kinds. (e.g. <a class="mw-redirect" href="Bunnymen.html" title="Bunnymen">Bunnymen</a> and <a href="Pig.html" title="Pig">pigs</a>)
+</li><li><b>Passive</b> mobs will never attack the player, even if attacked or chased after. (e.g. <a class="mw-redirect" href="Rabbits.html" title="Rabbits">rabbits</a> and <a href="Birds.html" title="Birds">birds</a>)
+</li></ul>
+<h2><span class="mw-headline" id="Characteristics">Characteristics</span></h2>
+<h3><span class="mw-headline" id="Health_.28HP.29">Health (HP)</span></h3>
+<p>Each hit by player decreases mob's health by:
+</p>
+<pre>weapon damage * character damage multiplier
+</pre>
+<p>The amount of hits required to kill a mob is:
+</p>
+<pre>mob health / player's damage
+</pre>
+<h3><span class="mw-headline" id="Damage_.28DMG.29">Damage (DMG)</span></h3>
+<p>Each hit to the player deals:
+</p>
+<pre>mob damage / player's armor
+</pre>
+<h3><span class="mw-headline" id="Attack_Period_.28AP.29">Attack Period (AP)</span></h3>
+<p>The time in <i><b>seconds</b></i> between each hit.
+</p>
+<h3><span class="mw-headline" id="Insanity_Aura_.28IA.29">Insanity Aura (IA)</span></h3>
+<p>Sanity gained/lost per minute when near mobs.
+</p>
+<h3><span class="mw-headline" id="Walk_Speed_.28WS.29">Walk Speed (WS)</span></h3>
+<p>Speed of mobs when neither aggressive (hostile and neutral mobs) nor running from the player (passive mobs)
+</p>
+<h3><span class="mw-headline" id="Run_Speed_.28RS.29">Run Speed (RS)</span></h3>
+<p>Speed of hostile and neutral mobs when aggressive towards the player and speed of passive mobs when running from mobs/player.
+</p><p>The player character's RS is about 6.
+</p><p><br/>
+Color scheme: <span style="background:#C9FFC9"><b>Passive</b></span>, <span style="background:#FFFFC9"><b>Neutral</b></span>, <span style="background:#FFC9C9"><b>Hostile</b></span>
+</p>
+<table class="wikitable sortable" style="width:100%; text-align:center; font-weight: bold">
+<tr style="text-align: center;;">
+<th scope="col"> Mob<br/>
+</th><th scope="col"> Name<br/>
+</th><th scope="col"> Type<br/>
+</th><th scope="col"> HP<br/>
+</th><th scope="col"> Dmg<br/>
+</th><th scope="col"> AP<br/>
+</th><th scope="col"> Sanity/insanity aura<br/>(/min)<br/>
+</th><th scope="col"> WS<br/>
+</th><th scope="col"> RS<br/>
+</th><th scope="col"> <span class="help" style="border-bottom:1px dotted" title=""></span><br/>
+</th></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Butterfly.html" title="Butterfly"><img alt="Butterfly" data-image-key="Butterfly.png" data-image-name="Butterfly.png" height="32" src="img/32px-Butterfly.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Butterfly.html" title="Butterfly">Butterfly</a></b>
+</td><td>P
+</td><td>1</td><td></td><td></td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Butterfly_Wings.html" title="Butterfly Wings"><img alt="Butterfly Wings" data-image-key="Butterfly_Wings.png" data-image-name="Butterfly Wings.png" height="32" src="img/32px-Butterfly_Wings.png" width="32"/></a>98% or <a href="Butter.html" title="Butter"><img alt="Butter" data-image-key="Butter.png" data-image-name="Butter.png" height="32" src="img/32px-Butter.png" width="32"/></a>2%
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Bee.html" title="Bee"><img alt="Bee" data-image-key="Bee.png" data-image-name="Bee.png" height="32" src="img/32px-Bee.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Bee.html" title="Bee">Bee</a></b>
+</td><td>N
+</td><td>100</td><td>10</td><td>2</td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Honey.html" title="Honey"><img alt="Honey" data-image-key="Honey.png" data-image-name="Honey.png" height="32" src="img/32px-Honey.png" width="32"/></a>16.7% or <a href="Stinger.html" title="Stinger"><img alt="Stinger" data-image-key="Stinger.png" data-image-name="Stinger.png" height="32" src="img/32px-Stinger.png" width="32"/></a>83.3%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Killer_Bee.html" title="Killer Bee"><img alt="Killer Bee" data-image-key="Killer_Bee.png" data-image-name="Killer Bee.png" height="32" src="img/32px-Killer_Bee.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Killer_Bee.html" title="Killer Bee">Killer Bee</a></b>
+</td><td>H
+</td><td>100</td><td>10</td><td>2</td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Honey.html" title="Honey"><img alt="Honey" data-image-key="Honey.png" data-image-name="Honey.png" height="32" src="img/32px-Honey.png" width="32"/></a>16.7% or <a href="Stinger.html" title="Stinger"><img alt="Stinger" data-image-key="Stinger.png" data-image-name="Stinger.png" height="32" src="img/32px-Stinger.png" width="32"/></a>83.3%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Mosquito.html" title="Mosquito"><img alt="Mosquito" data-image-key="Mosquito.png" data-image-name="Mosquito.png" height="32" src="img/32px-Mosquito.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Mosquito.html" title="Mosquito">Mosquito</a></b>
+</td><td>H
+</td><td>100</td><td>3</td><td>2</td><td></td><td>8</td><td>12
+</td><td style="text-align: left;"><a href="Mosquito_Sack.html" title="Mosquito Sack"><img alt="Mosquito Sack" data-image-key="Mosquito_Sack.png" data-image-name="Mosquito Sack.png" height="40" src="img/40px-Mosquito_Sack.png" width="40"/></a>
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Crow.html" title="Crow"><img alt="Crow" data-image-key="Crow.png" data-image-name="Crow.png" height="32" src="img/32px-Crow.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Crow.html" title="Crow">Crow</a></b>
+</td><td>P
+</td><td>25</td><td></td><td></td><td></td><td></td><td>
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>50% or <a href="Crow_Feather.html" title="Crow Feather"><img alt="Crow Feather" data-image-key="Crow_Feather.png" data-image-name="Crow Feather.png" height="32" src="img/32px-Crow_Feather.png" width="32"/></a>50%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Redbird.html" title="Redbird"><img alt="Redbird" data-image-key="Redbird.png" data-image-name="Redbird.png" height="32" src="img/32px-Redbird.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Redbird.html" title="Redbird">Redbird</a></b>
+</td><td>P
+</td><td>25</td><td></td><td></td><td></td><td></td><td>
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>50% or <a href="Crimson_Feather.html" title="Crimson Feather"><img alt="Crimson Feather" data-image-key="Crimson_Feather.png" data-image-name="Crimson Feather.png" height="32" src="img/32px-Crimson_Feather.png" width="32"/></a>50%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Snowbird.html" title="Snowbird"><img alt="Winter Snowbird" data-image-key="Winter_Snowbird.png" data-image-name="Winter Snowbird.png" height="27" src="img/32px-Winter_Snowbird.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Snowbird.html" title="Snowbird">Snowbird</a></b>
+</td><td>P
+</td><td>25</td><td></td><td></td><td></td><td></td><td>
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>50% or <a href="Azure_Feather.html" title="Azure Feather"><img alt="Azure Feather" data-image-key="Azure_Feather.png" data-image-name="Azure Feather.png" height="32" src="img/32px-Azure_Feather.png" width="32"/></a>50%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Gobbler.html" title="Gobbler"><img alt="Gobbler" data-image-key="Gobbler.png" data-image-name="Gobbler.png" height="33" src="img/28px-Gobbler.png" width="28"/></a>
+</td><td style="text-align: left;"><b><a href="Gobbler.html" title="Gobbler">Gobbler</a></b>
+</td><td>P
+</td><td>50</td><td></td><td></td><td></td><td>3</td><td>8
+</td><td style="text-align: left;"><a href="Drumstick.html" title="Drumstick"><img alt="Drumstick" data-image-key="Drumstick.png" data-image-name="Drumstick.png" height="32" src="img/32px-Drumstick.png" width="32"/></a> x2
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Rabbit.html" title="Rabbit"><img alt="Rabbit" data-image-key="Rabbit.png" data-image-name="Rabbit.png" height="32" src="img/32px-Rabbit.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Rabbit.html" title="Rabbit">Rabbit</a></b>
+</td><td>P
+</td><td>25</td><td></td><td></td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Rabbit#Beardlings.html" title="Beardling"><img alt="Beard Monster" data-image-key="Beard_Monster.png" data-image-name="Beard Monster.png" height="28" src="img/28px-Beard_Monster.png" width="28"/></a>
+</td><td style="text-align: left;"><b><a href="Rabbit#Beardlings.html" title="Rabbit">Beardling</a></b>
+</td><td>P
+</td><td>25</td><td></td><td></td><td> -40</td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>40% or <a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a>40% or <a href="Beard_Hair.html" title="Beard Hair"><img alt="Beard Hair" data-image-key="Beard_Hair.png" data-image-name="Beard Hair.png" height="32" src="img/32px-Beard_Hair.png" width="32"/></a>20%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Mandrake.html" title="Mandrake"><img alt="Mandrake Mob" data-image-key="Mandrake_Mob.png" data-image-name="Mandrake Mob.png" height="27" src="img/40px-Mandrake_Mob.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a href="Mandrake.html" title="Mandrake">Mandrake</a></b>
+</td><td>P
+</td><td>20</td><td></td><td></td><td></td><td>6</td><td>6
+</td><td style="text-align: left;"><a href="Mandrake_(item).html" title="Mandrake (item)"><img alt="Mandrake" data-image-key="Mandrake.png" data-image-name="Mandrake.png" height="32" src="img/32px-Mandrake.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Frog.html" title="Frog"><img alt="Frog" data-image-key="Frog.png" data-image-name="Frog.png" height="32" src="img/32px-Frog.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Frog.html" title="Frog">Frog</a></b>
+</td><td>H
+</td><td>100</td><td>10</td><td>1</td><td></td><td>4</td><td>8
+</td><td style="text-align: left;"><a href="Frog_Legs.html" title="Frog Legs"><img alt="Frog Legs" data-image-key="Frog_Legs.png" data-image-name="Frog Legs.png" height="32" src="img/32px-Frog_Legs.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Beefalo.html" title="Beefalo"><img alt="Beefalo" data-image-key="Beefalo.png" data-image-name="Beefalo.png" height="38" src="img/45px-Beefalo.png" width="45"/></a>
+</td><td style="text-align: left;"><b><a href="Beefalo.html" title="Beefalo">Beefalo</a></b>
+</td><td>N
+</td><td>500</td><td>34</td><td>4</td><td></td><td>1.5</td><td>7
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×4, <a href="Beefalo_Wool.html" title="Beefalo Wool"><img alt="Beefalo Wool" data-image-key="Beefalo_Wool.png" data-image-name="Beefalo Wool.png" height="32" src="img/32px-Beefalo_Wool.png" width="32"/></a>×3 and <a href="Beefalo_Horn.html" title="Beefalo Horn"><img alt="Beefalo Horn" data-image-key="Beefalo_Horn.png" data-image-name="Beefalo Horn.png" height="32" src="img/32px-Beefalo_Horn.png" width="32"/></a>33%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Baby_Beefalo.html" title="Baby Beefalo"><img alt="Baby Beefalo" data-image-key="Baby_Beefalo.png" data-image-name="Baby Beefalo.png" height="32" src="img/42px-Baby_Beefalo.png" width="42"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Baby_Beefalo.html" title="Baby Beefalo">Teen Beefalo</a></b>
+</td><td>P
+</td><td>300</td><td></td><td></td><td></td><td>1.8</td><td>8.1
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×3, <a href="Beefalo_Wool.html" title="Beefalo Wool"><img alt="Beefalo Wool" data-image-key="Beefalo_Wool.png" data-image-name="Beefalo Wool.png" height="32" src="img/32px-Beefalo_Wool.png" width="32"/></a>×2
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Baby_Beefalo.html" title="Baby Beefalo"><img alt="Baby Beefalo" data-image-key="Baby_Beefalo.png" data-image-name="Baby Beefalo.png" height="29" src="img/38px-Baby_Beefalo.png" width="38"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Baby_Beefalo.html" title="Baby Beefalo">Toddler Beefalo</a></b>
+</td><td>P
+</td><td>300</td><td></td><td></td><td></td><td>1.4</td><td>6.3
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>×4, <a href="Beefalo_Wool.html" title="Beefalo Wool"><img alt="Beefalo Wool" data-image-key="Beefalo_Wool.png" data-image-name="Beefalo Wool.png" height="32" src="img/32px-Beefalo_Wool.png" width="32"/></a>×2
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Baby_Beefalo.html" title="Baby Beefalo"><img alt="Baby Beefalo" data-image-key="Baby_Beefalo.png" data-image-name="Baby Beefalo.png" height="26" src="img/34px-Baby_Beefalo.png" width="34"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Baby_Beefalo.html" title="Baby Beefalo">Baby Beefalo</a></b>
+</td><td>P
+</td><td>300</td><td></td><td></td><td></td><td>1</td><td>4.5
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>×3, <a href="Beefalo_Wool.html" title="Beefalo Wool"><img alt="Beefalo Wool" data-image-key="Beefalo_Wool.png" data-image-name="Beefalo Wool.png" height="32" src="img/32px-Beefalo_Wool.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Koalefant.html" title="Koalefant"><img alt="Koalefant" data-image-key="Koalefant.png" data-image-name="Koalefant.png" height="32" src="img/36px-Koalefant.png" width="36"/></a>
+</td><td style="text-align: left;"><b><a href="Koalefant.html" title="Koalefant">Koalefant</a></b>
+</td><td>N
+</td><td>500</td><td>50</td><td>4</td><td></td><td>1.5</td><td>7
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×8, <a href="Koalefant_Trunk.html" title="Koalefant Trunk"><img alt="Koalefant Trunk" data-image-key="Koalefant_Trunk.png" data-image-name="Koalefant Trunk.png" height="32" src="img/32px-Koalefant_Trunk.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Winter_Koalefant.html" title="Winter Koalefant"><img alt="Winter Koalefant" data-image-key="Winter_Koalefant.png" data-image-name="Winter Koalefant.png" height="32" src="img/38px-Winter_Koalefant.png" width="38"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Winter_Koalefant.html" title="Winter Koalefant">Winter Koalefant</a></b>
+</td><td>N
+</td><td>500</td><td>50</td><td>4</td><td></td><td>1.5</td><td>7
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×8, <a href="Winter_Koalefant_Trunk.html" title="Winter Koalefant Trunk"><img alt="Winter Koalefant Trunk" data-image-key="Winter_Koalefant_Trunk.png" data-image-name="Winter Koalefant Trunk.png" height="32" src="img/32px-Winter_Koalefant_Trunk.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Tallbird.html" title="Tallbird"><img alt="Tallbird" data-image-key="Tallbird.png" data-image-name="Tallbird.png" height="50" src="img/32px-Tallbird.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Tallbird.html" title="Tallbird">Tallbird</a></b>
+</td><td>H
+</td><td>400</td><td>50</td><td>2</td><td></td><td>7</td><td>7
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×2
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Smallish_Tallbird.html" title="Smallish Tallbird"><img alt="Teenbird" data-image-key="Teenbird.png" data-image-name="Teenbird.png" height="52" src="img/26px-Teenbird.png" width="26"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Smallish_Tallbird.html" title="Smallish Tallbird">TeenBird</a></b>
+</td><td>N
+</td><td>300</td><td>37.5</td><td>2</td><td></td><td>6</td><td>6
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Smallbird.html" title="Smallbird"><img alt="Smallbird" data-image-key="Smallbird.png" data-image-name="Smallbird.png" height="31" src="img/36px-Smallbird.png" width="36"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Smallbird.html" title="Smallbird">Smallbird</a></b>
+</td><td>P
+</td><td>50</td><td>10</td><td>1</td><td></td><td>6</td><td>6
+</td><td style="text-align: left;"><b><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a></b>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a class="image" href="File:Pengull.png.html"><img alt="Pengull" data-image-key="Pengull.png" data-image-name="Pengull.png" height="39" src="img/32px-Pengull.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Pengull.html" title="Pengull">Pengull</a></b>
+</td><td>N
+</td><td>150</td><td>33</td><td>3</td><td></td><td>2</td><td>?
+</td><td style="text-align: left;"><a href="Jet_Feather.html" title="Jet Feather"><img alt="Jet Feather" data-image-key="Jet_Feather.png" data-image-name="Jet Feather.png" height="24" src="img/24px-Jet_Feather.png" width="24"/></a> 20% and <a href="Drumstick.html" title="Drumstick"><img alt="Drumstick" data-image-key="Drumstick.png" data-image-name="Drumstick.png" height="24" src="img/24px-Drumstick.png" width="24"/></a> 10% and <a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="24" src="img/24px-Morsel.png" width="24"/></a> 10%, <a href="Egg.html" title="Egg"><img alt="Egg" data-image-key="Egg.png" data-image-name="Egg.png" height="24" src="img/24px-Egg.png" width="24"/></a> (If hidden)
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Tentacle.html" title="Tentacle"><img alt="Tentacle" data-image-key="Tentacle.png" data-image-name="Tentacle.png" height="68" src="img/28px-Tentacle.png" width="28"/></a>
+</td><td style="text-align: left;"><b><a href="Tentacle.html" title="Tentacle">Tentacle</a></b>
+</td><td>H
+</td><td>500</td><td>34</td><td>2</td><td> -40</td><td></td><td>
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>×2, <a href="Tentacle_Spike.html" title="Tentacle Spike"><img alt="Tentacle Spike" data-image-key="Tentacle_Spike.png" data-image-name="Tentacle Spike.png" height="32" src="img/32px-Tentacle_Spike.png" width="32"/></a> 50% and <a href="Tentacle_Spots.html" title="Tentacle Spots"><img alt="Tentacle Spots" data-image-key="Tentacle_Spots.png" data-image-name="Tentacle Spots.png" height="32" src="img/32px-Tentacle_Spots.png" width="32"/></a>20%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Tentacle#Big_Tentacle.html" title="Tentacle#Big Tentacle"><img alt="Tentapillar" data-image-key="Tentapillar.png" data-image-name="Tentapillar.png" height="56" src="img/34px-Tentapillar.png" width="34"/></a>
+</td><td style="text-align: left;"><a href="Tentacle#Big_Tentacle.html" title="Tentacle">Big Tentacle</a>
+</td><td>P
+</td><td>500</td><td></td><td></td><td></td><td></td><td>
+</td><td><a href="Light_Bulb.html" title="Light Bulb"><img alt="Light Bulb" data-image-key="Light_Bulb.png" data-image-name="Light Bulb.png" height="24" src="img/24px-Light_Bulb.png" width="24"/></a>80%, <a href="Tentacle_Spike.html" title="Tentacle Spike"><img alt="Tentacle Spike" data-image-key="Tentacle_Spike.png" data-image-name="Tentacle Spike.png" height="24" src="img/24px-Tentacle_Spike.png" width="24"/></a><span style="vertical-align:bottom">50% once a day, </span><br/><a href="Tentacle_Spots.html" title="Tentacle Spots"><img alt="Tentacle Spots" data-image-key="Tentacle_Spots.png" data-image-name="Tentacle Spots.png" height="24" src="img/24px-Tentacle_Spots.png" width="24"/></a><span style="vertical-align:bottom">40%,</span><a href="Marsh_Turf.html" title="Marsh Turf"><img alt="Marsh Turf" data-image-key="Marsh_Turf.png" data-image-name="Marsh Turf.png" height="24" src="img/24px-Marsh_Turf.png" width="24"/></a><span style="vertical-align:bottom">25% 4 per day, </span><br/><a href="Slurtle_Slime.html" title="Slurtle Slime"><img alt="Slurtle Slime" data-image-key="Slurtle_Slime.png" data-image-name="Slurtle Slime.png" height="24" src="img/24px-Slurtle_Slime.png" width="24"/></a><span style="vertical-align:bottom">10%,<a href="Skeleton.html" title="Skeleton"><img alt="Skeleton" data-image-key="Skeleton.png" data-image-name="Skeleton.png" height="24" src="img/24px-Skeleton.png" width="24"/></a><span style="vertical-align:bottom">10% once per day, </span> <a href="Rocks.html" title="Rocks"><img alt="Rocks" data-image-key="Rocks.png" data-image-name="Rocks.png" height="24" src="img/24px-Rocks.png" width="24"/></a><span style="vertical-align:bottom">10% </span> </span>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Tentacle#Baby_Tentacle.html" title="Tentacle#Baby Tentacle"><img alt="Baby Tentacle" data-image-key="Baby_Tentacle.png" data-image-name="Baby Tentacle.png" height="60" src="img/20px-Baby_Tentacle.png" width="20"/></a>
+</td><td style="text-align: left;"><b><a href="Tentacle#Baby_Tentacle.html" title="Tentacle">Baby Tentacle</a></b>
+</td><td>H
+</td><td>20</td><td>5</td><td>3</td><td></td><td></td><td></td><td>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Thulecite_Club.html" title="Thulecite Club"><img alt="Shadow Tentacle" data-image-key="Shadow_Tentacle.png" data-image-name="Shadow Tentacle.png" height="60" src="img/20px-Shadow_Tentacle.png" width="20"/></a>
+</td><td style="text-align: left;"><b><a href="Thulecite_Club.html" title="Thulecite Club">Shadow Tentacle</a></b>
+</td><td>H
+</td><td>500</td><td>34</td><td>2</td><td> -40</td><td></td><td></td><td>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Clockwork_Bishop.html" title="Clockwork Bishop"><img alt="Clockwork Bishop" data-image-key="Clockwork_Bishop.png" data-image-name="Clockwork Bishop.png" height="60" src="img/30px-Clockwork_Bishop.png" width="30"/></a>
+</td><td style="text-align: left;"><b><a href="Clockwork_Bishop.html" title="Clockwork Bishop">Clockwork Bishop</a></b>
+</td><td>H
+</td><td>300</td><td>40</td><td>4</td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Gears.html" title="Gears"><img alt="Gears" data-image-key="Gears.png" data-image-name="Gears.png" height="32" src="img/32px-Gears.png" width="32"/></a>×2, <a href="Purple_Gem.html" title="Purple Gem"><img alt="Purple Gem" data-image-key="Purple_Gem.png" data-image-name="Purple Gem.png" height="32" src="img/32px-Purple_Gem.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Clockwork_Bishop#Damaged_Bishop.html" title="Clockwork Bishop#Damaged Bishop"><img alt="Damaged bishop" data-image-key="Damaged_bishop.png" data-image-name="Damaged bishop.png" height="59" src="img/40px-Damaged_bishop.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a href="Clockwork_Bishop#Damaged_Bishop.html" title="Clockwork Bishop">Damaged Bishop</a></b>
+</td><td>H
+</td><td>300</td><td>40</td><td>4</td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Purple_Gem.html" title="Purple Gem"><img alt="Purple Gem" data-image-key="Purple_Gem.png" data-image-name="Purple Gem.png" height="32" src="img/32px-Purple_Gem.png" width="32"/></a>, <a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a>60%, <a href="Thulecite_Fragments.html" title="Thulecite Fragments"><img alt="Thulecite Fragments" data-image-key="Thulecite_Fragments.png" data-image-name="Thulecite Fragments.png" height="32" src="img/32px-Thulecite_Fragments.png" width="32"/></a>50%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Clockwork_Knight.html" title="Clockwork Knight"><img alt="Clockwork Knight" data-image-key="Clockwork_Knight.png" data-image-name="Clockwork Knight.png" height="62" src="img/35px-Clockwork_Knight.png" width="35"/></a>
+</td><td style="text-align: left;"><b><a href="Clockwork_Knight.html" title="Clockwork Knight">Clockwork Knight</a></b>
+</td><td>H
+</td><td>300</td><td>40</td><td>2</td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Gears.html" title="Gears"><img alt="Gears" data-image-key="Gears.png" data-image-name="Gears.png" height="32" src="img/32px-Gears.png" width="32"/></a>×2
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Clockwork_Knight#Damaged_Knight.html" title="Clockwork Knight#Damaged Knight"><img alt="Damaged Knight" data-image-key="Damaged_Knight.png" data-image-name="Damaged Knight.png" height="53" src="img/25px-Damaged_Knight.png" width="25"/></a>
+</td><td style="text-align: left;"><b><a href="Clockwork_Knight#Damaged_Knight.html" title="Clockwork Knight">Damaged Knight</a></b>
+</td><td>H
+</td><td>300</td><td>40</td><td>2</td><td></td><td>5</td><td>5
+</td><td style="text-align: left;"><a href="Gears.html" title="Gears"><img alt="Gears" data-image-key="Gears.png" data-image-name="Gears.png" height="32" src="img/32px-Gears.png" width="32"/></a>, <a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a>60%, <a href="Thulecite_Fragments.html" title="Thulecite Fragments"><img alt="Thulecite Fragments" data-image-key="Thulecite_Fragments.png" data-image-name="Thulecite Fragments.png" height="32" src="img/32px-Thulecite_Fragments.png" width="32"/></a>50%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Clockwork_Rook.html" title="Clockwork Rook"><img alt="Rook" data-image-key="Rook.png" data-image-name="Rook.png" height="48" src="img/40px-Rook.png" width="40"/></a>
+</td><td style="text-align: left;"><a href="Clockwork_Rook.html" title="Clockwork Rook">Clockwork Rook</a>
+</td><td>H
+</td><td>300</td><td>45</td><td>2</td><td></td><td>5</td><td>16
+</td><td style="text-align: left;"><a href="Gears.html" title="Gears"><img alt="Gears" data-image-key="Gears.png" data-image-name="Gears.png" height="32" src="img/32px-Gears.png" width="32"/></a>×2
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Clockwork_Rook#Damaged_Rook.html" title="Clockwork Rook#Damaged Rook"><img alt="Damaged Clockwork" data-image-key="Damaged_Clockwork.png" data-image-name="Damaged Clockwork.png" height="62" src="img/60px-Damaged_Clockwork.png" width="60"/></a>
+</td><td style="text-align: left;"><b><a href="Clockwork_Rook#Damaged_Rook.html" title="Clockwork Rook">Damaged Rook</a></b>
+</td><td>H
+</td><td>300</td><td>45</td><td>2</td><td></td><td>5</td><td>16
+</td><td style="text-align: left;"><a href="Gears.html" title="Gears"><img alt="Gears" data-image-key="Gears.png" data-image-name="Gears.png" height="32" src="img/32px-Gears.png" width="32"/></a>, <a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a>60%, <a href="Thulecite_Fragments.html" title="Thulecite Fragments"><img alt="Thulecite Fragments" data-image-key="Thulecite_Fragments.png" data-image-name="Thulecite Fragments.png" height="32" src="img/32px-Thulecite_Fragments.png" width="32"/></a>50%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Hallucination#Crawling_Horror.html" title="Crawling Horror"><img alt="Crawling Horror" data-image-key="Crawling_Horror.png" data-image-name="Crawling Horror.png" height="33" src="img/36px-Crawling_Horror.png" width="36"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Hallucination#Crawling_Horror.html" title="Hallucination">Crawling Horror</a></b>
+</td><td>H
+</td><td>300</td><td>20</td><td>2.5</td><td> -100</td><td>3</td><td>3
+</td><td style="text-align: left;"><a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a> and <a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a> 50%,<span style="font-weight:bold;"> +15 </span><a href="Sanity#Numerical_Sanity_Table.html" title="Sanity"><img alt="Sanity" data-image-key="Sanity.png" data-image-name="Sanity.png" height="33" src="img/32px-Sanity.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Hallucination#Terrorbeak.html" title="Terrorbeak"><img alt="Terrorbeak" data-image-key="Terrorbeak.png" data-image-name="Terrorbeak.png" height="47" src="img/30px-Terrorbeak.png" width="30"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Hallucination#Terrorbeak.html" title="Hallucination">Terrorbeak</a></b>
+</td><td>H
+</td><td>400</td><td>50</td><td>1.5</td><td> -100</td><td>7</td><td>7
+</td><td style="text-align: left;"><a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a><span style="font-weight:bold;"> and </span><a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a><span style="font-weight:bold;">50%</span>, +33 <a href="Sanity#Numerical_Sanity_Table.html" title="Sanity"><img alt="Sanity" data-image-key="Sanity.png" data-image-name="Sanity.png" height="33" src="img/32px-Sanity.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><div class="center"><div class="floatnone"><a href="Hound.html" title="Hound"><img alt="Hound" data-image-key="Hound.png" data-image-name="Hound.png" height="32" src="img/36px-Hound.png" width="36"/></a></div></div>
+</td><td style="text-align: left;"><b><a href="Hound.html" title="Hound">Hound</a></b>
+</td><td>H
+</td><td>150</td><td>20</td><td>2</td><td> -40</td><td>10</td><td>10
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>,<a href="Hound%27s_Tooth.html" title="Hound's Tooth"><img alt="Hound's Tooth" data-image-key="Hound%27s_Tooth.png" data-image-name="Hound's Tooth.png" height="32" src="img/32px-Hound%27s_Tooth.png" width="32"/></a>12.5%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><div class="center"><div class="floatnone"><a href="Red_Hound.html" title="Red Hound"><img alt="Red Hound" data-image-key="Red_Hound.png" data-image-name="Red Hound.png" height="32" src="img/40px-Red_Hound.png" width="40"/></a></div></div>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Red_Hound.html" title="Red Hound">Red Hound</a></b>
+</td><td>H
+</td><td>100</td><td>30</td><td>2</td><td> -40</td><td>10</td><td>10
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>,<a href="Hound%27s_Tooth.html" title="Hound's Tooth"><img alt="Hound's Tooth" data-image-key="Hound%27s_Tooth.png" data-image-name="Hound's Tooth.png" height="32" src="img/32px-Hound%27s_Tooth.png" width="32"/></a>, <a href="Ash.html" title="Ash"><img alt="Ash" data-image-key="Ash.png" data-image-name="Ash.png" height="32" src="img/32px-Ash.png" width="32"/></a>×3 and <a href="Red_Gem.html" title="Red Gem"><img alt="Red Gem" data-image-key="Red_Gem.png" data-image-name="Red Gem.png" height="32" src="img/32px-Red_Gem.png" width="32"/></a>20%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><div class="center"><div class="floatnone"><a href="Blue_Hound.html" title="Blue Hound"><img alt="Blue Hound" data-image-key="Blue_Hound.png" data-image-name="Blue Hound.png" height="36" src="img/40px-Blue_Hound.png" width="40"/></a></div></div>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Blue_Hound.html" title="Blue Hound">Blue Hound</a></b>
+</td><td>H
+</td><td>100</td><td>30</td><td>2</td><td> -40</td><td>10</td><td>10
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>,<a href="Hound%27s_Tooth.html" title="Hound's Tooth"><img alt="Hound's Tooth" data-image-key="Hound%27s_Tooth.png" data-image-name="Hound's Tooth.png" height="32" src="img/32px-Hound%27s_Tooth.png" width="32"/></a>×2 and <a href="Blue_Gem.html" title="Blue Gem"><img alt="Blue Gem" data-image-key="Blue_Gem.png" data-image-name="Blue Gem.png" height="32" src="img/32px-Blue_Gem.png" width="32"/></a>20%
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Krampus.html" title="Krampus"><img alt="Krampus" data-image-key="Krampus.png" data-image-name="Krampus.png" height="33" src="img/25px-Krampus.png" width="25"/></a>
+</td><td style="text-align: left;"><b><a href="Krampus.html" title="Krampus">Krampus</a></b>
+</td><td>N
+</td><td>200</td><td>50</td><td>1.2</td><td></td><td>7</td><td>7
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>, <a href="Charcoal.html" title="Charcoal"><img alt="Charcoal" data-image-key="Charcoal.png" data-image-name="Charcoal.png" height="32" src="img/32px-Charcoal.png" width="32"/></a>×2 and <a href="Krampus_Sack.html" title="Krampus Sack"><img alt="Krampus Sack" data-image-key="Krampus_Sack.png" data-image-name="Krampus Sack.png" height="32" src="img/32px-Krampus_Sack.png" width="32"/></a>1%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="MacTusk.html" title="MacTusk"><img alt="MacTusk" data-image-key="MacTusk.png" data-image-name="MacTusk.png" height="39" src="img/30px-MacTusk.png" width="30"/></a>
+</td><td style="text-align: left;"><b><a href="MacTusk.html" title="MacTusk">MacTusk</a></b>
+</td><td>H
+</td><td>150</td><td>33</td><td>3</td><td></td><td>3</td><td>6
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>,<a href="Blow_Dart.html" title="Blow Dart"><img alt="Blow Dart" data-image-key="Blow_Dart.png" data-image-name="Blow Dart.png" height="32" src="img/32px-Blow_Dart.png" width="32"/></a> and<a href="Walrus_Tusk.html" title="Walrus Tusk"><img alt="Walrus Tusk" data-image-key="Walrus_Tusk.png" data-image-name="Walrus Tusk.png" height="32" src="img/32px-Walrus_Tusk.png" width="32"/></a>50% and <a href="Tam_o%27_Shanter.html" title="Tam o' Shanter"><img alt="Tam o' Shanter" data-image-key="Tam_o%27_Shanter.png" data-image-name="Tam o' Shanter.png" height="32" src="img/32px-Tam_o%27_Shanter.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="WeeTusk.html" title="WeeTusk"><img alt="WeeTusk" data-image-key="WeeTusk.png" data-image-name="WeeTusk.png" height="38" src="img/30px-WeeTusk.png" width="30"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="WeeTusk.html" title="WeeTusk">WeeTusk</a></b>
+</td><td>H
+</td><td>100</td><td>22</td><td>5.1</td><td></td><td>3</td><td>5
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Merm.html" title="Merm"><img alt="Merm" data-image-key="Merm.png" data-image-name="Merm.png" height="47" src="img/35px-Merm.png" width="35"/></a>
+</td><td style="text-align: left;"><b><a href="Merm.html" title="Merm">Merm</a></b>
+</td><td>H
+</td><td>250</td><td>30</td><td>3</td><td></td><td>3</td><td>8
+</td><td style="text-align: left;"><a href="Fish.html" title="Fish"><img alt="Fish" data-image-key="Fish.png" data-image-name="Fish.png" height="32" src="img/32px-Fish.png" width="32"/></a><a href="Frog_Legs.html" title="Frog Legs"><img alt="Frog Legs" data-image-key="Frog_Legs.png" data-image-name="Frog Legs.png" height="32" src="img/32px-Frog_Legs.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Pig.html" title="Pig"><img alt="Pig" data-image-key="Pig.png" data-image-name="Pig.png" height="41" src="img/33px-Pig.png" width="33"/></a>
+</td><td style="text-align: left;"><b><a href="Pig.html" title="Pig">Pig</a></b>
+</td><td>N
+</td><td>250</td><td>33</td><td>3</td><td> +25 (If allied)</td><td>3</td><td>5
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>75% or <a href="Pig_Skin.html" title="Pig Skin"><img alt="Pig Skin" data-image-key="Pig_Skin.png" data-image-name="Pig Skin.png" height="32" src="img/32px-Pig_Skin.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Guardian_Pig.html" title="Guardian Pig"><img alt="Guardian Pig" data-image-key="Guardian_Pig.png" data-image-name="Guardian Pig.png" height="44" src="img/33px-Guardian_Pig.png" width="33"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Guardian_Pig.html" title="Guardian Pig">Guardian Pig</a></b>
+</td><td>H
+</td><td>300</td><td>33</td><td>1.5</td><td></td><td>3</td><td>5
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>75% or <a href="Pig_Skin.html" title="Pig Skin"><img alt="Pig Skin" data-image-key="Pig_Skin.png" data-image-name="Pig Skin.png" height="32" src="img/32px-Pig_Skin.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Werepig.html" title="Werepig"><img alt="Werepig" data-image-key="Werepig.png" data-image-name="Werepig.png" height="41" src="img/34px-Werepig.png" width="34"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Werepig.html" title="Werepig">Werepig</a></b>
+</td><td>H
+</td><td>350</td><td>40</td><td>2</td><td> -100</td><td>3</td><td>7
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×2, <a href="Pig_Skin.html" title="Pig Skin"><img alt="Pig Skin" data-image-key="Pig_Skin.png" data-image-name="Pig Skin.png" height="32" src="img/32px-Pig_Skin.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Bunnyman.html" title="Bunnyman"><img alt="Bunnyman" data-image-key="Bunnyman.png" data-image-name="Bunnyman.png" height="52" src="img/30px-Bunnyman.png" width="30"/></a>
+</td><td style="text-align: left;"><a href="Bunnyman.html" title="Bunnyman">Bunnyman</a>
+</td><td>N
+</td><td>200</td><td>40</td><td>2</td><td> <span style="font-weight:bold;">+25 (If allied)</span></td><td>3</td><td>6
+</td><td style="text-align: left;"><a href="Carrot.html" title="Carrot"><img alt="Carrot" data-image-key="Carrot.png" data-image-name="Carrot.png" height="24" src="img/24px-Carrot.png" width="24"/></a><span style="vertical-align:bottom">×2, </span><a href="Bunny_Puff.html" title="Bunny Puff"><img alt="Bunny Puff" data-image-key="Bunny_Puff.png" data-image-name="Bunny Puff.png" height="24" src="img/24px-Bunny_Puff.png" width="24"/></a><span style="vertical-align:bottom">25% or </span><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="24" src="img/24px-Meat.png" width="24"/></a><span style="vertical-align:bottom">75%</span>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Beardlord.html" title="Beardlord"><img alt="Beardlord" data-image-key="Beardlord.png" data-image-name="Beardlord.png" height="36" src="img/30px-Beardlord.png" width="30"/></a>
+</td><td style="text-align: left;"><a class="mw-redirect" href="Beardlord.html" title="Beardlord">Beardlord</a>
+</td><td>N
+</td><td>200</td><td>60</td><td>1</td><td> ?</td><td>3</td><td>6
+</td><td style="text-align:left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>, <a href="Beard_Hair.html" title="Beard Hair"><img alt="Beard Hair" data-image-key="Beard_Hair.png" data-image-name="Beard Hair.png" height="24" src="img/24px-Beard_Hair.png" width="24"/></a><span style="vertical-align:bottom">×2</span>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Rock_Lobster.html" title="Rock Lobster"><img alt="Rock Lobster" data-image-key="Rock_Lobster.png" data-image-name="Rock Lobster.png" height="33" src="img/30px-Rock_Lobster.png" width="30"/></a>
+</td><td style="text-align: left;"><a href="Rock_Lobster.html" title="Rock Lobster">Rock Lobster</a>
+</td><td>N
+</td><td>1250-1800</td><td>62.5-90</td><td>1</td><td> ?</td><td>2</td><td>
+</td><td style="text-align:left;"><a href="Rocks.html" title="Rocks"><img alt="Rocks" data-image-key="Rocks.png" data-image-name="Rocks.png" height="24" src="img/24px-Rocks.png" style="vertical-align: text-bottom" width="24"/></a> × 2, <a href="Flint.html" title="Flint"><img alt="Flint" data-image-key="Flint.png" data-image-name="Flint.png" height="24" src="img/24px-Flint.png" style="vertical-align: text-bottom" width="24"/></a> × 2, <a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="24" src="img/24px-Meat.png" style="vertical-align: text-bottom" width="24"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Spider.html" title="Spider"><img alt="Spider" data-image-key="Spider.png" data-image-name="Spider.png" height="21" src="img/36px-Spider.png" width="36"/></a>
+</td><td style="text-align: left;"><b><a href="Spider.html" title="Spider">Spider</a></b>
+</td><td>H
+</td><td>100</td><td>20</td><td>3</td><td> -25</td><td>3</td><td>5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>50% or <a href="Silk.html" title="Silk"><img alt="Silk" data-image-key="Silk.png" data-image-name="Silk.png" height="32" src="img/32px-Silk.png" width="32"/></a>25% or <a href="Spider_Gland.html" title="Spider Gland"><img alt="Spider Gland" data-image-key="Spider_Gland.png" data-image-name="Spider Gland.png" height="32" src="img/32px-Spider_Gland.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Spider_Warrior.html" title="Spider Warrior"><img alt="Spider Warrior" data-image-key="Spider_Warrior.png" data-image-name="Spider Warrior.png" height="17" src="img/40px-Spider_Warrior.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a class="mw-redirect" href="Spider_Warrior.html" title="Spider Warrior">Spider Warrior</a></b>
+</td><td>H
+</td><td>200</td><td>20</td><td>4-6</td><td> -40</td><td>4</td><td>5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>50% or <a href="Silk.html" title="Silk"><img alt="Silk" data-image-key="Silk.png" data-image-name="Silk.png" height="32" src="img/32px-Silk.png" width="32"/></a>25% or <a href="Spider_Gland.html" title="Spider Gland"><img alt="Spider Gland" data-image-key="Spider_Gland.png" data-image-name="Spider Gland.png" height="32" src="img/32px-Spider_Gland.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Cave_Spider.html" title="Cave Spider"><img alt="Cave Spider" data-image-key="Cave_Spider.png" data-image-name="Cave Spider.png" height="36" src="img/36px-Cave_Spider.png" width="36"/></a>
+</td><td style="text-align: left;"><a href="Cave_Spider.html" title="Cave Spider">Cave Spider</a>
+</td><td>H
+</td><td>150</td><td>20</td><td>3</td><td> -15</td><td>3</td><td>5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>50% or <a href="Silk.html" title="Silk"><img alt="Silk" data-image-key="Silk.png" data-image-name="Silk.png" height="32" src="img/32px-Silk.png" width="32"/></a>25% or <a href="Spider_Gland.html" title="Spider Gland"><img alt="Spider Gland" data-image-key="Spider_Gland.png" data-image-name="Spider Gland.png" height="32" src="img/32px-Spider_Gland.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Spitter.html" title="Spitter"><img alt="Spitter" data-image-key="Spitter.png" data-image-name="Spitter.png" height="23" src="img/36px-Spitter.png" width="36"/></a>
+</td><td style="text-align: left;"><a href="Spitter.html" title="Spitter">Spitter</a>
+</td><td>H
+</td><td>175</td><td>20</td><td>6</td><td> -15</td><td>4</td><td>5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>50% or <a href="Silk.html" title="Silk"><img alt="Silk" data-image-key="Silk.png" data-image-name="Silk.png" height="32" src="img/32px-Silk.png" width="32"/></a>25% or <a href="Spider_Gland.html" title="Spider Gland"><img alt="Spider Gland" data-image-key="Spider_Gland.png" data-image-name="Spider Gland.png" height="32" src="img/32px-Spider_Gland.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Dangling_Depth_Dweller.html" title="Dangling Depth Dweller"><img alt="Dangling Depth Dweller" data-image-key="Dangling_Depth_Dweller.png" data-image-name="Dangling Depth Dweller.png" height="40" src="img/32px-Dangling_Depth_Dweller.png" width="32"/></a>
+</td><td style="text-align: left;"><a href="Dangling_Depth_Dweller.html" title="Dangling Depth Dweller">Dangling Depth Dweller</a>
+</td><td>H
+</td><td>200</td><td>20</td><td>2</td><td> -25</td><td>3</td><td>5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>50% or <a href="Silk.html" title="Silk"><img alt="Silk" data-image-key="Silk.png" data-image-name="Silk.png" height="32" src="img/32px-Silk.png" width="32"/></a>25% or <a href="Spider_Gland.html" title="Spider Gland"><img alt="Spider Gland" data-image-key="Spider_Gland.png" data-image-name="Spider Gland.png" height="32" src="img/32px-Spider_Gland.png" width="32"/></a>25%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Batilisk.html" title="Batilisk"><img alt="Batilisk" data-image-key="Batilisk.png" data-image-name="Batilisk.png" height="22" src="img/36px-Batilisk.png" width="36"/></a>
+</td><td style="text-align: left;"><a href="Batilisk.html" title="Batilisk">Batilisk</a>
+</td><td>H
+</td><td>50</td><td>20</td><td>1</td><td></td><td>8</td><td>
+</td><td style="text-align: left;"><a href="Batilisk_Wing.html" title="Batilisk Wing"><img alt="Batilisk Wing" data-image-key="Batilisk_Wing.png" data-image-name="Batilisk Wing.png" height="24" src="img/24px-Batilisk_Wing.png" width="24"/></a>15% and <a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="24" src="img/24px-Monster_Meat.png" width="24"/></a>10% and <a href="Guano.html" title="Guano"><img alt="Guano" data-image-key="Guano.png" data-image-name="Guano.png" height="24" src="img/24px-Guano.png" width="24"/></a>15%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Slurper.html" title="Slurper"><img alt="Slurper" data-image-key="Slurper.png" data-image-name="Slurper.png" height="44" src="img/36px-Slurper.png" width="36"/></a>
+</td><td style="text-align: left;"><a href="Slurper.html" title="Slurper">Slurper</a>
+</td><td>H
+</td><td>200</td><td>30</td><td>5</td><td> -25</td><td>9</td><td>
+</td><td style="text-align: left;"><a href="Light_Bulb.html" title="Light Bulb"><img alt="Light Bulb" data-image-key="Light_Bulb.png" data-image-name="Light Bulb.png" height="24" src="img/24px-Light_Bulb.png" width="24"/></a><span style="vertical-align:bottom">x2, </span> <span style="vertical-align:bottom"><a href="Slurper_Pelt.html" title="Slurper Pelt"><img alt="Slurper Pelt" data-image-key="Slurper_Pelt.png" data-image-name="Slurper Pelt.png" height="24" src="img/24px-Slurper_Pelt.png" style="vertical-align: text-bottom" width="24"/></a>50%</span>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Depths_Worm.html" title="Depths Worm"><img alt="Depths Worm" data-image-key="Depths_Worm.png" data-image-name="Depths Worm.png" height="55" src="img/24px-Depths_Worm.png" width="24"/></a>
+</td><td style="text-align: left;"><a href="Depths_Worm.html" title="Depths Worm">Depths Worm</a>
+</td><td>H
+</td><td>900</td><td>75</td><td>4</td><td> -25</td><td>?</td><td>
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="30" src="img/30px-Monster_Meat.png" width="30"/></a>x4,<a href="Worm_Light.html" title="Worm Light"><img alt="Glow Berry" data-image-key="Glow_Berry.png" data-image-name="Glow Berry.png" height="32" src="img/32px-Glow_Berry.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Splumonkey.html" title="Splumonkey"><img alt="Splumonkey Cropped" data-image-key="Splumonkey_Cropped.png" data-image-name="Splumonkey Cropped.png" height="26" src="img/34px-Splumonkey_Cropped.png" width="34"/></a>
+</td><td style="text-align: left;"><a href="Splumonkey.html" title="Splumonkey">Splumonkey</a>
+</td><td>P
+</td><td>125</td><td>20</td><td>2</td><td></td><td>7</td><td>
+</td><td style="text-align: left;"><a href="Morsel.html" title="Morsel"><img alt="Morsel" data-image-key="Morsel.png" data-image-name="Morsel.png" height="32" src="img/32px-Morsel.png" width="32"/></a>,<a href="Cave_Banana.html" title="Cave Banana"><img alt="Cave Banana" data-image-key="Cave_Banana.png" data-image-name="Cave Banana.png" height="32" src="img/32px-Cave_Banana.png" width="32"/></a>,<a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="32" src="img/32px-Nightmare_Fuel.png" width="32"/></a> 50%
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Splumonkey#Shadow_Splumonkey.html" title="Splumonkey#Shadow Splumonkey"><img alt="Shadow Splumonkey" data-image-key="Shadow_Splumonkey.png" data-image-name="Shadow Splumonkey.png" height="23" src="img/34px-Shadow_Splumonkey.png" width="34"/></a>
+</td><td style="text-align: left;"><a href="Splumonkey#Shadow_Splumonkey.html" title="Splumonkey">Shadow Splumonkey</a>
+</td><td>H
+</td><td>125</td><td>20</td><td>2</td><td></td><td>7</td><td>
+</td><td style="text-align: left;"><a href="Cave_Banana.html" title="Cave Banana"><img alt="Cave Banana" data-image-key="Cave_Banana.png" data-image-name="Cave Banana.png" height="24" src="img/24px-Cave_Banana.png" width="24"/></a>, <a href="Beard_Hair.html" title="Beard Hair"><img alt="Beard Hair" data-image-key="Beard_Hair.png" data-image-name="Beard Hair.png" height="24" src="img/24px-Beard_Hair.png" width="24"/></a>,<a href="Nightmare_Fuel.html" title="Nightmare Fuel"><img alt="Nightmare Fuel" data-image-key="Nightmare_Fuel.png" data-image-name="Nightmare Fuel.png" height="24" src="img/24px-Nightmare_Fuel.png" width="24"/></a> <b>50%</b>, Any stolen items in its Inventory
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Slurtle.html" title="Slurtle"><img alt="Slurtle" data-image-key="Slurtle.png" data-image-name="Slurtle.png" height="29" src="img/34px-Slurtle.png" width="34"/></a>
+</td><td style="text-align: left;"><a href="Slurtle.html" title="Slurtle">Slurtle</a>
+</td><td>P
+</td><td>600</td><td>25</td><td>4</td><td></td><td>3</td><td>
+</td><td style="text-align: left;"><a href="Slurtle_Slime.html" title="Slurtle Slime"><img alt="Slurtle Slime" data-image-key="Slurtle_Slime.png" data-image-name="Slurtle Slime.png" height="32" src="img/32px-Slurtle_Slime.png" width="32"/></a> x2, <a href="Broken_Shell.html" title="Broken Shell"><img alt="Broken Shell" data-image-key="Broken_Shell.png" data-image-name="Broken Shell.png" height="32" src="img/32px-Broken_Shell.png" width="32"/></a> 90% or <a href="Shelmet.html" title="Shelmet"><img alt="Shelmet" data-image-key="Shelmet.png" data-image-name="Shelmet.png" height="32" src="img/32px-Shelmet.png" width="32"/></a> 10%
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Snurtle.html" title="Snurtle"><img alt="Snurtle" data-image-key="Snurtle.png" data-image-name="Snurtle.png" height="21" src="img/34px-Snurtle.png" width="34"/></a>
+</td><td style="text-align: left;"><a class="mw-redirect" href="Snurtle.html" title="Snurtle">Snurtle</a>
+</td><td>P
+</td><td>200</td><td></td><td></td><td></td><td>7</td><td>
+</td><td style="text-align: left;"><a href="Slurtle_Slime.html" title="Slurtle Slime"><img alt="Slurtle Slime" data-image-key="Slurtle_Slime.png" data-image-name="Slurtle Slime.png" height="32" src="img/32px-Slurtle_Slime.png" width="32"/></a> x2,<a href="Broken_Shell.html" title="Broken Shell"><img alt="Broken Shell" data-image-key="Broken_Shell.png" data-image-name="Broken Shell.png" height="32" src="img/32px-Broken_Shell.png" width="32"/></a> 25% or <a href="Snurtle_Shell_Armor.html" title="Snurtle Shell Armor"><img alt="Snurtle Shell Armor" data-image-key="Snurtle_Shell_Armor.png" data-image-name="Snurtle Shell Armor.png" height="32" src="img/32px-Snurtle_Shell_Armor.png" width="32"/></a> 75%
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Treeguard.html" title="Treeguard"><img alt="Treeguard" data-image-key="Treeguard.png" data-image-name="Treeguard.png" height="33" src="img/20px-Treeguard.png" width="20"/></a>
+</td><td style="text-align: left;"><b><a href="Treeguard.html" title="Treeguard">Treeguard (Tall)</a></b>
+</td><td>N
+</td><td>2500</td><td>186(62)</td><td>3</td><td> -100</td><td>1.875</td><td>1.875
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>, <a href="Living_Log.html" title="Living Log"><img alt="Living Log" data-image-key="Living_Log.png" data-image-name="Living Log.png" height="32" src="img/32px-Living_Log.png" width="32"/></a>×6
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Treeguard.html" title="Treeguard"><img alt="Treeguard" data-image-key="Treeguard.png" data-image-name="Treeguard.png" height="30" src="img/18px-Treeguard.png" width="18"/></a>
+</td><td style="text-align: left;"><b><a href="Treeguard.html" title="Treeguard">Treeguard (Normal)</a></b>
+</td><td>N
+</td><td>2000</td><td>150(50)</td><td>3</td><td> -100</td><td>1.5</td><td>1.5
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>, <a href="Living_Log.html" title="Living Log"><img alt="Living Log" data-image-key="Living_Log.png" data-image-name="Living Log.png" height="32" src="img/32px-Living_Log.png" width="32"/></a>×6
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Treeguard.html" title="Treeguard"><img alt="Treeguard" data-image-key="Treeguard.png" data-image-name="Treeguard.png" height="26" src="img/16px-Treeguard.png" width="16"/></a>
+</td><td style="text-align: left;"><b><a href="Treeguard.html" title="Treeguard">Treeguard (Short)</a></b>
+</td><td>N
+</td><td>1400</td><td>105(35)</td><td>3</td><td> -100</td><td>1.05</td><td>1.05
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>, <a href="Living_Log.html" title="Living Log"><img alt="Living Log" data-image-key="Living_Log.png" data-image-name="Living Log.png" height="32" src="img/32px-Living_Log.png" width="32"/></a>×6
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Spider_Queen.html" title="Spider Queen"><img alt="Spider Queen" data-image-key="Spider_Queen.png" data-image-name="Spider Queen.png" height="35" src="img/40px-Spider_Queen.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a href="Spider_Queen.html" title="Spider Queen">Spider Queen</a></b>
+</td><td>H
+</td><td>1250</td><td>80</td><td>3</td><td> -400</td><td>1.75</td><td>1.75
+</td><td style="text-align: left;"><a href="Monster_Meat.html" title="Monster Meat"><img alt="Monster Meat" data-image-key="Monster_Meat.png" data-image-name="Monster Meat.png" height="32" src="img/32px-Monster_Meat.png" width="32"/></a>×4, <a href="Silk.html" title="Silk"><img alt="Silk" data-image-key="Silk.png" data-image-name="Silk.png" height="32" src="img/32px-Silk.png" width="32"/></a>×4, <a href="Spider_Eggs.html" title="Spider Eggs"><img alt="Spider Eggs" data-image-key="Spider_Eggs.png" data-image-name="Spider Eggs.png" height="32" src="img/32px-Spider_Eggs.png" width="32"/></a>, <a href="Spiderhat.html" title="Spiderhat"><img alt="Spiderhat" data-image-key="Spiderhat.png" data-image-name="Spiderhat.png" height="32" src="img/32px-Spiderhat.png" width="32"/></a>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Deerclops.html" title="Deerclops"><img alt="Deerclops" data-image-key="Deerclops.png" data-image-name="Deerclops.png" height="40" src="img/32px-Deerclops.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Deerclops.html" title="Deerclops">Deerclops</a></b>
+</td><td>H
+</td><td>2000</td><td>150(50)</td><td>3</td><td> -400</td><td>3</td><td>3
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×8, <a href="Deerclops_Eyeball.html" title="Deerclops Eyeball"><img alt="Deerclops Eyeball" data-image-key="Deerclops_Eyeball.png" data-image-name="Deerclops Eyeball.png" height="32" src="img/32px-Deerclops_Eyeball.png" width="32"/></a>
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Chester.html" title="Chester"><img alt="Chester" data-image-key="Chester.png" data-image-name="Chester.png" height="40" src="img/40px-Chester.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a href="Chester.html" title="Chester">Chester</a></b>
+</td><td>P
+</td><td>450</td><td></td><td></td><td></td><td>3</td><td>7
+</td><td style="text-align:left;">Content
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Ghost.html" title="Ghost"><img alt="Ghost Build" data-image-key="Ghost_Build.png" data-image-name="Ghost Build.png" height="35" src="img/20px-Ghost_Build.png" width="20"/></a>
+</td><td style="text-align: left;"><b><a href="Ghost.html" title="Ghost">Ghost</a></b>
+</td><td>H
+</td><td>200</td><td>15</td><td>1.2</td><td> -40</td><td>2</td><td>2
+</td><td style="text-align:left;">
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Abigail.html" title="Abigail"><img alt="Abigail build" data-image-key="Abigail_build.png" data-image-name="Abigail build.png" height="36" src="img/20px-Abigail_build.png" width="20"/></a>
+</td><td style="text-align: left;"><b><a href="Abigail.html" title="Abigail">Abigail</a></b>
+</td><td>N
+</td><td>600</td><td>10, 20, 40</td><td>1.5</td><td></td><td>5</td><td>5
+</td><td><div class="floatleft"><a class="image" href="File:Abigail%27s_Flower.png.html"><img alt="Abigail's Flower" data-image-key="Abigail%27s_Flower.png" data-image-name="Abigail's Flower.png" height="30" src="img/30px-Abigail%27s_Flower.png" width="30"/></a></div>
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Charlie_(Night_Monster).html" title="Charlie (Night Monster)"><img alt="DS-charlie-head" data-image-key="DS-charlie-head.png" data-image-name="DS-charlie-head.png" height="35" src="img/35px-DS-charlie-head.png" width="35"/></a>
+</td><td style="text-align: left;"><b><a href="Charlie_(Night_Monster).html" title="Charlie (Night Monster)">Charlie (Night Monster)</a></b>
+</td><td>H
+</td><td><span style="font-weight:bold;">N/A</span></td><td>100</td><td>Random</td><td> -20 (on hit)</td><td></td><td></td><td>Cannot be killed
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Ancient_Guardian.html" title="Ancient Guardian"><img alt="Ancient Guardian" data-image-key="Ancient_Guardian.png" data-image-name="Ancient Guardian.png" height="50" src="img/50px-Ancient_Guardian.png" width="50"/></a>
+</td><td style="text-align: left;"><b><a href="Ancient_Guardian.html" title="Ancient Guardian">Ancient Guardian</a></b>
+</td><td>H
+</td><td>2500</td><td>100</td><td>2</td><td></td><td>5</td><td>17
+</td><td style="text-align: left;"><a href="Meat.html" title="Meat"><img alt="Meat" data-image-key="Meat.png" data-image-name="Meat.png" height="32" src="img/32px-Meat.png" width="32"/></a>×8, <a href="Rhino_Horn.html" title="Rhino Horn"><img alt="Guardian's Horn" data-image-key="Guardian%27s_Horn.png" data-image-name="Guardian's Horn.png" height="32" src="img/32px-Guardian%27s_Horn.png" width="32"/></a>, <a href="Ornate_Chest.html" title="Ornate Chest"><img alt="Ornate Chest" data-image-key="Ornate_Chest.png" data-image-name="Ornate Chest.png" height="56" src="img/64px-Ornate_Chest.png" width="64"/></a>
+</td></tr>
+<tr style="background: #FFFFC9">
+<td><a href="Houndius_Shootius.html" title="Houndius Shootius"><img alt="Houndius Shootius Build" data-image-key="Houndius_Shootius_Build.png" data-image-name="Houndius Shootius Build.png" height="49" src="img/30px-Houndius_Shootius_Build.png" width="30"/></a>
+</td><td style="text-align: left;"><b><a href="Houndius_Shootius.html" title="Houndius Shootius">Houndius Shootius</a></b>
+</td><td>N
+</td><td>1000</td><td>65</td><td>3</td><td> -2</td><td></td><td></td><td>
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Lureplant.html" title="Lureplant"><img alt="Lureplant" data-image-key="Lureplant.png" data-image-name="Lureplant.png" height="47" src="img/35px-Lureplant.png" width="35"/></a>
+</td><td style="text-align: left;"><b><a href="Lureplant.html" title="Lureplant">Lureplant</a></b>
+</td><td>P
+</td><td>300</td><td></td><td></td><td></td><td></td><td></td><td><a class="image" href="File:Fleshy_Bulb.png.html" title="Fleshy Bulb"><img alt="Fleshy Bulb" data-image-key="Fleshy_Bulb.png" data-image-name="Fleshy Bulb.png" height="32" src="img/32px-Fleshy_Bulb.png" width="32"/></a>, any undigested items
+</td></tr>
+<tr style="background: #FFC9C9">
+<td><a href="Lureplant#Eyeplant.html" title="Lureplant#Eyeplant"><img alt="Eyeplant" data-image-key="Eyeplant.png" data-image-name="Eyeplant.png" height="28" src="img/33px-Eyeplant.png" width="33"/></a>
+</td><td style="text-align: left;"><b><a href="Lureplant#Eyeplant.html" title="Lureplant">Eyeplant</a></b>
+</td><td>H
+</td><td>30</td><td>20</td><td>1</td><td></td><td></td><td>
+</td><td style="text-align: left;">
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Worm_Hole.html" title="Worm Hole"><img alt="Worm Hole" data-image-key="Worm_Hole.png" data-image-name="Worm Hole.png" height="23" src="img/40px-Worm_Hole.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a href="Worm_Hole.html" title="Worm Hole">Worm Hole</a></b>
+</td><td>P
+</td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td>Cannot be killed
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Worm_Hole#Sick_Worm_Holes.html" title="Worm Hole#Sick Worm Holes"><img alt="Sick Wormhole" data-image-key="Sick_Wormhole.png" data-image-name="Sick Wormhole.png" height="18" src="img/40px-Sick_Wormhole.png" width="40"/></a>
+</td><td style="text-align: left;"><b><a href="Worm_Hole#Sick_Worm_Hole.html" title="Worm Hole">Sick Worm Hole</a></b>
+</td><td>P
+</td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td>
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Fireflies.html" title="Fireflies"><img alt="Fireflies" data-image-key="Fireflies.png" data-image-name="Fireflies.png" height="32" src="img/32px-Fireflies.png" width="32"/></a>
+</td><td style="text-align: left;"><b><a href="Fireflies.html" title="Fireflies">Fireflies</a></b>
+</td><td>P
+</td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td>Cannot be killed
+</td></tr>
+<tr style="background: #C9FFC9">
+<td><a href="Pig_King.html" title="Pig King"><img alt="Pig King" data-image-key="Pig_King.png" data-image-name="Pig King.png" height="44" src="img/50px-Pig_King.png" width="50"/></a>
+</td><td style="text-align: left;"><b><a href="Pig_King.html" title="Pig King">Pig King</a></b>
+</td><td>P
+</td><td>N/A</td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td><span style="font-weight:bold;">N/A</span></td><td>Cannot be killed
+</td></tr></table>
+<p><b>HP</b> = Health Points, <b>Dmg</b> = Damage dealt per hit, <b>AP</b> = Attack Period, <b>IA</b> = <a href="Sanity#Chronological_Sanity_Table.html" title="Sanity">Insanity aura</a>, <b>WS</b> = Walk Speed, <b>RS</b> = Run Speed
+</p>
+<h3><span class="mw-headline" id="Mob_Interactions">Mob Interactions</span></h3>
+<p>This chart details the outcome of hostility if one mob is to meet another, the left vertical side of the column are the "spotters", and the straight horizontal side are the "spotted". When a Spotter meets a Spotted, the interactions are detailed. Special thanks to Spazmatic on the Don't Starve Forums.
+</p><p><br/>
+</p>
+<figure class="article-thumb tright" style="width: 352px"> <a class="image" href="File:Aggro_Table_V1.png.html"><img alt="Aggro Table V1" class="thumbimage" data-image-key="Aggro_Table_V1.png" data-image-name="Aggro Table V1.png" height="53" src="img/352px-Aggro_Table_V1.png" width="352"/></a> <figcaption> <p class="caption">Mob Table</p> </figcaption> </figure>
+<p><br/>
+Also, an Spreadsheet Table by <a class="external text exitstitial" href="member.php?3309-Spazmatic.html" rel="nofollow">Klei Forum User Spazmatic</a> from <a class="external text exitstitial" href="showthread.php?20704-The-Aggro-Table-or-quot-A-guide-to-what-attacks-what-quot.html" rel="nofollow">this Klei thread</a>, is located at <a class="external text" href="ccc?key=0AktErFcEFQVtdHpjWGE4Mi1IelFPellqc2poZlZQY3c#gid=0.html" rel="nofollow">this Google Docs location</a>.
+</p>
+<div style="clear:both"></div>
+<table cellspacing="1" style="width:100%; border:#90725D 1px solid">
+<tr>
+<td colspan="2" style="background-color:#DEC8A1; text-align:center;"><b><strong class="selflink">Mobs</strong></b><div class="plainlinks" style="float:right; margin-right:8px;"><small><a href="Template:Mobs.html" title="Template:Mobs">view</a></small></div></td>
+</tr>
+<tr>
+<td style="background-color:#E8D9BB;padding-left:10px; padding-right:10px;"><b>Hostile <a href="Monsters.html" title="Monsters">Monsters</a></b></td>
+<td style="padding-left:8px;"><a href="Batilisk.html" title="Batilisk">Batilisk</a> • <a href="Cave_Spider.html" title="Cave Spider">Cave Spider</a> • <a href="Clockwork_Bishop.html" title="Clockwork Bishop">Clockwork Bishop</a> • <a href="Clockwork_Rook.html" title="Clockwork Rook">Clockwork Rook</a> • <a href="Clockwork_Knight.html" title="Clockwork Knight">Clockwork Knight</a> • <a href="Dangling_Depth_Dweller.html" title="Dangling Depth Dweller">Dangling Depth Dweller</a> • <a href="Depths_Worm.html" title="Depths Worm">Depths Worm</a> • <a href="Frog.html" title="Frog">Frog</a> • <a class="mw-redirect" href="Guardian_Pig.html" title="Guardian Pig">Guardian Pig</a> • <a href="Ghost.html" title="Ghost">Ghost</a> • <a href="Shadow_Creature.html" title="Shadow Creature">Shadow Creature</a> • <a href="Hound.html" title="Hound">Hound</a> (<i><a class="mw-redirect" href="Red_Hound.html" title="Red Hound">Red Hound</a> • <a class="mw-redirect" href="Blue_Hound.html" title="Blue Hound">Blue Hound</a></i>) • <a class="mw-redirect" href="Killer_Bee.html" title="Killer Bee">Killer Bee</a> • <a href="Lureplant.html" title="Lureplant">Lureplant</a> • <a href="MacTusk.html" title="MacTusk">MacTusk</a> • <a href="Merm.html" title="Merm">Merm</a> • <a href="Mosquito.html" title="Mosquito">Mosquito</a> • <a href="Spider.html" title="Spider">Spider</a> • <a class="mw-redirect" href="Spider_Warrior.html" title="Spider Warrior">Spider Warrior</a> • <a href="Spitter.html" title="Spitter">Spitter</a> • <a href="Tallbird.html" title="Tallbird">Tallbird</a> • <a href="Tentacle.html" title="Tentacle">Tentacle</a> (<i><a class="mw-redirect" href="Big_Tentacle.html" title="Big Tentacle">Big Tentacle</a></i> • <i><a class="mw-redirect" href="Baby_Tentacle.html" title="Baby Tentacle">Baby Tentacle</a></i>) • <a href="Wee_MacTusk.html" title="Wee MacTusk">Wee MacTusk</a> •  (<i><a class="mw-redirect" href="Birchnut_Treeguard.html" title="Birchnut Treeguard">Birchnut Treeguard</a> • <a href="Varg.html" title="Varg">Varg</a></i> <a href="Reign_of_Giants.html" title="Reign of Giants"><img alt="Reign of Giants icon" data-image-key="Reign_of_Giants_icon.png" data-image-name="Reign of Giants icon.png" height="33" src="img/30px-Reign_of_Giants_icon.png" width="30"/></a>)</td>
+</tr>
+<tr>
+<td style="background-color:#E8D9BB; padding-left:10px; padding-right:10px;"><b>Boss Monsters</b></td>
+<td style="padding-left:8px;"><a href="Ancient_Guardian.html" title="Ancient Guardian">Ancient Guardian</a> • <a href="Deerclops.html" title="Deerclops">Deerclops</a> • <a href="Spider_Queen.html" title="Spider Queen">Spider Queen</a> • <a href="Treeguard.html" title="Treeguard">Treeguard</a> •  (<i><a href="Bearger.html" title="Bearger">Bearger</a> • <a href="Dragonfly.html" title="Dragonfly">Dragonfly</a> • <a class="mw-redirect" href="Goose.html" title="Goose">Goose</a></i> <a href="Reign_of_Giants.html" title="Reign of Giants"><img alt="Reign of Giants icon" data-image-key="Reign_of_Giants_icon.png" data-image-name="Reign of Giants icon.png" height="35" src="img/32px-Reign_of_Giants_icon.png" width="32"/></a>)</td>
+</tr>
+<tr>
+<td style="background-color:#E8D9BB; padding-left:10px; padding-right:10px;"><b>Neutral <a href="Animals.html" title="Animals">Animals</a></b></td>
+<td style="padding-left:8px;"><a href="Bee.html" title="Bee">Bee</a> • <a href="Beefalo.html" title="Beefalo">Beefalo</a> • <a href="Bunnyman.html" title="Bunnyman">Bunnyman</a> (<i><a class="mw-redirect" href="Beardlord.html" title="Beardlord">Beardlord</a></i>) • <a href="Koalefant.html" title="Koalefant">Koalefant</a> • <a href="Krampus.html" title="Krampus">Krampus</a> • <a href="Pengull.html" title="Pengull">Pengull</a> • <a href="Pig.html" title="Pig">Pig</a> (<i><a class="mw-redirect" href="Werepig.html" title="Werepig">Werepig</a></i>) • <a href="Rock_Lobster.html" title="Rock Lobster">Rock Lobster</a> • <a class="mw-redirect" href="Snurtle.html" title="Snurtle">Snurtle</a> • <a href="Slurtle.html" title="Slurtle">Slurtle</a> • <a class="mw-redirect" href="Smallish_Tallbird.html" title="Smallish Tallbird">Smallish Tallbird</a> • <a href="Splumonkey.html" title="Splumonkey">Splumonkey</a> • (<i><a href="Buzzard.html" title="Buzzard">Buzzard</a> • <a href="Catcoon.html" title="Catcoon">Catcoon</a> • <a href="Volt_Goat.html" title="Volt Goat">Volt Goat</a></i> <a href="Reign_of_Giants.html" title="Reign of Giants"><img alt="Reign of Giants icon" data-image-key="Reign_of_Giants_icon.png" data-image-name="Reign of Giants icon.png" height="33" src="img/30px-Reign_of_Giants_icon.png" width="30"/></a>)</td>
+</tr>
+<tr>
+<td style="background-color:#E8D9BB; padding-left:10px; padding-right:10px;"><b>Passive <a href="Animals.html" title="Animals">Animals</a></b></td>
+<td style="padding-left:8px;"><a class="mw-redirect" href="Baby_Beefalo.html" title="Baby Beefalo">Baby Beefalo</a> • <a href="Butterfly.html" title="Butterfly">Butterfly</a> • <a href="Chester.html" title="Chester">Chester</a> • <a class="mw-redirect" href="Crow.html" title="Crow">Crow</a> • <a href="Gobbler.html" title="Gobbler">Gobbler</a> • <a href="Mandrake.html" title="Mandrake">Mandrake</a> • <a href="Rabbit.html" title="Rabbit">Rabbit</a> (<i><a class="mw-redirect" href="Beardling.html" title="Beardling">Beardling</a></i>) • <a class="mw-redirect" href="Redbird.html" title="Redbird">Redbird</a> • <a class="mw-redirect" href="Smallbird.html" title="Smallbird">Smallbird</a> • <a class="mw-redirect" href="Snowbird.html" title="Snowbird">Snowbird</a> • (<i><a href="Glommer.html" title="Glommer">Glommer</a> • <a href="Moleworm.html" title="Moleworm">Moleworm</a></i> <a href="Reign_of_Giants.html" title="Reign of Giants"><img alt="Reign of Giants icon" data-image-key="Reign_of_Giants_icon.png" data-image-name="Reign of Giants icon.png" height="33" src="img/30px-Reign_of_Giants_icon.png" width="30"/></a>)</td>
+</tr>
+<tr>
+<td style="background-color:#E8D9BB; padding-left:10px; padding-right:10px;"><b>Other</b></td>
+<td style="padding-left:8px;"><a href="Abigail.html" title="Abigail">Abigail</a> • <a href="Charlie_(Night_Monster).html" title="Charlie (Night Monster)">Charlie</a> • <a href="Maxwell_(NPC).html" title="Maxwell (NPC)">Maxwell</a> • <a href="Pig_King.html" title="Pig King">Pig King</a></td>
+</tr>
+</table>
+<!-- 
+NewPP limit report
+Preprocessor node count: 311/300000
+Post‐expand include size: 9548/2097152 bytes
+Template argument size: 4419/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<!-- Saved in parser cache with key dontstarvegame:pcache:idhash:5540-0!*!0!!*!2!* -->
+<noscript><link href="http://slot1.images.wikia.nocookie.net/__cb1402702339/common/extensions/wikia/ImageLazyLoad/css/ImageLazyLoadNoScript.css" rel="stylesheet"/></noscript><noscript><link href="http://slot1.images.wikia.nocookie.net/__cb1402702339/common/extensions/wikia/TOCimprovements/TOCNoScript.css" rel="stylesheet"/></noscript></div>

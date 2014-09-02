@@ -1,0 +1,1699 @@
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><p>Since late 2012 when <i><a class="mw-redirect" href="Don%27t_Starve.html" title="Don't Starve">Don't Starve</a></i> became available to the public, there have been periodical updates, which introduce new content, fix glitches, or balance the game. The final major update before the game's official release on the PlayStation 4 was in October 2013, after which all updates focus on bugfixes and performance. The player must download the latest patch before playing the game.
+</p><p>This page lists updates to the basic game. For the version history of the <i>Reign of Giants</i> DLC please go <a href="Reign_of_Giants#Version_History.html" title="Reign of Giants">here</a>.
+</p><p><br/>
+</p>
+<nav class="toc" id="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">[<a class="internal" data-hide="hide" data-show="show" href="#.html" id="togglelink">show</a>]</span></div><ol></ol></nav>
+<h2><span class="mw-headline" id="November_19.2C_2013_-_Bugfix"> <b>November 19, 2013 - Bugfix</b> </span></h2>
+<p>Gameplay fixes
+Build 89932:
+</p>
+<ul><li>Integrated better driver and resolution messages.
+</li><li>- default bindings for 360 wired controller on OSX
+</li><li>- wired 360 controller is detected by available buttons/sticks on OSX
+</li><li>allow multiple containers to open when you are using the mouse and keyboard
+</li><li>fix for KEDS-179 - don't allow controller deployment from within a container
+</li><li>- [Bug #1292] cave and follower information is cleared when saving with CompleteLevel
+</li><li>fix for interrupted actions when hit
+</li><li>fix for entities not falling asleep when teleported
+</li><li>fix for stale component reference in projectile
+</li><li>you can properly deploy or murder captured butterflies
+</li><li>New pot file.
+</li><li>- Fix PS4 triggers always held under OSX
+</li><li>Add help text for load widget
+</li><li>fix for WX78 dying on load if he's upgraded a lot and has a lot of effigies
+</li><li>Fix for putting putting partial stacks in a container.
+</li><li>Add help text for buttons ("select") and popup dialog ("back") functionality.
+</li><li>cave entrances shouldn't show up in adventure mode
+</li><li>Fix for flickering walls and such.
+</li><li>- [Bug #1295] on screen controls don't store controller id between updates to ensure that they are always displaying the correct control tips
+</li><li>put an upper limit on the number of birds Wickerbottom can spawn at once to avoid out of memory birdameggedon
+</li><li>hide the crafting menu when using the pause inventory
+</li><li>- [Bug #1292] world clock is only advanced to the player's age when entering or leaving caves, not after travelling with the teleportato
+</li><li>- additionally the player's age is reset to 0 when entering a world with an age of 0 when not ascending/descending, otherwise the next ascend/descend will advance the world to the previous age value
+</li><li>put a cap on map zoom-out
+</li><li>fix customization screen override loading
+</li><li>Fix for minimap not clearing properly.
+</li></ul>
+<h2><span class="mw-headline" id="November_14.2C_2013_-_Bugfix_.2F_Performance_update"> <span id="Nov_14_Bugfix"><b>November 14, 2013 - Bugfix / Performance update</b></span> </span></h2>
+<p>Gameplay fixes
+</p>
+<ul><li>Add naughtiness to smallish tallbird
+</li><li>shadow maxwells scare rabbits
+</li><li>wilson is invincible while sleeping
+</li><li>fix recipe prototyping to work with new tech level splits
+</li><li>fix for Winter is generated in spite of the 'Season' preset setting being set to 'Only Summer'. in the 'World Menu'
+</li><li>fix for Wolfgang saying how mighty he is and totally ruining everything in the intro NIS
+</li><li>Make telelocator check for water when teleporting randomly
+</li><li>prevent infinite loot fountain from beaver-gnawed spiky tree
+</li><li>Stumps can now be lit on fire after loading.
+</li><li>Stumps now propagate fire.
+</li><li>fix for placing structures after eating a glow fruit
+</li><li>fix maxwell mine visibility
+</li><li>heatrocks work in backpacks
+</li><li>instead of clearing followers from saveindex on load which can result in them being lost, clear followers on any save that is not an ascend/descend
+</li><li>fix crash when lureplants eat bees
+</li><li>Now reset the colour cube on load to deal with loading and saving between insane and non insane games.
+</li><li>made evergreens and cave entrances non-clickable when they are first worked to stop you from interacting with them by accident
+</li><li>Planted pine cone has different name from unplanted
+</li><li>Abigail is now tagged as a "character", additionally the tentacle will retaliate against anything in range that is attacking it
+</li><li>lantern swap bug fix
+</li><li>lantern can't be turned on in pocket
+</li><li>killing a baby beefalo is very naughty
+</li><li>Made a "SelfStacker" component and added it to the houndstooth, monster meat and spoiledfood to improve base clenliness and performance in very long games
+</li><li>Rubble no longer crashes
+</li><li>Armour will always return 0 damage if the absorb percent is &gt;= 1.
+</li><li>There is now only one "Sinkhole" room per task. This will remove the case of regularly seeing two cave entrances near each other.
+</li><li>Made "characterspecific.lua" a component for items that are only supposed to be on one character. Added it to all character specific items.
+</li><li>fix bug where nightmare stuff was getting turned on in second overworlds
+</li><li>fix for occasional cave gen fail
+</li><li>Fix for wes talking
+</li><li>Walrus blow dart is no longer targetable/inspectable during flight
+</li><li>Fix for two bugs: Leif not exiting frozen once hit and minotaur being stunlockable.
+</li><li>Made beefalo poop in the old way, and fixed a problem with their babies never showing up
+</li><li>Catcher now makes sure the projectile it's tracking is valid before attempting to preform functions with it.
+</li><li>Combat function now ensures that the entity it's on is still around before calling GetDistSqToInst.
+</li><li>Ham bat no longer loses durability from being used, but does spoil over time
+</li><li>Ham bat and flower hat both display spoilage graphics instead of text percentages in order to reflect that they are spoiling over time
+</li><li>fixed occasional invisible maxwell intro bug
+</li><li>properly report farm plot fertilization success
+</li><li>make the build placers opaque so that they show up better
+</li><li>make burnt trees more visible when they are highlighted
+</li><li>Deerclops will knock down anything he collides with that is tagged "tree", allowing him to pass through.
+</li><li>Divining rod will not disappear when attacking.
+</li><li>made hambat non-edible to avoid interface confusion. Gave it higher damage to compensate.
+</li><li>flower hat is not edible to reduce interface confusion
+</li><li>make dusk announcement more generic, so that it doesn't mention fire.
+</li><li>Inventory items that also have brains will now hibernate while they are held by an owner.
+</li><li>Bees no should no longer buzz while in a container.
+</li><li>Fix for mandrake crash when travelling between cave levels.
+</li><li>Use consistent language for the settings screen in FE and pause menu
+</li><li>Fix for inventory items getting into a bad state when you try to put them into an already-full chester
+</li><li>Birds can no longer be killed while flying away.
+</li><li>Shadow Creatures will not trigger tooth traps.
+</li><li>Fix woodie, chester contents, and beard issues when time catches up when leaving / entering caves
+</li><li>Fix for dropping equippable tools under full-container conditions
+</li><li>Maxwell's Shadows will now die when he does.
+</li><li>Fix bee spawn schedule
+</li></ul>
+<p>Controller stuff
+</p>
+<ul><li>Added a controller debug menu
+</li><li>Improved attack/interaction picker
+</li><li>Added vibration (it can be toggled off)
+</li><li>added controller hints to the front end screens and made them more consoleish when a controller is attached
+</li><li>When using dpad to use un-equipped item on the scene, it will now be equipped if required
+</li><li>Fix for item-on-item interactions with controller
+</li><li>Fix "for science!" button controller focus when you beat the game
+</li><li>Inventory hint stays up longer
+</li><li>Added trigger tooltips to inventory and crafting bars
+</li><li>Controller tips for inventory and container items are at more sensible offsets
+</li><li>add louder controller focus change sound
+</li><li>added repeat rate for controller page/value changes
+</li><li>hooked up sounds to page flips
+</li><li>don't play scrolling sounds after the ends of the crafting menu
+</li><li>When using a controller pressing the "INVENTORY_USEONSELF" bind will now first toggle deployable mode on (if applicable) a 2nd press will execute any action related to the bind if deployable mode was triggered.
+</li><li>Keep the crafting menu open as you open and close the map
+</li><li>make controller scrolling move a page at a time in the character select screen
+</li><li>changed the sense of the rotation buttons to be more logical
+</li><li>controller focus movement in FE has repeat when held
+</li><li>Use the correct string (based on type, not index) to name the controller you're configuring on the controls screen
+</li><li>Added default PS3 controller bindings on OSX
+</li><li>Added various missing control bindings across platforms
+</li><li>Split ui focus controls from movement
+</li><li>Split prev/next controls from prev/next page, bound to spinner
+</li><li>Controls screen listens for pgup/pgdown, scrolls by half-screens so you can see some paired controls better
+</li><li>Deprecated "custom control" values which are unused inhouse, hopefully unused in mods
+</li><li>Increment control mapping version, invalidating users' current mapping settings (sorry!)
+</li><li>When hovering a stackable item over a stack of the same type the hint now says "Put" instead of "Swap" to match the behaviour
+</li></ul>
+<p>Performance
+</p>
+<ul><li>Re-enabled mipmapping on pc - the game should look much cleaner at low resolutions now
+</li><li>Set up better timer code for osx and linux
+</li><li>Lots of GPU / shader optimizations - the game should run better on older cards
+</li><li>made killer bee brains cheaper
+</li><li>made controller button popup checker cheaper
+</li><li>Fire fighting ) - Perf improvement with burning trees (lights in general). Light buffer is now quarter res (actually it's fixed res)
+</li><li>Lua spike prevention - no deferred userdata cleanup, timeslicing "built-in"
+</li></ul>
+<p>UI fixes 
+</p>
+<ul><li>disable crafting/inventory opening when you are a beaver
+</li><li>adjust recipe description text over slightly
+</li><li>properly pause game when prompting the player to confirm activation of adventure portal so that controller input isn't picked up by the game
+</li><li>The audio settings are automatically changed when starting a new game on a fresh install
+</li><li>fix scrolling issue with crafting UI
+</li><li>Fix mousewheel zoom on map screen
+</li><li>clock is now more legible
+</li><li>Don't stop FE music when a character is selected
+</li><li>Updated fonts in inventory bar for legibility
+</li><li>Spoilable inventory items now also have a highlight outline behind their icon/text
+</li><li>fix text cut-off in crafting menu
+</li><li>replaced big arrow button anims with image buttons
+</li><li>hide hud and squelch interaction when going through wormhole
+</li><li>map screen panning is smooth instead of chunky
+</li><li>Remove non-functional open/close prompt for equipped containers when using controller
+</li><li>arrow added to hud for backpack
+</li><li>inventory bg is one solid image
+</li><li>move chester open menu up to the top of the screen
+</li><li>opening chester will close chests and vice-versa (so they don't overlap)
+</li><li>Display deaths recorded as "unknown" as "shenanigans" instead
+</li></ul>
+<p>Misc
+</p>
+<ul><li>Did full string pass - there should be no more missing strings
+</li><li>Player character Art is high-res for nicer closeups
+</li></ul>
+<h2><span class="mw-headline" id="October_22.2C_2013_-_All.27s_Well_that_Maxwell"> <span id="All.27s_Well_That_Maxwell"><b>October 22, 2013 - All's Well that Maxwell</b></span> </span></h2>
+<figure class="article-thumb tright" style="width: 180px"> <a class="image" href="File:Post-209228-0-69011200-1382472428.jpg.html"><img alt="Post-209228-0-69011200-1382472428" class="thumbimage" data-image-key="Post-209228-0-69011200-1382472428.jpg" data-image-name="Post-209228-0-69011200-1382472428.jpg" height="333" src="img/180px-Post-209228-0-69011200-1382472428.jpg" width="180"/></a> <figcaption> </figcaption> </figure>
+<p><br/>
+Characters:
+</p>
+<ul><li><a href="Maxwell_(Character).html" title="Maxwell (Character)">Maxwell</a> has his player power.
+</li></ul>
+<p>Creatures:
+</p>
+<ul><li><a href="Mosquito.html" title="Mosquito">Mosquito</a> drops loot.
+</li></ul>
+<p>Items:
+</p>
+<ul><li>The "<a href="Totally_Normal_Tree.html" title="Totally Normal Tree">Totally Normal Tree</a>" now spawns in the world.
+</li></ul>
+<p>Screens:
+</p>
+<ul><li>A "Top Mods" section has been added to the mods screen.
+</li></ul>
+<p>Tweaks/ Changes:
+</p><p>Creatures:
+</p>
+<ul><li><a href="Depths_Worm.html" title="Depths Worm">Depths Worm</a> attacks now ramp up over an increased time period.
+</li></ul>
+<ul><li><a href="Spitter.html" title="Spitter">Spitter Spiders</a> had their range and projectile speed decreased.
+</li></ul>
+<p><br/>
+Items:
+</p>
+<ul><li>The <a href="Miner_Hat.html" title="Miner Hat">Miner Hat</a> can now be refueled.
+</li></ul>
+<ul><li><a href="Wickerbottom.html" title="Wickerbottom">Wickerbottom's</a> books have descriptions.
+</li></ul>
+<ul><li><a class="mw-redirect" href="Tooth_Traps.html" title="Tooth Traps">Tooth Traps</a> and <a class="mw-redirect" href="Bee_Mines.html" title="Bee Mines">Bee Mines</a> are now "deployable" objects. They can no longer be packed too closely by dropping them.
+</li></ul>
+<p><br/>
+General:
+</p>
+<ul><li>Rearranged some of the front end.
+</li></ul>
+<ul><li>Added FX to mining animation.
+</li></ul>
+<ul><li>Added FX to book reading animation.
+</li></ul>
+<ul><li>Improved feedback when taking damage over time.
+</li></ul>
+<ul><li>Added some additional music to the <a href="Ruins.html" title="Ruins">Ruins</a>.
+</li></ul>
+<ul><li>Made some improvements to the text widget.
+</li></ul>
+<ul><li>Improved console screen focus.
+</li></ul>
+<ul><li>Improved controller controls and prompts for <a class="mw-redirect" href="Teleportato.html" title="Teleportato">Teleportato</a>.
+</li></ul>
+<ul><li>Added additional art to the credits screen.
+</li></ul>
+<p><br/>
+Controls:
+</p>
+<ul><li>Action button will now harvest <a class="mw-redirect" href="Farms.html" title="Farms">Farms</a>, <a href="Crock_Pot.html" title="Crock Pot">Crockpots</a> and <a class="mw-redirect" href="Drying_Racks.html" title="Drying Racks">Drying Racks</a>.
+</li></ul>
+<p><br/>
+Bug Fixes:
+</p><p><br/>
+Creatures:
+</p>
+<ul><li>Befriending music will now play for <a class="mw-redirect" href="Bunnymen.html" title="Bunnymen">Bunnymen</a> and <a class="mw-redirect" href="Chess_Monsters.html" title="Chess Monsters">Chess Monsters</a>.
+</li></ul>
+<ul><li><a href="Batilisk.html" title="Batilisk">Batilisks</a> have been given a strong stomach.
+</li></ul>
+<ul><li>The <a href="Ancient_Guardian.html" title="Ancient Guardian">Ancient Guardian</a> will drop his <a href="Guardian%27s_Horn.html" title="Guardian's Horn">horn</a> again.
+</li></ul>
+<ul><li><a class="mw-redirect" href="Shadow_Creatures.html" title="Shadow Creatures">Shadow Hands</a> will appear again.
+</li></ul>
+<ul><li>The <a href="Pig_King.html" title="Pig King">Pig King</a> will no longer throw <a class="mw-redirect" href="Gold.html" title="Gold">Gold</a> on top of himself and surrounding <a class="mw-redirect" href="Obelisks.html" title="Obelisks">Obelisks</a>.
+</li></ul>
+<ul><li><a href="Chester.html" title="Chester">Chester</a> no longer uses the old death effect.
+</li><li><a class="mw-redirect" href="Pigs.html" title="Pigs">Pigs</a> will not panic if given any light source.
+</li></ul>
+<ul><li>Fixed a bug that was preventing pathfinding from working with <a class="mw-redirect" href="Walls.html" title="Walls">Walls</a>.
+</li></ul>
+<ul><li>Shadow entities no longer appear as chunky messes in the Mac and Linux versions.
+</li></ul>
+<ul><li><a class="mw-redirect" href="Chess_Monsters.html" title="Chess Monsters">Chess Monsters</a> will now retaliate when being attacked by other chess monsters that are following the player.
+</li></ul>
+<ul><li><a class="mw-redirect" href="Ice_Hounds.html" title="Ice Hounds">MacTusk's Ice Hounds</a> will no longer respawn instantly under the right conditions.
+</li></ul>
+<ul><li>You can no longer click-spam <a class="mw-redirect" href="Pigs.html" title="Pigs">Pigs</a> to force feed them and gain extra <a href="Manure.html" title="Manure">Manure</a>.
+</li></ul>
+<ul><li>Fix for bee/mosquito sounds so they don't accumulate at the world origin.
+</li></ul>
+<p><br/>
+Items:
+</p>
+<ul><li>The <a class="mw-redirect" href="Lazy_Forager%E2%80%99s_Amulet.html" title="Lazy Forager’s Amulet">Lazy Forager’s Amulet</a> will now also pick up any animals that are caught in a <a href="Trap.html" title="Trap">Trap</a> when the trap is collected.
+</li></ul>
+<ul><li><a href="Pumpkin_Lantern.html" title="Pumpkin Lantern">Pumpkin Lantern</a> no longer bounce when placed.
+</li></ul>
+<ul><li>Snurtle Shell Armour will provide protection again.
+</li></ul>
+<ul><li>Picking a <a href="Mushrooms.html" title="Mushrooms">Mushroom</a> as day phase changes will no longer cause the mushroom to regrow immediately.
+</li></ul>
+<ul><li>Breaking down a <a href="Crock_Pot.html" title="Crock Pot">Crock Pot</a> with a completed food item will cause the item to drop in the rubble.
+</li></ul>
+<ul><li><a href="Tent.html" title="Tent">Tents</a> and <a class="mw-redirect" href="Straw_Roll.html" title="Straw Roll">Sleeping Rolls</a> now properly restore body heat.
+</li></ul>
+<ul><li>The <a href="Glow_Berry.html" title="Glow Berry">Glow Berry</a> is now tradeable.
+</li></ul>
+<ul><li>Tree Stumps can now be burnt.
+</li></ul>
+<ul><li>Creatures can no longer walk through walls that have been destroyed and rebuilt.
+</li></ul>
+<ul><li>Fixed some issues with save/load states on Light Plants.
+</li></ul>
+<ul><li><a class="mw-redirect" href="Heat_Stone.html" title="Heat Stone">Heat Stones</a> now emit light if they are heated up outside your inventory.
+</li></ul>
+<ul><li>Items do not rot on death in caves.
+</li></ul>
+<ul><li>Walls no longer sleep - this should help with some caged animals escaping their pens.
+</li></ul>
+<ul><li>Fixed some issues with the Forager Amulet duplicating traps.
+</li></ul>
+<ul><li><a href="Boomerang.html" title="Boomerang">Boomerangs</a> now works against the <a class="mw-redirect" href="Tentapillar.html" title="Tentapillar">Tentapillar</a>.
+</li></ul>
+<p><br/>
+General:
+</p>
+<ul><li>Light effects on <a href="Nightmare_Light.html" title="Nightmare Light">Nightmare Lights</a> can now be clicked through.
+</li></ul>
+<ul><li>Rearranged some items in setpieces to allow for proper pathfinding.
+</li></ul>
+<ul><li>Players will now react to being hit by bees and mosquitoes.
+</li></ul>
+<ul><li>Music will play during credits on the standalone version.
+</li></ul>
+<ul><li>Fixed some issues with resurrecting.
+</li></ul>
+<ul><li>Water is no longer culled while still on screen.
+</li></ul>
+<ul><li>Fixed some issues with the player appearing at the wrong location when changing cave levels.
+</li></ul>
+<ul><li>Actions are now canceled when you change your tool mid-action.
+</li></ul>
+<ul><li>Maxwell's Shadow no longer lingers in the world during the intro.
+</li></ul>
+<ul><li>Shadows now rotate correctly.
+</li></ul>
+<ul><li>Cleaned up some TaskInTime calls to prevent memory growth.
+</li></ul>
+<ul><li>Made Cave Gen a bit more consistent in an effort to remove MaxWorldGen crashes.
+</li></ul>
+<ul><li>The book reading FX is now canceled if the action is.
+</li></ul>
+<ul><li>The HUD will now hide during the tent's fade out.
+</li></ul>
+<ul><li>Shift clicking now works properly between backpacks and player inventory.
+</li></ul>
+<ul><li>Removed double-click sound when clicking build recipe.
+</li></ul>
+<ul><li>Fixed beesplosion when trying to stuff bees into a full container.
+</li></ul>
+<ul><li>The confirmation window will now close if you press "no" when entering Maxwell's door.
+</li></ul>
+<ul><li>Fixed a crash that happened during the loading of some adventure levels.
+</li></ul>
+<ul><li>Adventure World (two worlds) will no longer crash on generation.
+</li></ul>
+<ul><li>Fixed a bug where you could get stuck in a state by pressing the map button while trying to sleep.
+</li></ul>
+<p><br/>
+Controls:
+</p>
+<ul><li>You can now add placeable items to a fire while using a controller.
+</li></ul>
+<ul><li>You can now press and hold to hammer.
+</li></ul>
+<ul><li>You can now navigate the controls screen with a controller.
+</li></ul>
+<ul><li>Fix for issues with using keyboard controlled crafting and mouse walking.
+</li></ul>
+<ul><li>Fixed items disappearing if you tap pickup very quickly.
+</li></ul>
+<ul><li>"Useable" items like the Telelocator Staff and Bush Hat can now be used when playing with a controller.
+</li></ul>
+<p><br/>
+Characters:
+</p>
+<ul><li><a href="Lucy_the_Axe.html" title="Lucy the Axe">Lucy the Axe</a> will no longer continue to talk after finishing adventure mode with <a href="Woodie.html" title="Woodie">Woodie</a>.
+</li></ul>
+<ul><li>Fixed some layering issues on the final level of adventure mode.
+</li></ul>
+<ul><li>Camera doesn't shake when doing work as Woodie.
+</li></ul>
+<ul><li>Woodie the Werebeaver now uses separate attack and action buttons.
+</li></ul>
+<ul><li>Player character will not emit frost breath when facing upwards.
+</li></ul>
+<ul><li>Tuned locomotor to prevent jittering at higher player speeds.
+</li></ul>
+<p><br/>
+</p><p><br/>
+Modding:
+</p><p><br/>
+</p>
+<ul><li>An official mod titled "The Screecher" has been added.
+</li></ul>
+<p><br/>
+</p><p>Mod System:
+</p>
+<ul><li>Mods which overwrite core game assets have usually crashed the game unless the game is restarted once. Now a mod can specify this to force the game to restart when the mod is loaded.
+</li></ul>
+<ul><li>Mods can now specify an arbitrary save slot instead of using slots 1-4. This is useful for 'game mode' mods which don't sit nicely on top of an existing Don't Starve save.
+</li></ul>
+<p><br/>
+Assets:
+</p>
+<ul><li>Road textures can now be overwritten by a mod.
+</li></ul>
+<p><br/>
+World Gen:
+</p>
+<ul><li>Can now specify the range of background nodes to generate for each node in the level definition.
+</li></ul>
+<ul><li>Tasks with blockers can now specify what their "blank" nodes are in case you don't want it to be ocean.
+</li></ul>
+<ul><li>Tasks have a little more control over internal connectedness by specifying a custom crosslink factor for rooms, and whether or not the rooms are generated in a loop.
+</li></ul>
+<p><br/>
+Development:
+</p>
+<ul><li>AddGameDebugKey and AddGlobalDebugKey are now global functions, so mods can utilise them for testing.
+</li></ul>
+<ul><li>Better logging when animations and builds are missing.
+</li></ul>
+<ul><li>Sublime Text, a great script editor, is now packaged with the mod tools in Steam! Use this when working with Lua files for syntax highlighting, multi-file search, and other handy editing tricks.
+</li></ul>
+<h2><span class="mw-headline" id="October_1.2C_2013_-_Six_Feet_Under"> <span id="Six_Feet_Under"><b>October 1, 2013 - Six Feet Under</b></span> </span></h2>
+<div class="floatright"><a class="image" href="File:Ds_updatePoster_small.png.html"><img alt="Ds updatePoster small" data-image-key="Ds_updatePoster_small.png" data-image-name="Ds updatePoster small.png" height="371" src="img/Ds_updatePoster_small.png" width="200"/></a></div>
+<p><br/>
+</p><p>Modding
+</p>
+<ul><li>Required setpieces and prefabs are now specified in level files instead of being hardcoded in world gen. This means you no longer have to have teleportatos in your custom levels. Check out "ordered_story_setpieces" and "required_prefabs" in scripts/maps/levels/survival.lua to see how we are using this for our own maps.
+</li><li>Mod uploader now works on all platforms.
+</li><li>A bunch of new modding tutorials have been made. Check them out <a class="external text" href=".html" rel="nofollow">here.</a>
+</li></ul>
+<p>General
+</p>
+<ul><li>You can now dig up turf that is underneath a road.
+</li><li>Pigs, characters and bunnymen's text are bigger
+</li></ul>
+<p>Creatures
+</p>
+<ul><li>Added a worm enemy to the caves.
+</li><li>The Ancient Guardian has a new short range melee attack that it will use when its target is close.
+</li><li>Rooks can no longer instantly kill any monster in the game during a charge.
+</li><li>Followers will have an easier time keeping up with their leader.
+</li><li>Fire hounds are now freezable, but with a higher resistance than normal.
+</li><li>Ice hounds are now burnable.
+</li><li>Gobblers will now drop two drumsticks on death.
+</li></ul>
+<p>World
+</p>
+<ul><li><b><u>DEATH IN THE CAVES NOW WORKS AS IT DOES IN THE OVER WORLD. IF YOU DIE YOUR SAVE FILE WILL BE DELETED.</u></b>
+</li><li>You can no longer regenerate caves.
+</li><li>Followers will follow you between cave levels.
+</li><li>Time is synced across cave levels.
+</li><li>Resurrection mechanics work between cave levels.
+</li><li>Cave world generation changes:
+<ul><li>Improved cave generation. Areas should feel more unique.
+</li><li>Added a couple new biomes:
+<ul><li>Red and Green fungus forests
+</li><li>Sunken Swamps
+</li></ul>
+</li></ul>
+</li><li>The nightmare has further influenced the caves. Fissures can be found throughout.
+</li><li>Spilagmites work like rocks and can be totally destroyed.
+</li><li>Added new art for the entrance to the ruins.
+</li></ul>
+<p>Items
+</p>
+<ul><li>The worm drops a magical food item.
+</li><li>The Thulecite Crown has a new magical effect.
+</li><li>Fire darts can now target non-burnable creatures, but will not do damage. You can use them to thaw frozen creatures.
+</li></ul>
+<p>Controls
+</p>
+<ul><li>Controller support added! A few screens and objects still need to be implemented, but the game is mostly playable with a controller. Expect to see improvements in controller functionality within the next update.
+</li><li>Controls can now be modified from the Pause menu, rather than needing to quit to the main menu.
+</li></ul>
+<p>Bug Fixes
+</p>
+<ul><li>Wilson no longer says "It's getting late, I should make a fire" while in the caves.
+</li><li>Wilson will no longer say "It's too bright out." when attempting to use a sleeping item in the caves during the day time.
+</li><li>Sanity loss no longer changes based on time of day in the caves.
+</li><li>MacTusk can now pathfind back to his camp if he's led very far away from it.
+</li><li>Improved graphical effects on MacTusks projectile.
+</li><li>Beefalo will now wake up when they're on fire.
+</li><li>You can no longer trade with sleeping pigs.
+</li><li>Removed small holes in cave worlds that were previously pillars.
+</li><li>Player now reacts to bee and mosquito attacks.
+</li><li>Cancelling a placement while wielding an item with a right click action will no longer trigger that action.
+</li></ul>
+<h2><span class="mw-headline" id="September_10.2C_2013_-_A_Moderately_Friendly_Update"> <span id="A_Moderately_Friendly_Update"><b>September 10, 2013 - A Moderately Friendly Update</b> </span> </span></h2>
+<div class="floatright"><a class="image" href="File:A_Moderately_Friendly_Update.jpg.html"><img alt="A Moderately Friendly Update" data-image-key="A_Moderately_Friendly_Update.jpg" data-image-name="A Moderately Friendly Update.jpg" height="552" src="img/298px-A_Moderately_Friendly_Update.jpg" width="298"/></a></div>
+<ul><li>New asset pipeline tools in alpha release!
+</li></ul>
+<ul><li>Animation importer for Spriter. Spriter is included with the Don’t Starve Mod Tools and the projects will be processed and imported into the game.
+</li><li>Automatic atlas generator for .png images. No more fiddling around, now a .tex and .xml file will be created for each .png in your mod.
+</li><li>Custom audio banks and events. Using FMOD designer you can create your own sound banks and run them in the game.
+</li></ul>
+<p>In addition:
+</p>
+<ul><li>Re-laid out the mods screen in anticipation of controller support.
+</li></ul>
+<p>Creatures
+</p>
+<ul><li>New <a class="mw-redirect" href="Damaged_Knight.html" title="Damaged Knight">Damaged Knight</a>
+</li><li>New Nightmare <a href="Splumonkey.html" title="Splumonkey">Monkey</a>
+</li><li><a href="Slurper.html" title="Slurper">Slurpers</a> are now more aggressive.
+</li><li>You can repair chess junk piles with <a href="Gears.html" title="Gears">gears</a> to spawn a friendly chess mob.
+</li><li>Speed up the descent of the <a class="mw-redirect" href="Depth_Dweller.html" title="Depth Dweller">depth dwelling spiders</a>.
+</li><li><a href="Splumonkey.html" title="Splumonkey">Splumonkeys</a> no longer use the “follower” component while they harass you. This should make fighting back easier.
+</li></ul>
+<p>World
+</p>
+<ul><li>Added a day/night cycle to the <a href="Caves.html" title="Caves">caves</a> (this is not synced with the upper world)
+</li><li>Added a new pillar type into level 1 caves.
+</li></ul>
+<p>Items
+Craftable
+</p>
+<ul><li><a href="Houndius_Shootius.html" title="Houndius Shootius">Houndius Shootius</a> - Protection from nasties.
+</li><li><a href="Potted_Fern.html" title="Potted Fern">Potted Fern</a> - Make that base look good.
+</li><li><a href="Deconstruction_Staff.html" title="Deconstruction Staff">Deconstruction Staff</a> - Save precious materials.
+</li><li><a class="mw-redirect" href="Thulecite_Walls.html" title="Thulecite Walls">Thulecite Walls</a> - A wall made of thulecite!
+</li><li><a href="Thulecite_Crown.html" title="Thulecite Crown">Thulecite Crown</a> - A helmet of Thulecite!
+</li></ul>
+<p>Discoverable
+</p>
+<ul><li>Items in the ruins will now sometimes drop “<a href="Thulecite_Fragments.html" title="Thulecite Fragments">Thulecite Fragments</a>” which can be refined into thulecite.
+</li><li>The <a href="Ancient_Guardian.html" title="Ancient Guardian">ancient guardian</a> will now drop a <a href="Guardian%27s_Horn.html" title="Guardian's Horn">horn</a> when killed.
+</li><li>Fishing in the wilds ponds will now produce an <a href="Eel.html" title="Eel">eel</a> .
+</li><li>Changed the art for the <a href="Barrel.html" title="Barrel">splumonkey spawner</a>.
+</li><li>Increased the number of uses the <a href="Axe.html" title="Pick/Axe">Pick/Axe</a> has.
+</li></ul>
+<p>Bug Fixes:
+</p>
+<ul><li>You can no longer fix walls with healing items.
+</li><li>Ice hounds will no longer spawn in great numbers from walrus camps.
+</li><li>Woodie will no longer slide around the world when in werebeaver mode.
+</li><li>The Magiluminescence amulet no longer gives off light while on the ground.
+</li><li>Fixed crash when enemies destroy structures.
+</li></ul>
+<h3><span class="mw-headline" id="September_12th_-_Hotfix"><u>September 12th - Hotfix</u></span></h3>
+<p>Rev. 85089
+</p><p>Fixes:
+</p>
+<pre> Crash when taking the teleportato to the next survival world
+ Crash when attacking a shadow creature
+ Crash when continuing a save slot that is between worlds
+ Map screen pan sensitivity
+</pre>
+<h2><span class="mw-headline" id="August_20.2C_2013_-_The_Stuff_of_Nightmares"> <span id="The_Stuff_of_Nightmares"> <b>August 20, 2013 - The Stuff of Nightmares</b> </span></span></h2>
+<p><b>World Generation:</b>
+</p>
+<ul><li>New Level: The <a href="Ruins.html" title="Ruins">Ruins</a>!
+<ul><li>The abandoned ruins of a once great civilization are now in the second level of the <a href="Caves.html" title="Caves">Caves</a>.<div class="floatright"><a class="image" href="File:The_Stuff_Of_Nightmares.jpg.html"><img alt="The Stuff Of Nightmares" data-image-key="The_Stuff_Of_Nightmares.jpg" data-image-name="The Stuff Of Nightmares.jpg" height="559" src="img/302px-The_Stuff_Of_Nightmares.jpg" width="302"/></a></div>
+</li><li>Discover the cause of their demise while you explore five new areas within the ruins.
+</li></ul>
+</li></ul>
+<p><b>New Creatures:</b>
+</p>
+<ul><li>You will come across ancient clockwork monsters in the ruins.
+</li><li>The terrifying <a href="Ancient_Guardian.html" title="Ancient Guardian">Ancient Guardian</a> lurks within the labyrinth.
+</li><li>Beware of ambush! The <a href="Dangling_Depth_Dweller.html" title="Dangling Depth Dweller">Dangling Depth Dweller</a> spider has been added.
+</li></ul>
+<p><b>New Items:</b>
+</p>
+<ul><li>New crafting tab: <a class="mw-redirect" href="Ancients.html" title="Ancients">Ancients</a>!
+</li><li><b>Discoverable Items:</b>
+<ul><li><a href="Thulecite.html" title="Thulecite">Thulecite</a>
+</li><li><a href="Slurper_Pelt.html" title="Slurper Pelt">Slurper Pelt</a>
+</li><li><a class="mw-redirect" href="Green_Gems.html" title="Green Gems">Green Gems</a>
+</li><li><a href="Lichen.html" title="Lichen">Lichen</a>
+</li><li><a href="Broken_Clockworks.html" title="Broken Clockworks">Broken Clockworks</a>
+</li><li><a class="mw-redirect" href="Relics.html" title="Relics">Relics</a>
+</li><li><a href="Ancient_Statue.html" title="Ancient Statue">Ancient Statues</a>
+</li><li><a href="Nightmare_Light.html" title="Nightmare Light">Nightmare Lights</a>
+</li><li><a href="Ancient_Pseudoscience_Station.html" title="Ancient Pseudoscience Station">Ancient Pseudoscience Station</a>
+</li><li><a href="Pillars.html" title="Pillars">Pillars</a>
+</li><li><a class="mw-redirect" href="Ornate_Chests.html" title="Ornate Chests">Ornate Chests</a>
+</li><li><a class="mw-redirect" href="Thulecite_Walls.html" title="Thulecite Walls">Thulecite Walls</a>
+</li><li><a class="mw-redirect" href="Wilds_Pond.html" title="Wilds Pond">Wilds Pond</a>
+</li></ul>
+</li><li><b>Craftable Items:</b>
+<ul><li>The <a href="Axe.html" title="Pick/Axe">Pick/Axe</a>: Dual functionality!
+</li><li><a href="Magiluminescence.html" title="Magiluminescence">Magiluminescence</a>: Light the way while keeping your hands and head free for activities!
+</li><li><a href="The_Lazy_Explorer.html" title="The Lazy Explorer">The Lazy Explorer</a>: Don't like walking? This staff is for you!
+</li><li><a href="Construction_Amulet.html" title="Construction Amulet">Construction Amulet</a>: See all the inefficiencies in your crafting.
+</li><li><a href="Thulecite_Medallion.html" title="Thulecite Medallion">Thulecite Medallion</a>: Track the ebb and flow of ambient magic levels.
+</li><li><a href="Belt_of_Hunger.html" title="Belt of Hunger">Belt of Hunger</a>: Keep all that important food inside you!
+</li><li><a href="Thulecite_Suit.html" title="Thulecite Suit">Thulecite Suit</a>: Protection from things hitting you.
+</li><li><a href="Thulecite_Club.html" title="Thulecite Club">Thulecite Club</a>: Hit things!
+</li></ul>
+</li></ul>
+<p><b>Screens:</b>
+</p>
+<ul><li>Keep track of your deaths in the new Morgue Screen.
+</li></ul>
+<p><br/>
+<b>Changes</b>
+</p>
+<ul><li>Walls have been removed from the cave levels to improve the gameplay experience.
+</li><li><a class="mw-redirect" href="Splumonkeys.html" title="Splumonkeys">Splumonkeys</a> and <a href="Slurper.html" title="Slurper">Slurpers</a> have ventured further underground and taken refuge within the second level!
+</li><li>The Gemology tab has been removed. Items from this tab are now either in the magic or ancients tab.
+</li><li>Orange and yellow gems no longer drop from stalagmites and earthquakes in level 1 of the caves.
+</li><li><a href="Slurper.html" title="Slurper">Slurpers</a> no longer drop beard hair.
+</li><li>The cost of the <a href="Prestihatitator.html" title="Prestihatitator">Prestihatitator</a> was adjusted.
+</li><li>Cleaned up the main menu by moving many of the buttons into the "Options" sub menu.
+</li><li>The camera now rotates in 90 degree chunks again.
+</li><li>Added more bindable controls.
+</li><li>There are now separate action and attack buttons.
+</li></ul>
+<p><br/>
+</p>
+<h3><span class="mw-headline" id="August_21th_-_Hotfix"><u>August 21th - Hotfix</u></span></h3>
+<p>Rev. 83742
+</p>
+<ul><li>Fixed a crash that was caused when certain items were loaded.
+</li><li>Fixed an issue that caused old worlds to sometimes crash
+</li><li>Fixed an issue that caused crashes when using traps.
+</li><li>Changed the camera rotation back to 45 degrees.
+</li></ul>
+<h3><span class="mw-headline" id="August_22th_-_Hotfix"><u>August 22th - Hotfix</u></span></h3>
+<p>Rev. 83854
+</p>
+<ul><li>Fixed additional issues with traps
+</li><li>There is an attack button (F) and an action button (space), and a force attack *modifier (ctrl)
+</li><li>You can hold these buttons to repeat actions/attacks
+</li><li>The action radius is the size that it used to be
+</li><li>The attack button will autowalk you to a target if you are not currently WASD walking
+</li><li>Dragging the mouse to walk, and then passing over the UI will not stop you
+</li><li>The attack button will not automatically target friendlies or neutrals. You can use the force attack button with it to initiate combat
+</li><li>If you press attack, and there's nothing around, nothing happens. This feels kinda gross, but it was confusing if you whiffed on a friendly.
+</li><li>Action button mining works again
+</li></ul>
+<h3><span class="mw-headline" id="August_23th_-_Hotfix"><u>August 23th - Hotfix</u></span></h3>
+<p>Rev. 83974
+</p>
+<ul><li>Fixed crash when rook smashes certain structures
+</li><li>Adjusted targeting rules for attack button - will attack previous target and 'enemy' structures by default
+</li></ul>
+<h2><span class="mw-headline" id="July_23.2C_2013_-_Hungry_For_Your_Hunger"><span id="Hungry_For_Your_Hunger"><b>July 23, 2013 - Hungry For Your Hunger</b></span></span></h2>
+<div class="floatright"><a class="image" href="File:Ds_updatePoster_Hungry.jpg.html"><img alt="Ds updatePoster Hungry" data-image-key="Ds_updatePoster_Hungry.jpg" data-image-name="Ds updatePoster Hungry.jpg" height="437" src="img/236px-Ds_updatePoster_Hungry.jpg" width="236"/></a></div>
+<p><b>New Creatures:</b>
+</p>
+<ul><li>The adorable <a href="Slurper.html" title="Slurper">Slurper</a> is a glowing cave-dweller who is hungry for your hunger.
+</li><li>A new mechanical minion, the <a class="mw-redirect" href="Clockwork_Castle.html" title="Clockwork Castle">Clockwork Castle</a>, has been seen stomping around Maxwell’s parts of the world.
+</li></ul>
+<p><br/>
+</p><p><br/>
+<b>More Gemology:</b>
+</p>
+<ul><li><a href="Yellow_Gem.html" title="Yellow Gem">Yellow Gem</a> and <a href="Orange_Gem.html" title="Orange Gem">Orange Gem</a> can now be found while spelunking underground.
+</li><li><a href="Star_Caller%27s_Staff.html" title="Star Caller's Staff">Star Caller’s Staff</a> (yellow gem) - Summon your very own tiny star for light and warmth!
+</li><li><a class="mw-redirect" href="Lazy_Forager%E2%80%99s_Amulet.html" title="Lazy Forager’s Amulet">Lazy Forager’s Amulet</a> (orange gem) - Because bending over to pick things up is so beneath you!
+</li><li><a href="Telelocator_Focus.html" title="Telelocator Focus">Telelocator Focus</a> - Use this construction to control the wild energies of your Telelocator Staff.
+</li></ul>
+<p><br/>
+</p><p><br/>
+<b>Other improvements:</b>
+</p>
+<ul><li>Control customization! Change your control settings from the main menu.
+</li><li>The research system has been shuffled around to separate Magic and Science; build the new <a href="Prestihatitator.html" title="Prestihatitator">Prestihatitator</a> to access the Magic side of research.
+</li><li>Splumonkeys will now pick up (and wear!) hats. Who doesn't love a monkey in a hat?
+</li></ul>
+<p style="margin-top:0px;margin-bottom:0px;list-style:discoutside;">
+</p>
+<h3><span class="mw-headline" id="July_26th_-_Hotfix.5B1.5D"><u>July 26th - Hotfix</u><sup class="reference" id="cite_ref-0"><a href="#cite_note-0.html">[1]</a></sup></span></h3>
+<p><b>Hotfix Changes (July 26)</b>
+</p>
+<ul><li>If the game can't load due to broken mods, it will disable all mods on the next load. These mods can be re-enabled from the menu.
+</li><li>Fixed a crash when some creatures die, including Chester. (Not that you should ever let Chester die....)
+</li></ul>
+<h2><span class="mw-headline" id="July_2.2C_2013_-_Strange_New_Powers"><span id="Strange_New_Powers"><b>July 2, 2013 - Strange New Powers</b></span></span></h2>
+<div class="floatright"><a class="image" href="File:Strange_New_Powers.jpg.html"><img alt="Strange New Powers" data-image-key="Strange_New_Powers.jpg" data-image-name="Strange New Powers.jpg" height="437" src="img/236px-Strange_New_Powers.jpg" width="236"/></a></div>
+<p><b>New Character:</b>
+</p><p><a href="Woodie.html" title="Woodie">Woodie</a> the Lumberjack
+</p><p>He's a fun-loving Canadian who spends too much time in the woods. His <a href="Lucy_the_Axe.html" title="Lucy the Axe">axe</a> talks to him, and he has a terrible curse.
+</p><p><b>New special powers for the unlockable characters:</b>
+</p><p><a href="Willow.html" title="Willow">Willow</a>
+</p>
+<ul><li>Gets a sanity bonus from being near fire
+</li><li>Impervious to fire damage (and probably heat when that becomes a Thing)
+</li><li>Gets a unique <a href="Willow%27s_Lighter.html" title="Willow's Lighter">lighter</a> that acts as an infinite torch with a very small radius
+</li><li>Has a lower max sanity
+</li><li>Lights fires at random when her sanity is low
+</li></ul>
+<p><br/>
+<a href="WX-78.html" title="WX-78">WX-78</a>
+</p>
+<ul><li>Can eat spoiled food with no penalty
+</li><li>Starts with very low stats, but can upgrade himself by eating gears.
+</li><li>Takes damage in the rain, but creates light from the sparks
+</li><li>Can get hit by lightning, causing it to gain 100 health, as well as gain increased movement speed and produce a circle of light around it.
+</li></ul>
+<p><a href="Wes.html" title="Wes">Wes</a>
+</p>
+<ul><li>Has pathetic, low stats
+</li><li>Can make <a href="Pile_o%27_Balloons.html" title="Pile o' Balloons">balloon animals</a> that lowers sanity by 5 each
+</li></ul>
+<p><a href="Wolfgang.html" title="Wolfgang">Wolfgang</a>
+</p>
+<ul><li>Has a large stomach
+</li><li>Faster sanity drain in the dark and near scary things
+</li><li>Gets damage and health bonuses when his belly is full (and penalties when it is empty!)
+</li></ul>
+<p><a href="Wendy.html" title="Wendy">Wendy</a>
+</p>
+<ul><li>Lower combat damage
+</li><li>Less afraid of the dark and monsters.
+</li><li>Carries around <a href="Abigail%27s_Flower.html" title="Abigail's Flower">Abigail's Flower</a>. When it is charged (it takes a couple of days), a blood sacrifice will summon <a href="Abigail.html" title="Abigail">Abigail</a>!
+</li><li>Abigail is a lot more useful now, and will last until she falls in battle
+</li></ul>
+<p><a href="Wickerbottom.html" title="Wickerbottom">Wickerbottom</a>
+</p>
+<ul><li>Gets a bonus tech level
+</li><li>Has a high max sanity
+</li><li>Can craft <a href="Books.html" title="Books">books</a> that can be read to cast powerful magic spells
+</li><li>Insomniac - can not sleep
+</li><li>Picky eater - higher penalties for spoiled food
+</li></ul>
+<p><b>New creatures:</b>
+</p>
+<ul><li><a href="Splumonkey.html" title="Splumonkey">Splumonkeys</a> - Cave-dwelling monkeys that just want to cause you trouble. Nothing is safe from their pestering! <a href="Barrel.html" title="Barrel">Barrels</a> spawn Splumonkeys.
+</li><li><a href="Pengull.html" title="Pengull">Pengulls</a> - Mostly harmless penguinoids who leap from the ocean in the winter to form rookeries. Be careful if you disrupt their migration!
+</li></ul>
+<p><b>New craftables:</b>
+</p><p>We added a <a class="mw-redirect" href="Gemology.html" title="Gemology">new tab</a> for gem-based items, and added amulets and staves for all of the existing colours. Watch this space for more mind-bending magic in future updates!
+</p>
+<ul><li><a href="Life_Giving_Amulet.html" title="Life Giving Amulet">Red amulet</a> - resurrects as before but also converts hunger into health
+</li><li><a href="Chilled_Amulet.html" title="Chilled Amulet">Blue amulet</a> - harness the power of cold!
+</li><li><a href="Nightmare_Amulet.html" title="Nightmare Amulet">Purple amulet</a> - Dare to gaze upon the terrifying nightmare world.
+</li><li><a href="Telelocator_Staff.html" title="Telelocator Staff">Purple staff</a> - Warp space and time with teleportation!
+</li></ul>
+<p><b>Mods:</b>
+</p><p>There is a new mod configuration screen that lets you activate/deactivate mods from within the game. Check out the <a class="external text" href="showthread.php?23184-Updating-your-mod-for-quot-Powers-quot-release.html" rel="nofollow">modding forum</a> for details!
+</p><p><b>World Generation</b>
+</p>
+<ul><li>When tree generation is set to more, then lumpy trees can be generated in normal forests.
+</li><li>Roads are wider and turn back on themselves less.
+</li></ul>
+<p><b>Items</b>
+</p>
+<ul><li>Gold, Fireflies, and flames shine with a redish, gold glow.
+</li></ul>
+<p>Technical stuff
+</p>
+<ul><li>Evergreen trees now emit pine needle particle effects when chopped and fall to the ground with a thump.
+</li></ul>
+<h2><span class="mw-headline" id="June_11.2C_2013_-_It.27s_not_a_rock.21"><span id="It.27s_not_a_rock.21"><b>June 11, 2013 - It's not a rock!</b></span></span></h2>
+<div class="floatright"><a class="image" href="File:Upd.png.html"><img alt="Upd" data-image-key="Upd.png" data-image-name="Upd.png" height="438" src="img/236px-Upd.png" width="236"/></a></div>
+<p><b>Mobs:</b>
+</p>
+<ul><li><a class="mw-redirect" href="Tentapillar.html" title="Tentapillar">Tentapillar</a>
+</li><li><a class="mw-redirect" href="Beardlord.html" title="Beardlord">Beardlord</a>
+</li><li><a href="Rock_Lobster.html" title="Rock Lobster">Rock Lobster</a>
+</li><li><a href="Lureplant.html" title="Lureplant">Lureplant</a>
+</li><li><a href="Lureplant#Eyeplant.html" title="Lureplant">Eyeplant</a>
+</li></ul>
+<p><b>Naturally Generated Objects</b>
+</p>
+<ul><li><a class="mw-redirect" href="Red_Mushtree.html" title="Red Mushtree">Red mushtree</a>
+</li><li><a href="Cave_Banana_Tree.html" title="Cave Banana Tree">Cave banana tree</a>
+</li><li><a class="mw-redirect" href="Green_Mushtree.html" title="Green Mushtree">Green mushtree</a>
+</li><li><a class="mw-redirect" href="Fern.html" title="Fern">Ferns</a>
+</li><li>New texture for certain <a href="Stalagmite.html" title="Stalagmite">Stalagmites</a>
+</li></ul>
+<p><b>Crafting</b>
+</p>
+<ul><li><a href="Bat_Bat.html" title="Bat Bat">Bat Bat</a>
+</li><li><a href="Compass.html" title="Compass">Compass</a>
+</li></ul>
+<p><b>Food</b>
+</p>
+<ul><li><a href="Leafy_Meat.html" title="Leafy Meat">Leafy Meat</a>
+</li><li><a href="Cave_Banana.html" title="Cave Banana">Cave Banana</a>
+</li><li><a class="mw-redirect" href="Foliage.html" title="Foliage">Foliage</a>
+</li></ul>
+<p><b>Technical Stuff:</b>
+</p>
+<ul><li><a class="mw-redirect" href="Fire_Pit.html" title="Fire Pit">Fire Pits</a> and <a href="Campfire.html" title="Campfire">Campfires</a> now extinguish when you <a href="Sleeping.html" title="Sleeping">sleep</a>.
+</li><li>The game now saves at random intervals, instead of every morning.
+</li><li>Worn clothes will lose durability when <a href="Sleeping.html" title="Sleeping">sleeping</a> at the same durability they would've lost not sleeping.
+</li><li>New world generation preset called "Lights Out".
+</li></ul>
+<h2><span class="mw-headline" id="May_21.2C_2013_-_Underground.5B2.5D"><span id="Underground"><b>May 21, 2013 - Underground</b></span><sup class="reference" id="cite_ref-1"><a href="#cite_note-1.html">[2]</a></sup></span></h2>
+<div class="floatright"><a class="image" href="File:Underground.jpg.html"><img alt="Underground" data-image-key="Underground.jpg" data-image-name="Underground.jpg" height="438" src="img/236px-Underground.jpg" width="236"/></a></div>
+<p><b>New World:</b>
+</p>
+<ul><li> <a href="Caves.html" title="Caves">Caves</a>
+</li></ul>
+<p><b>Mobs:</b>
+</p>
+<ul><li> <a href="Batilisk.html" title="Batilisk">Batilisks</a>—drops <a href="Batilisk_Wing.html" title="Batilisk Wing">Batilisk Wings</a> or <a href="Monster_Meat.html" title="Monster Meat">Monster Meat</a>, produce <a href="Guano.html" title="Guano">Guano</a>.
+</li><li> Two new kinds of <a href="Spider.html" title="Spider">Spider</a> -- <a href="Cave_Spider.html" title="Cave Spider">Cave Spider</a> and <a href="Spitter.html" title="Spitter">Spitter</a>—drops <a class="mw-redirect" href="Spider_Glands.html" title="Spider Glands">Spider Glands</a>, <a href="Silk.html" title="Silk">Silk</a> and <a href="Monster_Meat.html" title="Monster Meat">Monster Meat</a>.
+<ul><li> New <a class="mw-redirect" href="Spider_Dens.html" title="Spider Dens">Spider Dens</a> with the appearance of <a href="Stalagmite.html" title="Stalagmite">Stalagmites</a> covered in Webbing, known as <a href="Spilagmite.html" title="Spilagmite">Spilagmites</a>.
+</li></ul>
+</li><li> <a class="mw-redirect" href="Snurtle.html" title="Snurtle">Snurtles</a> and <a href="Slurtle.html" title="Slurtle">Slurtles</a>—drops a wearable Shell—Eats <a href="Rocks.html" title="Rocks">Rocks</a> to produce <a href="Slurtle_Slime.html" title="Slurtle Slime">Slurtle Slime</a>.
+</li><li> <a class="mw-redirect" href="Bunnymen.html" title="Bunnymen">Bunnymen</a>—drops <a href="Meat.html" title="Meat">Meat</a>, 2 <a class="mw-redirect" href="Carrots.html" title="Carrots">Carrots</a> or <a class="mw-redirect" href="Bunny_Puffs.html" title="Bunny Puffs">Bunny Puff</a>
+<ul><li> Spawns from Naturally generated, and craftable '<a class="mw-redirect" href="Carrot_Houses.html" title="Carrot Houses">Carrot Houses</a>'
+</li><li> They will start attacking you if you have meat in your inventory
+</li></ul>
+</li></ul>
+<p><b>Naturally Generated Objects:</b>
+</p>
+<ul><li> <a class="mw-redirect" href="Mushtrees.html" title="Mushtrees">Mushtrees</a>—a light source—drops 2 <a href="Log.html" title="Log">Logs</a> and a <a class="mw-redirect" href="Blue_Cap.html" title="Blue Cap">Blue Cap</a> when chopped.
+</li><li> <a href="Stalagmite.html" title="Stalagmite">Stalagmites</a>—Similar to overworld <a class="mw-redirect" href="Boulders.html" title="Boulders">Boulders</a>. Drops <a href="Rocks.html" title="Rocks">Rocks</a>, <a href="Flint.html" title="Flint">Flint</a>, <a class="mw-redirect" href="Gold_Nuggets.html" title="Gold Nuggets">Gold Nuggets</a> and <a href="Nitre.html" title="Nitre">Nitre</a>. 
+</li><li> <a href="Light_Flower.html" title="Light Flower">Light Flower</a>—a light source—grows <a href="Light_Bulb.html" title="Light Bulb">Light Bulbs</a>, used to craft and fuel <a href="Lantern.html" title="Lantern">Lanterns</a>
+</li><li> New <a class="mw-redirect" href="Turf.html" title="Turf">Turf</a> - Mud, Fungal
+</li></ul>
+<p><b>Crafting:</b>
+</p>
+<ul><li> <a href="Lantern.html" title="Lantern">Lanterns</a>—craftable light source. Both portable and refuelable. Uses <a href="Light_Bulb.html" title="Light Bulb">Light Bulbs</a>.
+</li><li> <a class="mw-redirect" href="Fur_Roll.html" title="Fur Roll">Fur Roll</a>—craftable survival item. Multiple-use sleeping roll that restores health in addition to sanity upon use.
+</li><li> <a href="Rabbit_Hutch.html" title="Rabbit Hutch">Rabbit Hutch</a>—craftable structure. Houses one <a href="Bunnyman.html" title="Bunnyman">Bunnyman</a>.
+</li></ul>
+<p><b>Crock Pot:</b>
+</p>
+<ul><li> <a href="Powdercake.html" title="Powdercake">Powdercakes</a> -- <a href="Honey.html" title="Honey">Honey</a> + <a href="Honey.html" title="Honey">Honey</a> + <a href="Corn.html" title="Corn">Corn</a> + <a class="mw-redirect" href="Twig.html" title="Twig">Twig</a> .
+</li></ul>
+<p><b>Natural 'Events':</b>
+</p>
+<ul><li> <a class="mw-redirect" href="Earthquakes.html" title="Earthquakes">Earthquakes</a> in <a href="Caves.html" title="Caves">Caves</a>, that drop <a href="Rocks.html" title="Rocks">Rocks</a>, <a href="Flint.html" title="Flint">Flint</a>, <a class="mw-redirect" href="Gold_Nuggets.html" title="Gold Nuggets">Gold Nuggets</a>, <a href="Nitre.html" title="Nitre">Nitre</a>, <a href="Marble.html" title="Marble">Marble</a> and <a href="Red_Gem.html" title="Red Gem">Red</a> and <a href="Blue_Gem.html" title="Blue Gem">Blue Gems</a> from the top making all of them renewable resource. Falling objects damage player on impact. Falling objects also cast a shadow, making them easy to avoid.
+<ul><li>This event will cause the various types of Slurtle to emerge and feast on rocks
+</li></ul>
+</li></ul>
+<p><b>Technical Stuff:</b>
+</p>
+<ul><li> Shift-click moves items between open containers. Ctrl-Shift-click manipulates stacks in the same way
+</li><li> <a href="Abigail.html" title="Abigail">Abigail</a> and <a href="Chester.html" title="Chester">Chester</a> no longer trigger traps
+</li><li> <a href="Hammer.html" title="Hammer">Hammering</a> is a RMB action
+</li><li> <a href="Bush_Hat.html" title="Bush Hat">Bush Hat</a> hide is an RMB toolbar action
+</li><li> <a href="Birds.html" title="Birds">Birds</a> in <a href="Birdcage.html" title="Birdcage">Birdcages</a> now sleep at Night, although they will wake up if player feeds them.
+</li><li> <a href="Tent.html" title="Tent">Tents</a> can no longer be used in dangerous situations.
+</li><li> <a href="Sewing_Kit.html" title="Sewing Kit">Sewing Kit</a> can now repair clothing without it being taken off
+</li></ul>
+<p><b>Bugs</b>
+</p>
+<ul><li> If two pigmen who are befriended are told to break a burnt down tree, they will do it forever and give off infinite charcoal
+</li><li> Sometimes the Night Hand's sound will play in the day after the night.
+</li></ul>
+<h2><span class="mw-headline" id="April_20.2C_2013_-_The_End_of_the_Beginning.5B3.5D"><span id="The_End_of_the_Beginning"><b>April 20, 2013 - The End of the Beginning</b></span><sup class="reference" id="cite_ref-2"><a href="#cite_note-2.html">[3]</a></sup></span></h2>
+<ul><li>Finished <a href="Adventure_Mode.html" title="Adventure Mode">Adventure Mode</a>
+</li><li><a href="Divining_Rod.html" title="Divining Rod">Divining Rod</a> - helps you track down missing portal pieces
+</li><li>Some of the <a href="Dress.html" title="Dress">Dress</a> items have durability
+</li><li><a href="Sewing_Kit.html" title="Sewing Kit">Sewing Kit</a> - repairs degraded clothing items
+</li><li><a href="Wes.html" title="Wes">Wes</a> is now unlocked by finding him in Adventure Mode
+</li><li>Beating Adventure Mode unlocks <a href="Maxwell.html" title="Maxwell">Maxwell</a> as a playable character
+</li><li>Frog <a href="Rain.html" title="Rain">Rain</a>
+</li><li><a href="Butterfly_Wings.html" title="Butterfly Wings">Butterfly Wings</a> only heal 8 points of health now
+</li><li>RMB replaced with a right mouse button icon
+</li><li><a class="mw-redirect" href="Pine_Cones.html" title="Pine Cones">Pine Cones</a> need to grow before becoming tier 1 trees
+</li><li>Birds in <a href="Birdcage.html" title="Birdcage">cages</a> no longer take RAW <a class="mw-redirect" href="Monster_meat.html" title="Monster meat">monster meat</a> or eggs in return for fresh <a href="Eggs.html" title="Eggs">eggs</a>
+</li><li>New sounds.
+</li><li><a href="Spiky_Bush.html" title="Spiky Bush">Spiky Bushes</a> now grow <a href="Twigs.html" title="Twigs">twigs</a>, and can be transplanted
+</li><li><a class="mw-redirect" href="Tallbirds.html" title="Tallbirds">Tallbirds</a> can't be stunlocked
+</li><li><a href="Maxwell%27s_Light.html" title="Maxwell's Light">Maxwell's Light</a>
+</li><li><a href="Nightmare_Throne.html" title="Nightmare Throne">Nightmare Throne</a>
+</li><li><a href="Nightmare_Lock.html" title="Nightmare Lock">Nightmare Lock</a>
+</li><li><a href="Chest.html" title="Chest">Chests</a> can be placed much more tightly
+</li><li>Updates moved to a 3 week schedule with earlier testing releases
+</li></ul>
+<p><b>Crafting:</b>
+</p>
+<ul><li> Added <a href="Sewing_Kit.html" title="Sewing Kit">Sewing Kit</a> recipe
+</li><li> <a href="Nightmare_Fuel.html" title="Nightmare Fuel">Nightmare Fuel</a> now requires 4 <a class="mw-redirect" href="Dark_Petals.html" title="Dark Petals">Dark Petals</a>
+</li><li> <a href="Beefalo_Hat.html" title="Beefalo Hat">Beefalo Hat</a> now requires 8 <a href="Beefalo_Wool.html" title="Beefalo Wool">Beefalo Wool</a> and 1 <a href="Beefalo_Horn.html" title="Beefalo Horn">Beefalo Horn</a>
+</li><li> <a href="Top_Hat.html" title="Top Hat">Top Hat</a> now requires 6 <a href="Silk.html" title="Silk">Silk</a>
+</li><li> <a href="Dapper_Vest.html" title="Dapper Vest">Dapper Vest</a> now requires 8 <a href="Hound%27s_Tooth.html" title="Hound's Tooth">Hound's Tooth</a> and 6 <a href="Silk.html" title="Silk">Silk</a>
+</li><li> <a href="Breezy_Vest.html" title="Breezy Vest">Breezy Vest</a> now requires <a href="Koalefant_Trunk.html" title="Koalefant Trunk">Koalefant Trunk</a> and 8 <a href="Silk.html" title="Silk">Silk</a>
+</li><li> <a href="Puffy_Vest.html" title="Puffy Vest">Puffy Vest</a> now requires <a class="mw-redirect" href="Winter_Koalefant_Trunk.html" title="Winter Koalefant Trunk">Winter Koalefant Trunk</a>, 8 <a href="Silk.html" title="Silk">Silk</a> and 2 <a href="Beefalo_Wool.html" title="Beefalo Wool">Beefalo Wool</a>
+</li></ul>
+<p><b>Bugs:</b>
+</p>
+<ul><li> Using a <a href="Tent.html" title="Tent">Tent</a> doesn't consume hunger (Could be intentional)
+</li><li> Koalefant's footprints in the edge of the world disappear after investigating the Suspicious Dirt Pile
+</li></ul>
+<h3><span class="mw-headline" id="April_29_-_Hotfix.5B4.5D"><u>April 29 - Hotfix</u><sup class="reference" id="cite_ref-3"><a href="#cite_note-3.html">[4]</a></sup></span></h3>
+<ul><li><a href="Divining_Rod.html" title="Divining Rod">Divining Rod</a> is craftable in survival mode, and can help find the adventure portal
+</li><li>Fixed resolution problems when windows is set to use large icons and text
+</li><li>OSX and Linux versions save fullscreen property in settings.ini
+</li><li><a class="mw-redirect" href="Walls.html" title="Walls">Walls</a> that have been destroyed and then repaired have proper collision
+</li><li>Fix crash when instantiating blueprints when you have already unlocked all crafting recipes
+</li><li>Fix linux save folder filename case issues
+</li><li>Triggered but still empty <a href="Trap.html" title="Trap">Traps</a> do not play full animation
+</li><li><a href="Berry_Bush.html" title="Berry Bush">Berry Bushes</a> play the right animation when <a href="Gobbler.html" title="Gobbler">Gobblers</a> enter them at dusk
+</li><li>Updated credits list
+</li><li>Fix for crash when putting food into sick wormhole
+</li><li>Fix for crash when attempting to blow up the nightmare throne
+</li><li>Removed "beta" from chrome footer
+</li><li>Fixed external website buttons on credits page on chrome
+</li></ul>
+<h3><span class="mw-headline" id="May_1_-_Hotfix.5B5.5D"><u>May 1 - Hotfix</u><sup class="reference" id="cite_ref-4"><a href="#cite_note-4.html">[5]</a></sup></span></h3>
+<ul><li>Added "Default Plus" preset
+</li><li>Fixed issue where death menu buttons could become unresponsive
+</li><li>Gold-vein <a href="Boulder.html" title="Boulder">rocks</a> always drop at least one gold
+</li><li>Increased <a href="Nitre.html" title="Nitre">Nitre</a> drop rate on nitre <a href="Boulder.html" title="Boulder">rocks</a>
+</li></ul>
+<h3><span class="mw-headline" id="May.C2.A02_-_Hotfix.5B6.5D"><u>May 2 - Hotfix</u><sup class="reference" id="cite_ref-5"><a href="#cite_note-5.html">[6]</a></sup></span></h3>
+<ul><li>User-overrides take precedence over preset overrides (so you can play default plus with fewer spiders if you like)
+</li><li>You can back out of the customization screen and go back into it and it won't forget your changes
+</li></ul>
+<h2><span class="mw-headline" id="April_9.2C_2013_-_The_End_is_Nigh"><span id="The_End_is_Nigh"><b>April 9, 2013 - The End is Nigh</b></span></span></h2>
+<p style="font-size:13px;"><figure class="article-thumb tright" style="width: 236px"> <a class="image" href="File:The_End_is_Nigh.jpg.html"><img alt="The End is Nigh" class="thumbimage" data-image-key="The_End_is_Nigh.jpg" data-image-name="The End is Nigh.jpg" height="437" src="img/236px-The_End_is_Nigh.jpg" width="236"/></a> <figcaption> </figcaption> </figure><b>Technical Stuff:</b></p>
+<ul><li>The game now runs on Mac and Linux on Steam
+</li><li>The game properly supports monitors with aspect ratios other than 16:9
+</li><li>You can resize the HUD in the options menu
+</li><li>The debug menu is disabled by default. You can enable it by editing your settings.ini
+</li></ul>
+<p><b>New Craftables:</b>
+</p>
+<ul><li>New armors: <a href="Grass_Suit.html" title="Grass Suit">Grass</a> and <a href="Marble_Suit.html" title="Marble Suit">Marble</a>
+</li><li>You can craft a walrus-tusk <a href="Walking_Cane.html" title="Walking Cane">walking cane</a>
+</li></ul>
+<p><b>New Findables:</b>
+</p>
+<ul><li>You can find <a href="Blueprint.html" title="Blueprint">blueprints</a> which unlock some recipes early
+</li><li>Added lumpy trees that don't drop pine cones
+</li><li>Added pig heads on sticks in merm-land, merm heads on sticks in pig-land
+</li><li>Added titles at the start of adventure mode
+</li><li>Some resource types will randomly swap out in adventure mode levels
+</li><li>Wormholes are now much more common.
+</li></ul>
+<p><b>Bug Fixes:</b>
+</p>
+<ul><li>Some optimization work for worlds with lots of entities
+</li><li>Entity culling works properly with gigantic resolutions
+</li><li>Mushrooms don't re-grow in winter
+</li></ul>
+<p><b>Bugs:</b>
+</p>
+<ul><li>Tools and weapons can't be placed in containers by drag&amp;drop over containers, they can only be placed directly into containers' slots.
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="March_26.2C_2013_-_Doorway_to_Adventure"><span id="Doorway_to_Adventure"><b>March 26, 2013 - Doorway to Adventure</b></span></span></h2>
+<p style="font-size:13px;"><div class="floatright"><a class="image" href="File:Doorway_to_Adventure.jpg.html"><img alt="Doorway to Adventure" data-image-key="Doorway_to_Adventure.jpg" data-image-name="Doorway to Adventure.jpg" height="371" src="img/200px-Doorway_to_Adventure.jpg" width="200"/></a></div></p>
+<p><b>New Features</b>
+</p>
+<ul><li>Adventure mode is now integrated into survival mode. In a survival mode level, you can find a special portal that will take you to the start of adventure mode. If you die in adventure mode, you will wake up back in your survival level, outside of the portal. From there you can try again (restarting at level 1, of course). Dying in survival mode is still perma-death-fatal, and retrying a survival level will always generate a new one for you. Any existing saves that you might have from previous patches will be interpreted as survival levels - you should be able to teleport out of them to get access to the new features.
+</li><li>New front-end screens for dealing with the save slots and the new game flow.
+</li><li>The adventure levels have been re-done to better match what their final structure will be. They’re still a bit rough around the edges, but you can start to see the overall sweep of the game now. Please see the detailed descriptions at the end of the change list.
+</li></ul>
+<p><b>New Craftables</b>
+</p>
+<ul><li><a href="Healing_Salve.html" title="Healing Salve">Healing Salve</a> - Made from crushed spider glands and ash - heals 20 health
+</li><li><a href="Lightning_Rod.html" title="Lightning Rod">Lightning Rod</a> - Protects bases against lightning, gives you a night of free light when struck.
+</li><li><a class="mw-redirect" href="Heat_Stone.html" title="Heat Stone">Heat Stone</a> - Place it near a fire to warm it up, and then carry it around with you to fend off the bitter frost.
+</li><li><a class="mw-redirect" href="Rabbit_Earmuffs.html" title="Rabbit Earmuffs">Earmuffs</a> - Made from rabbits, of course!
+</li><li><a class="mw-redirect" href="Piggyback.html" title="Piggyback">Piggyback</a> - A fancier, bigger backpack (that slows you down!)
+</li></ul>
+<p><b>New Creatures</b>
+</p>
+<ul><li><a href="Clockwork_Bishop.html" title="Clockwork Bishop">The Bishop</a> - guards Maxwell’s structures with lightning shots
+</li></ul>
+<p><b>New Level Features</b>
+</p>
+<ul><li>Chess biome! In adventure levels, Maxwell's influence has begun creeping into the environment.
+</li><li>Points of interest and traps - these are small, non-random areas that have good or bad effects.
+</li><li><a href="Touch_Stone.html" title="Touch Stone">Touch Stone</a> - these mysterious stones act as one-time-use meat effigies if you touch them. There are a handful generated in each survival level.
+</li><li><a href="Maxwell%27s_Door.html" title="Maxwell's Door">Maxwell's Door</a> - leads to adventure mode.
+</li><li>Pleasingly-arranged mushroom rings
+</li><li>One-way "Sick" wormhole (only in adventure mode currently)
+</li><li><a href="Pig_Head.html" title="Pig Head">Pig-head-on-a-stick</a> - someone’s been busy!
+</li><li>Variant <a href="Berry_Bush.html" title="Berry Bush">Berry Bush</a>
+</li></ul>
+<p><b>Tuning</b>
+</p>
+<ul><li>Compressed the XP track. You now earn 20xp per survival mode day at a flat rate, and unlock all the XP-unlockable characters a lot more quickly
+</li><li>Characters have a bit more health by default. This is to reduce the number of one-shot player deaths, and give you more of a chance to run away from danger.
+</li><li>The player now has 15 inventory slots
+</li><li>When you advance through the teleportato in adventure mode, you can only take four items with you. Choose wisely!
+</li><li>Sanity depletion in the rain is less harsh
+</li><li>The HUD is a bit smaller, to show more of the game world
+</li><li>Removed low-level farm plots. We really didn’t need three versions of the same thing.
+</li><li>Deerclops, lightning and beefalo mating season are configurable through level gen parameters
+</li><li>Stepping on spider ground will trigger a response from the den
+</li><li>Tweaked mushroom spawn chances
+</li><li>Abigail has more health, but enemies will fight back against her
+</li></ul>
+<p><b>Bugfixes</b>
+</p>
+<ul><li>Many new map icons, including backpacks and Chester!
+</li><li>Crock-pot fixes: mushrooms count as vegetables, fixed frogglebunwich recipe
+</li><li>You can no longer carry an extra backpack in your hands as you walk around.
+</li><li>Werepigs don’t kite. They are too angry for that.
+</li><li>The death screen buttons should always work now.
+</li><li>RMB can be used to light things on fire when the torch is equipped (useful at night)
+</li><li>Added a default start node so that Maxwell and Wilson not occluded
+</li><li>Frozen ponds can't be fished anymore.. but you can walk across them.
+</li><li>MacTusk can miss you with his blowdart
+</li><li>Spiderhat / Miner hat show remaining fuel
+</li><li>Treeguards can be set on fire more than once
+</li><li>Lua console now supports arrow keys
+</li><li>Fireflies glow more reliably at the right times
+</li><li>Trap icons don't show up on the map when inside a container
+</li><li>Chester is immune to ghosts
+</li><li>Chester has much more health, and resurrects after only one day
+</li><li>Fix spider jump attack sometimes not actually jumping
+</li><li>Spider jump attack will not hurt Wilson when it misses
+</li><li>Birds that are flying away shouldn't restart their fly-away animations mid-flight
+</li><li>Rabbits will try to avoid a player between them and their home
+</li><li>Fix to Abigail/ghost movement stuttering
+</li><li>Ghosts pathfind, but will go through walls or objects if needed
+</li><li>Abigail will show up at least every 3 nights
+</li><li>Abigail will spawn some distance away from Wendy
+</li><li>Wandering creatures will try to avoid walls and water
+</li><li>Fleeing creatures will try to avoid running into walls
+</li><li>Fix apparent duplicate item when dropping item on the ground and then into your backpack before the drop happens
+</li><li>Fix infinite bees spawning from beebox by repeatedly saving/loading game
+</li><li>When murdering an entire stack of helpless creatures in your inventory, loot is gained for each individual, not just once
+</li><li>Waking up sleeping hunting hounds at night will rouse the walruses from their slumber
+</li><li>Fixed a bug where you could use a sleeping bag or tent during the transition from night to day to skip an entire day. 
+</li></ul>
+<hr/>
+<p><b>Level Descriptions:</b> The adventure levels are still being worked on and refined, but here's an idea of where the are right now and where we want them to be.
+</p><p><b>Level 1:</b>
+</p><p>Near-constant rain and frequent short winters take a toll on your sanity and your fires. You must survive in these more extreme conditions as you hunt for the teleportato pieces. When complete, this level should feel similar to a survival level, but with increased pressure on all your resources.
+</p><p><b>Level 2:</b>
+</p><p>This level is smaller and shorter than the previous level, but it is permanently winter! The aim is to survive the cold without any preparation time. When complete, this level should keep you moving quickly.
+</p><p><b>Level 3:</b>
+</p><p>The level features a resource-rich central island, surrounded by dangerous lands containing each of the teleportato pieces. Right now it's still fairly lush, but eventually the outlying islands should be quite inhospitable!
+</p><p><b>Level 4:</b>
+</p><p>Use the first land to stock up. Once you pass through the dying wormhole, you'll need everything you've got to survive. We're currently still working on the balance between the two lands.
+</p><p><b>Level 5:</b>
+</p><p>This level should put your survival skills to the ultimate test, not only will there be harsh weather and tough monsters, but resources will be extremely scarce. Eventually. Right now it's just been roughed in, but it's still got lots of badguys in it!
+</p><p><b>Level 6:</b>
+</p><p>Maxwell is still devising this level...
+</p>
+<hr/>
+<h3><span class="mw-headline" id="March_28.2F29_-_Hotfix"><u>March 28/29 - Hotfix</u></span></h3>
+<ul><li>fixed the reusable <a href="Meat_Effigy.html" title="Meat Effigy">Meat Effigy</a> bug
+</li></ul>
+<h3><span class="mw-headline" id="March_27.2C_2013_-_Hotfix"><u>March 27, 2013 - Hotfix</u></span></h3>
+<ul><li>new berry bush is affected by berry bush slider
+</li><li>spider scouts will call for reinforcements if you hit them near their nests
+</li><li>mist is less dense
+</li><li>fixed two-backpack spacebar loophole
+</li><li>fixed missing string for meat effigy recipe
+</li><li>mctuskcity setpiece is disabled (you didn't want to find that one...)
+</li><li>fix crash when picking up some burnt items
+</li><li>fix for crash in chest_foodspoil setpiece
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="March_12.2C_2013_-_A_Little_Rain_Must_Fall"><span id="A_Little_Rain_Must_Fall"><b>March 12, 2013 - A Little Rain Must Fall</b></span></span></h2>
+<p style="font-size:13px;"><figure class="article-thumb tright" style="width: 236px"> <a class="image" href="File:A_Little_Rain_Must_Fall.jpg.html"><img alt="A Little Rain Must Fall" class="thumbimage" data-image-key="A_Little_Rain_Must_Fall.jpg" data-image-name="A Little Rain Must Fall.jpg" height="437" src="img/236px-A_Little_Rain_Must_Fall.jpg" width="236"/></a> <figcaption> </figcaption> </figure></p>
+<p><b>New features</b>
+</p>
+<ul><li> Rain comes during the summer to ruin your fires and dampen your spirits. Watch out for lightning strikes!
+</li><li> Sandbox custom mode sliders are all unlocked. You can make the game really, really hard now.
+</li><li> Pathfinding works over long distances
+</li><li> Day length changes throughout seasons
+</li><li> Modders can bring up an interactive lua console with the ~ key
+</li></ul>
+<p><b>Adventure mode</b>
+</p>
+<ul><li> Put in very rough sketches of the actual adventure levels. It’s very rough at this point, and the ‘story’ bits are missing, but the basic structure is in place.
+</li><li> Added lots of little set pieces using new objects that try to impede your progress.
+</li></ul>
+<p><b>New monsters</b>
+</p>
+<ul><li> <a href="Clockwork_Knight.html" title="Clockwork Knight">Clockwork Knight</a>
+</li><li> <a href="Merm.html" title="Merm">Merm</a>
+</li><li> <a class="mw-redirect" href="Guardian_Pig.html" title="Guardian Pig">Guardian Pig</a>
+</li></ul>
+<p><b>New stuff to build</b>
+</p>
+<ul><li> <a href="Jerky.html" title="Jerky">Jerky</a>
+</li><li> <a href="Honey_Poultice.html" title="Honey Poultice">Honey Poultice</a>
+</li><li> <a href="Gunpowder.html" title="Gunpowder">Gunpowder</a>
+</li><li> <a href="One-man_Band.html" title="One-man Band">One-man Band</a>
+</li><li> <a href="Purple_Gem.html" title="Purple Gem">Purple Gem</a>
+</li><li> <a href="Fire_Staff.html" title="Fire Staff">Fire Staff</a>
+</li><li> <a href="Shadow_Manipulator.html" title="Shadow Manipulator">Shadow Manipulator</a>
+</li><li> <a href="Rainometer.html" title="Rainometer">Rainometer</a>
+</li><li> <a href="Umbrella.html" title="Umbrella">Umbrella</a>
+</li><li> <a href="Ham_Bat.html" title="Ham Bat">Ham Bat</a>
+</li></ul>
+<p><b>New stuff in the world</b>
+</p>
+<ul><li> <a href="Mushrooms.html" title="Mushrooms">Mushrooms</a> - Red, green and blue
+</li><li> A bit of <a href="Maxwell.html" title="Maxwell">Maxwell</a> ground is starting to creep into the world around some <a href="Things.html" title="Things">teleportato parts</a>
+</li><li> <a href="Pig_Torch.html" title="Pig Torch">Pig Torch</a>
+</li><li> <a class="mw-redirect" href="Killer_Bee_Hive.html" title="Killer Bee Hive">Wasp hives</a>
+</li><li> (In)sanity <a class="mw-redirect" href="Obelisks.html" title="Obelisks">Obelisks</a> that block areas when you are (in)sane
+</li><li> <a href="Hound_Mound.html" title="Hound Mound">Hound Mound</a>
+</li><li> Two types of <a href="Pond.html" title="Pond">Ponds</a> - <a href="Frog.html" title="Frog">Frog</a> and <a href="Mosquito.html" title="Mosquito">Mosquito</a>
+</li><li> <a href="Marble_Pillar.html" title="Marble Pillar">Marble Pillars</a> (mineable for <a href="Marble.html" title="Marble">Marble</a> which are used to make checkerboard flooring for decorative purposes)
+</li><li> <a class="mw-redirect" href="Evil_Flowers.html" title="Evil Flowers">Evil Flowers</a> and <a class="mw-redirect" href="Dark_Petals.html" title="Dark Petals">Dark Petals</a>
+</li><li> <a href="Nitre.html" title="Nitre">Nitre</a>
+</li><li> <a href="Egg.html" title="Egg">Egg</a>
+</li><li> <a href="Carpeted_Flooring.html" title="Carpeted Flooring">Carpet</a>
+</li><li> <a href="Checkerboard_Flooring.html" title="Checkerboard Flooring">Checkerboard Flooring</a>
+</li></ul>
+<p><b>Tuning</b>
+</p>
+<ul><li> Magical recipes have mostly been moved to the shadow manipulator
+</li><li> Nightmare Fuel now can be crafted
+</li><li> Icebox require gears to create
+</li><li> Tallbirds spawn more often
+</li><li> Ponds freeze in the winter, and stop spawning things
+</li><li> Beefalo mating season is shorter, and there are fewer babies
+</li><li> Ranged weapons actually shoot projectiles
+</li><li> Treeguards drop special, magical wood that is used in some recipes
+</li><li> Health and Sanity effects of foods have been reduced (you restore these by other means now)
+</li><li> Monster meat perishes faster
+</li><li> Some fuels like ropes or dug plants burning time has been reduced
+</li><li> Blow dart causes more damage
+</li><li> Graves have gems, gears, and nightmare fuel in them sometimes
+</li></ul>
+<p><b>Bug fixes</b>
+</p>
+<ul><li> You can kill small creatures directly in your inventory / toss them into fires
+</li><li> Season onsets work better in adventure mode
+</li><li> AOE attacks cause area damage even if the targeted hit misses
+</li><li> Deerclops can not be stunlocked, and doesn’t panic when he is lit on fire
+</li><li> Koalefants can no longer fly across water when you aren’t watching
+</li><li> Koalefant tracks point more accurately in the correct direction
+</li><li> Attempting to store a weapon in Chester no longer attacks him
+</li><li> Chester follows through wormholes when using a backpack
+</li><li> Right click an equipped tool with another item no longer destroys the tool
+</li><li> When wilson uses up a tool, he automatically equips a replacement if one is available
+</li><li> You can no longer light <a href="Beefalo.html" title="Beefalo">Beefalo</a> (or other creatures) on fire by using a torch on them
+</li><li> Mandrakes get picked up properly when using Spacebar
+</li></ul>
+<p style="font-size:13px;"></p>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="February_26.2C_2013_-_A_Winter.27s_Tale"><span id="A_Winter.27s_Tale"><b>February 26, 2013 - A Winter's Tale</b></span></span></h2>
+<p style="font-size:13px;"><div class="floatright"><a class="image" href="File:A_Winter%27s_Tale.jpg.html"><img alt="A Winter's Tale" data-image-key="A_Winter%27s_Tale.jpg" data-image-name="A Winter's Tale.jpg" height="437" src="img/236px-A_Winter%27s_Tale.jpg" width="236"/></a></div></p>
+<p><b>Winter</b> Winter comes every 20 days or so, with snow and a new audio landscape. Ambient air temperature is modelled, and your character will get colder the longer he/she stays out in the open. Getting too cold for too long will cause freezing damage. You can extend your time away from the fire by wearing warm clothing. Nights are longer, and vegetation does not replenish. Bees and butterflies don’t leave their houses in the winter
+<b>Improved Mod Support</b> There is a new mod API that should make mods break less when we update, and allows multiple mods to work at the same time. Here is some documentation on <b><a class="external text" href="showthread.php?10817-TUTORIAL-Creating-a-Mod-using-the-Mod-System.html" rel="nofollow">how to create a mod</a></b>. Language packs are now actually supported. We supply a strings.pot template file with every update, and the game can load .po language files. This should make maintaining translations a lot easier, and you can use industry-standard tools. For more info, <b><a class="external text" href="showthread.php?10819-TUTORIAL-Creating-a-translation-using-the-PO-Format.html" rel="nofollow">see here</a></b>.
+</p><p><b>New creatures:</b>
+</p>
+<ul><li> <a class="mw-redirect" href="Mactusk_N%27_Son.html" title="Mactusk N' Son">Mactusk N' Son</a> - Sets up camp in an igloo with his Son, and then hunt you with blowdarts and hounds.
+</li><li> <a href="Deerclops.html" title="Deerclops">Deerclops</a> - He’s big, he likes to smash stuff, and he’s really hard to kill. You should probably just run away.
+</li><li> <a class="mw-redirect" href="Winter_Koalefant.html" title="Winter Koalefant">Winter Koalefant</a> - You can harvest his warm winter trunk.
+</li><li> <a class="mw-redirect" href="Snowbird.html" title="Snowbird">Snowbird</a> - A winter bird that drops a new type of feather.
+</li><li> <a href="Mosquito.html" title="Mosquito">Mosquito</a> - Spawn from ponds or Maxwellian traps. They eat too much and explode!
+</li><li> <a class="mw-redirect" href="Blue_Hound.html" title="Blue Hound">Blue Hound</a> - Assists MacTusk N' Son with fighting and he has chance to drop Blue Gem
+</li></ul>
+<p><b>New Drops </b>
+</p>
+<ul><li> <a href="Blue_Gem.html" title="Blue Gem">Blue Gem</a>
+</li><li> <a href="Walrus_Tusk.html" title="Walrus Tusk">Walrus Tusk</a>
+</li><li> <a href="Deerclops_Eyeball.html" title="Deerclops Eyeball">Deerclops Eyeball</a>
+</li><li> <a href="Tam_o%27_Shanter.html" title="Tam o' Shanter">Tam o' Shanter</a>
+</li><li> <a class="mw-redirect" href="Snowbird_Feather.html" title="Snowbird Feather">Snowbird Feather</a>
+</li></ul>
+<p><b>New Craftables</b>
+</p>
+<ul><li> <a href="Ice_Staff.html" title="Ice Staff">Ice Staff</a>
+</li><li> <a class="mw-redirect" href="Winterometer.html" title="Winterometer">Winterometer</a>
+</li><li> <a href="Blow_Dart.html" title="Blow Dart">Blow Dart</a> (damaging)
+</li><li> <a class="mw-redirect" href="Puffy_vest.html" title="Puffy vest">Puffy vest</a>
+</li></ul>
+<p><b>Adventure Mode (continued)</b> This update continues the development of adventure mode, and seeks to refine the difficulty curve.
+</p>
+<ul><li> Varying summer/winter lengths
+</li><li> Varying day/night lengths
+</li><li> New resource-starved worlds
+</li><li> Island chain worlds with lots of <a href="Worm_Hole.html" title="Worm Hole">Worm Holes</a>
+</li></ul>
+<p><b>Sandbox Mode (continued)</b> Added a new world creation screen. There are only a couple of options enabled currently, but soon you will be able to unlock more!
+</p><p><b>Sanity tuning</b> From our testing, we determined that sanity was coming on too early for new players, but was also easily avoidable by established players. The intention is for sanity to be a long-term lurking danger, so this was the complete opposite of what we were going for. Here are some changes to help rectify this:
+</p>
+<ul><li> <a href="Vegetables.html" title="Vegetables">Vegetables</a> , <a href="Crock_Pot.html" title="Crock Pot">Crock Pot</a> foods don’t regen as much sanity
+</li><li> <a class="mw-redirect" href="Monster.html" title="Monster">Monsters</a> cause more sanity drain when near
+</li><li> Player’s Initial <a href="Sanity.html" title="Sanity">Sanity</a> is higher
+</li><li> Pure darkness causes a large drop <a href="Sanity.html" title="Sanity">Sanity</a> (instead of a gradient around a light source)
+</li><li> <a class="mw-redirect" href="Hallucination.html" title="Hallucination">Shadowbeasts</a> show up later in the <a href="Sanity.html" title="Sanity">Sanity</a> curve, and are unattackable when you are not insane.
+</li><li> The <a class="mw-redirect" href="Hallucination.html" title="Hallucination">Crawling Horror</a> is weaker and the <a class="mw-redirect" href="Hallucination.html" title="Hallucination">Terrorbeak</a> is tougher
+</li><li> <a class="mw-redirect" href="Grue.html" title="Grue">Charlie</a> the invisible monster deals sanity damage when he hits you.
+</li><li> The sanity effect jiggles more slowly, so as to be less nauseating.
+</li></ul>
+<p><b>Tuning / Fixes</b>
+</p>
+<ul><li> <a href="Trap.html" title="Trap">Rabbit Traps</a> work again
+</li><li> <a href="Maxwell.html" title="Maxwell">Maxwell</a> leaves traps for you in <a href="Adventure_Mode.html" title="Adventure Mode">Adventure Mode</a>
+</li><li> Armour is less effective
+</li><li> Player attacks are less powerful
+</li><li> <a href="Pig.html" title="Pig">Pigs</a> can’t be stunlocked, have less windup animation before an attack, attack less often, have more health, take longer to respawn, and attempt to kite their targets
+</li><li> <a href="Bee.html" title="Bee">Bees</a> run around between attacks
+</li><li> <a href="Meat.html" title="Meat">Meat</a> healing and health values adjusted
+</li><li> Dead rabbits respawn slower
+</li><li> <a href="Beefalo.html" title="Beefalo">Beefalo</a> drop fewer meats
+</li><li> <a href="Honey.html" title="Honey">Honey</a> doesn't heal as much
+</li><li> Honey generates more slowly in bee boxes
+</li><li> <a href="Spider_Den.html" title="Spider Den">Spider Dens</a> have more <a class="mw-redirect" href="Spider_Warrior.html" title="Spider Warrior">warriors</a>, and cycle through levels faster
+</li><li> Spoilage is a bit faster in general
+</li><li> Stale food has less of a hunger penalty
+</li><li> Healing values are a bit lower in general
+</li><li> Ponds show up in more places
+</li><li> <a href="Eye_Bone.html" title="Eye Bone">Eye Bone</a> turns to ash during teleportation even if you hide them in a backpack
+</li><li> <a href="Things.html" title="Things">Teleportato</a> pieces are more scattered, and have little setpiece scenes surrounding them
+</li><li> <a class="mw-redirect" href="Panflutes.html" title="Panflutes">Panflutes</a> require a mandrake to craft
+</li><li> Darts shouldn’t miss targets that are walking away
+</li><li> More effective <a href="Bush_Hat.html" title="Bush Hat">Bush Hat</a>
+</li></ul>
+<hr/>
+<h3><span class="mw-headline" id="February_28.2C_2013_-_Hotfix"><u>February 28, 2013 - Hotfix</u></span></h3>
+<p><b>Balance:</b>
+</p>
+<ul><li> Armour durability back to sanity-patch levels
+</li><li> Player does 34 base damage instead of 33 (so as to not leave creatures with 1 health that requires an extra hit)
+</li><li> <a class="mw-redirect" href="Werepig.html" title="Werepig">Werepigs</a> kite like normal <a href="Pig.html" title="Pig">Pigs</a>
+</li></ul>
+<p><b>Features:</b>
+</p>
+<ul><li> <a href="Tent.html" title="Tent">Tent</a> overhaul - acts as a multi-use <a class="mw-redirect" href="Straw_Roll.html" title="Straw Roll">Straw Roll</a> (restores sanity, costs time and hunger)
+</li><li> <a class="mw-redirect" href="Straw_Roll.html" title="Straw Roll">Straw Roll</a> has a normal hunger penalty, not a percentage
+</li></ul>
+<p><b>Fixes:</b>
+</p>
+<ul><li> Translation fixes (some spelling fixes too)
+</li><li> Possible fix for rare oncreep crash
+</li><li> Highest campfire light level circle is larger than the second highest
+</li></ul>
+<hr/>
+<h3><span class="mw-headline" id="February_29.2C_2013_-_Hotfix"><u>February 29, 2013 - Hotfix</u></span></h3>
+<ul><li> Fixed a crash on day 12 of Level 4 of <a href="Adventure_Mode.html" title="Adventure Mode">Adventure Mode</a> when the seasons change.
+</li></ul>
+<div style="clear:both"></div>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="February_12.2C_2013_.E2.80.93.C2.A0Insanity.21.5B7.5D"><span id="Insanity.21"><b>February 12, 2013 – Insanity!</b></span><sup class="reference" id="cite_ref-6"><a href="#cite_note-6.html">[7]</a></sup></span></h2>
+<div class="floatright"><a class="image" href="File:Insanity!.jpg.html"><img alt="Insanity!" data-image-key="Insanity%21.jpg" data-image-name="Insanity!.jpg" height="437" src="img/236px-Insanity%21.jpg" width="236"/></a></div>
+<p><b>New Character: <a href="Wes.html" title="Wes">Wes</a></b> - Do you think Don’t Starve is too easy? Try playing as Wes, the mime! He’s not good at doing anything!
+</p><p><b><a href="Sanity.html" title="Sanity">Sanity</a></b> - The player character loses sanity when he is left alone in the dark, gets close to scary monsters, or does crazy things like eating monster meat or jumping through a <a href="Worm_Hole.html" title="Worm Hole">Worm Hole</a>. Sanity can be regained through acts of dapperness, like wearing fancy clothes in the sunshine and eating candy.
+Low sanity is not fatal, but strange creatures from another time and place are attracted to madness. There are new, powerful items that can be built from the <a href="Nightmare_Fuel.html" title="Nightmare Fuel">Nightmare Fuel</a> that they leave behind when killed.
+</p><p><b>Save Slots</b> - You can have up to four save games at once now. Your existing save will be imported into the first slot when you start the game for the first time.
+</p><p><b><a href="Sandbox_Mode.html" title="Sandbox Mode">Sandbox Mode</a></b> - This is the game as you all know it. There will eventually be a customization screen before you start a level, but you just get the default generation for now.
+</p><p><b>Experimental <a href="Adventure_Mode.html" title="Adventure Mode">Adventure Mode</a></b> - When you start a new game, you can choose to play in adventure (i.e. story) mode. Currently, there are five levels of difficulty as you progress through the levels. This is an early test, so we have a lot of work to do to make these levels meaningful and fun. We also need to add the story’s ending. This is for experienced DS players who want a taste of the future.
+</p><p><b>Pathfinding</b> - Monsters and followers can navigate around corners and walls.
+</p><p><b>Mod Support (steam only)</b>- Modding is now allowed! We’re distributing the source scripts with the game, so have a look in data/scripts, and see what you can do. There is an example (machine-translated) French language pack included with the game to get you started. <a class="external text" href="forumdisplay.php?54-Don-t-Starve-Beta-Mods-amp-Tools.html" rel="nofollow">See the modding forum</a> for more details.
+</p><p><b>New Craftables:</b>
+</p>
+<ul><li><a href="Bush_Hat.html" title="Bush Hat">Bush Hat</a> - Hide from your enemies in plain sight.
+</li><li><a href="Night_Light.html" title="Night Light">Night Light</a> - Light your nights with nightmare fuel.
+</li><li><a href="Night_Armour.html" title="Night Armour">Night Armour</a> - Protects the flesh, but sacrifices the mind.
+</li><li><a href="Dark_Sword.html" title="Dark Sword">Night Sword</a> - Live by the sword, go crazy by the sword.
+</li><li><a href="Cobblestones.html" title="Cobblestones">Cobbles</a> - Build your own roads.
+</li><li><a href="Taffy.html" title="Taffy">Taffy</a> + <a href="Pumpkin_Cookie.html" title="Pumpkin Cookie">Pumpkin Cookies</a> - New recipes! Mmmmmmm!
+</li></ul>
+<p><b>Tuning:</b>
+</p>
+<ul><li>The tent is cheaper to make, and doesn’t restore health any more.
+</li><li>Natural roads are curvy and look better.
+</li><li>There is a way for non-Wilson characters to find beard hairs in the wild.
+</li><li>Sometimes, when you find pig villages, they will have carrot and flower farms.
+</li><li>Lots of small, under-the-hood changes to the world gen.
+</li><li>Seeds provide less hunger.
+</li><li>Birds drop a feather -or- a morsel, never both.
+</li><li>Rabbits take longer to respawn.
+</li><li>Hounds drop teeth less often.
+</li><li>Traps and Toothtraps have slightly fewer uses.
+</li><li>Farms take a bit longer to grow.
+</li><li>Birds won’t land on seeds if you are standing too close to them.
+</li><li>Spider dens spit out less creep.
+</li><li>Creep without a spider den disappears. (As a side-effect, creep can no longer be picked up and placed.)
+</li><li>Walls have more health.
+</li><li>Torches cost more to build, but last longer.
+</li><li>Corpses are back!
+</li></ul>
+<p><b>Bug Fixes:</b>
+</p>
+<ul><li>There is much less mist in the graveyards, since it was causing performance and visibility problems.
+</li><li>Stuff that falls near the ocean shouldn’t disappear.
+</li><li>Stone walls don’t take fire damage.
+</li><li>Hounds don’t follow you through the teleportato.
+</li><li>You can’t be killed while you are using the teleportato.
+</li><li>Stumps no longer rain from the sky on loading some games.
+</li><li>Rabbits no longer phase through obstacles.
+</li><li>Placers for campfires won’t disappear into the night when trying to build them.
+</li><li>Heated beefalo won’t go out of their way to aggro walls.
+</li><li>Spider queens no longer give birth to unlimited spiders when they have a combat target.
+</li></ul>
+<p><b>Deprecations:</b> The old world gen and the old research system have been removed. If you have an existing save game that was using the old research system, you will have to build some science machines to unlock your recipes.
+</p>
+<hr/>
+<h3><span class="mw-headline" id="February_13.2C_2013_-_Hotfix"><u>February 13, 2013 - Hotfix</u></span></h3>
+<p><b>New item:</b>
+</p>
+<ul><li> <a href="Garland.html" title="Garland">Garland</a> - a pretty hat made out of flowers that gives a small sanity buff until it rots away
+</li></ul>
+<p><b>Bug fixes:</b>
+</p>
+<ul><li><a href="Abigail.html" title="Abigail">Abigail</a> doesn’t hurt walls, and keeps more distance from you
+</li><li>Natural pig villages in new worlds won’t be too large
+</li><li>Bird traps take longer to trap birds
+</li><li><a href="Wall.html" title="Wall">Wall</a> repair is cheaper
+</li><li>Pigs say the right thing when they are befriended
+</li><li>Pigs don’t eat things off ground right when they are spawned
+</li><li>You have to force-attack to attack your own wall
+</li></ul>
+<p><b>Sanity Tuning:</b>
+</p>
+<ul><li>Making a prototype gives a small sanity boost
+</li><li>Crawling Horrors and Terrorbeaks don’t hit quite as hard, and have a bit less HP
+</li><li>You always resurrect (slightly) sane
+</li><li>Wormhole sanity penalty is lower
+</li><li>Nightmare fuel drops more regularly from shadow monsters
+</li><li>Killing a shadow monster boosts sanity a bit
+</li><li>Shaving increases sanity
+</li><li>Ground Watchers come later and are less numerous
+</li><li>Cooked vegetables give a small sanity boost
+</li><li>Creepy eyes spawn farther away from the fire
+</li><li>Shadow monsters don't teleport into the water when you hit them
+</li><li>Tophat is a bit cheaper to make
+</li><li>Pig friends give a smaller sanity boost
+</li><li>Max 3 shadow monsters at once (earlier was 4)
+</li><li>Mr. Skitts shows up less frequently
+</li><li>Wet goop does not restore sanity
+</li><li>Sanity penalty for eating spoiled food is not as strong
+</li><li>Reduced nightmarefuel crafting costs
+</li><li>Reduced night light insanity aura
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="January_29.2C_2013_.E2.80.93_Progress.21.5B8.5D"><span id="Progress.21"><b>January 29, 2013 – Progress!</b></span><sup class="reference" id="cite_ref-7"><a href="#cite_note-7.html">[8]</a></sup></span></h2>
+<p style="font-size:13px;"><div class="floatright"><a class="image" href="File:Progress!.jpg.html"><img alt="Progress!" data-image-key="Progress%21.jpg" data-image-name="Progress!.jpg" height="437" src="img/236px-Progress%21.jpg" width="236"/></a></div></p>
+<p>You can escape the world by finding <a href="Wooden_Thing.html" title="Wooden Thing">Wooden Thing</a> and activating it. You get to keep your inventory, and you cash-out any XP that you have and unlock characters without dying. This is the first step towards story mode. The world that you escape to is no harder than the first, but this will change soon!
+</p><p><b>New <a class="mw-redirect" href="Research.html" title="Research">Research</a> Method:</b> Under the new research method, you unlock access to tiers of recipes by building research machines. You can unlock a specific recipe by building it near an active machine, after which point you can build it anywhere. Your known recipes last as long as you do - they will travel with you to new worlds if you escape, but you will lose them if you die. There are no more research points or grinding. The science machine is now a bit cheaper to make, and the alchemy engine is a bit more expensive.
+</p><p>This is a big change, so we've made it optional for the time being. When you start a new world, you will get to choose between the new research method or the old one. Your progress in the old method is not available in the new method, but will be there if you switch back. We will be phasing out the old method soon, but wanted to introduce the new one carefully.
+</p><p><b>New Character: <a href="Wickerbottom.html" title="Wickerbottom">Wickerbottom</a></b> The Librarian can be unlocked with XP. She gets a bonus research tier, because she is so smart.
+</p><p><b>New Creatures:</b>
+</p>
+<ul><li>There are <a class="mw-redirect" href="Baby_Beefalo.html" title="Baby Beefalo">Baby Beefalo</a>. You can eat them, if you are a terrible person.
+</li><li><a href="Worm_Hole.html" title="Worm Hole">Worm Holes</a> are sprinkled throughout new worlds. I dare you to click on one!
+</li><li><a href="Koalefant.html" title="Koalefant">Koalefant</a>, an elusive herbivore that you can hunt. He is hard to find, and harder to catch. He drops <a href="Koalefant_Trunk.html" title="Koalefant Trunk">Koalefant Trunk</a> and lots of meat.
+</li></ul>
+<p><b>New Craftables:</b>
+</p>
+<ul><li>You can build three types of defensive <a class="mw-redirect" href="Walls.html" title="Walls">Walls</a> (<a class="mw-redirect" href="Hay_Wall.html" title="Hay Wall">Hay Walls</a>, <a class="mw-redirect" href="Wood_Wall.html" title="Wood Wall">Wood Walls</a>, and <a class="mw-redirect" href="Stone_Wall.html" title="Stone Wall">Stone Walls</a>). These can be destroyed by monsters, and repaired by you. The AI pathfinding is not done yet but will probably go in the next update, so enjoy confusing the heck out of pigmen while you can.
+</li><li>You can make wooden floor tiles and place them like turf.
+</li><li>You can make a <a href="Boomerang.html" title="Boomerang">Boomerang</a> and throw it at other creatures. Just be careful when it flies back at you!
+</li><li>You can build a <a href="Pitchfork.html" title="Pitchfork">Pitchfork</a>, which takes over turfing duties from the shovel.
+</li><li>You can craft a nice, comfy <a href="Breezy_Vest.html" title="Breezy Vest">Breezy Vest</a>.
+</li></ul>
+<p><b>New Other Stuff:</b>
+</p>
+<ul><li>Spider dens produce creep tiles <a href="Sticky_Webbing.html" title="Sticky Webbing">Sticky Webbing</a> that slow down movement. You can dig them up and place them if you like.
+</li><li>Added a better death effect for creatures.
+</li><li>Spline-based <a class="mw-redirect" href="Roads.html" title="Roads">Roads</a> look better, and make you walk faster.
+</li></ul>
+<p><b>Balance Changes:</b>
+</p>
+<ul><li>Every new <a href="Meat_Effigy.html" title="Meat Effigy">Meat Effigy</a> that you create takes a chunk of your max health. It gets returned when you die, or when you destroy the effigy.
+</li><li>Made <a href="Monster_Lasagna.html" title="Monster Lasagna">Monster Lasagna</a> recipe that shows up when you use too much monster meat in the crock pot.
+</li><li>Cooked / crocked foods inherit spoiledness from their ingredients (with a small bonus).
+</li><li>The "new world gen" is now the default. The old method will soon be deprecated.
+</li><li>Added a character quip when <a href="Hound.html" title="Hound">Hounds</a> are approaching.
+</li><li>The <a href="Tent.html" title="Tent">Tent</a> no longer swaps characters - it is now acts as a super-powerful bedroll that restores all health and hunger.
+</li><li><a href="Honey_Nuggets.html" title="Honey Nuggets">Honey Nuggets</a> and <a href="Honey_Ham.html" title="Honey Ham">Honey Ham</a> spoil a bit faster.
+</li></ul>
+<p><b>Misc Bug fixes:</b>
+</p>
+<ul><li>Birds don't spawn seeds when flying away if there's already seeds nearby.
+</li><li><a href="Tooth_Trap.html" title="Tooth Trap">Tooth Trap</a> can be reset with Right-click.
+</li><li>Beard fountain doesn't... fountain.
+</li><li>Teenbird and <a href="Tallbird.html" title="Tallbird">Tallbird</a> aggression fixes.
+</li><li>If you die with something in your hand it will drop on the ground instead of disappearing.
+</li><li>Fix for missing <a href="Pig_King.html" title="Pig King">Pig King</a> in new world generation.
+</li><li>Fix for hangs in new world generation.
+</li><li>Massive speed up for new world generation.
+</li><li>Fixed bird/wilson animation freak-outs on slower machines.
+</li><li>Darts and poop won't magically accumulate at the world origin.
+</li><li>Berries won't show up in farm plots.
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="January_15.2C_2013_.E2.80.93.C2.A0Spoiled_Rotten.5B9.5D"><span id="Spoiled_Rotten"><b>January 15, 2013 – Spoiled Rotten</b></span><sup class="reference" id="cite_ref-8"><a href="#cite_note-8.html">[9]</a></sup></span></h2>
+<p style="font-size:13px;"><div class="floatright"><a class="image" href="File:Spoiled_Rotten.jpg.html"><img alt="Spoiled Rotten" data-image-key="Spoiled_Rotten.jpg" data-image-name="Spoiled Rotten.jpg" height="370" src="img/200px-Spoiled_Rotten.jpg" width="200"/></a></div></p>
+<p><br/>
+</p>
+<ul><li><a href="Food.html" title="Food">Food</a> spoils over long periods of time. Stale and Spoiled foods are less beneficial. Rotten food is practically inedible, but can be used as fuel or fertilizer.
+</li><li><a href="Health.html" title="Health">Health</a> and <a href="Hunger.html" title="Hunger">Hunger</a> values have been re-tuned across the board. Characters have a larger hunger buffer now.
+</li><li><a href="Crock_Pot.html" title="Crock Pot">Crock Pot</a> foods are stackable up to 40.
+</li><li>You can build an <a href="Ice_Box.html" title="Ice Box">Ice Box</a> to mitigate spoilage.
+</li><li>New unlockable character: <a href="WX-78.html" title="WX-78">WX-78</a>, a robot who can eat spoiled food with no penalties, and who hates all living things.
+</li><li>Smallbirds grow up to become angsty Teenbirds (<a class="mw-redirect" href="Smallish_Tallbird.html" title="Smallish Tallbird">Smallish Tallbirds</a> in-game). Teenbirds grow up to be <a href="Tallbird.html" title="Tallbird">Tallbirds</a> and leave the player.
+</li><li>The mysterious Otto Von Chesterfield (an <a href="Eye_Bone.html" title="Eye Bone">Eye Bone</a> item that spawn a <a href="Chester.html" title="Chester">Chester</a>) can be found in some <a href="Marsh.html" title="Marsh">Marshes</a>, and can be befriended (a new world is needed to find the Eye Bone).
+</li><li><a href="Beefalo.html" title="Beefalo">Beefalo</a> travel in proper herds now. Herds regenerate off-screen (currently with adults)
+</li><li>Beefalo herds become agitated when they go into heat, and will chase away the player if they are not wearing a <a href="Beefalo_Hat.html" title="Beefalo Hat">Beefalo Hat</a>.
+</li><li>Beefalo sometimes drop a <a href="Beefalo_Horn.html" title="Beefalo Horn">Beefalo Horn</a>, which can be used to move beefalos around.
+</li><li>The <a href="Spiderhat.html" title="Spiderhat">Spiderhat</a> is no longer craftable - the player will just wear the <a href="Spider_Queen.html" title="Spider Queen">Spider Queen</a>'s head directly. It also can't be used to steal <a class="mw-redirect" href="Spiders.html" title="Spiders">Spiders</a> from an existing Queen.
+</li><li>Steam cloud can be disabled (details below)
+</li><li>Camera controls: CTRL+P will freeze the camera in place; CTRL+H will hide the HUD.
+</li><li>Minor tweaks and fixes
+</li><li>Fixed various save/load issues
+</li></ul>
+<hr/>
+<h3><span class="mw-headline" id="January_16_-_Hotfix.5B10.5D"><u>January 16 - Hotfix</u><sup class="reference" id="cite_ref-9"><a href="#cite_note-9.html">[10]</a></sup></span></h3>
+<p><b>Tuning</b>
+</p>
+<ul><li>Health values for a lot of food items are higher! Rejoice!
+</li><li>Default stomach size reduced to 150
+</li><li>Spoilage happens *slightly* faster overall
+</li><li>Three new crockpot recipes: Honey Nuggets, Meatballs, and Fistfull of Jam
+</li><li>Teenbirds take longer to grow up
+</li><li>Crockpot works a little faster
+</li></ul>
+<p><b>Fixes</b>
+</p>
+<ul><li>Fueled hats shouldn't keep running when you reload. (You'll have to equip and unequip existing hats to reset them)
+</li><li>Tooth trap stays set across save/load
+</li><li>Cooked mandrake doesn't crash when you eat it
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="January_8.2C_2013_Turf.21.5B11.5D"><span id="Turf.21"><b>January 8, 2013 Turf!</b></span><sup class="reference" id="cite_ref-10"><a href="#cite_note-10.html">[11]</a></sup></span></h2>
+<p style="font-size:13px;"><div class="floatright"><a class="image" href="File:Turf!.jpg.html"><img alt="Turf!" data-image-key="Turf%21.jpg" data-image-name="Turf!.jpg" height="341" src="img/236px-Turf%21.jpg" width="236"/></a></div></p>
+<ul><li>Ground can now be dug up using the <a href="Shovel.html" title="Shovel">Shovel</a> to reveal the bare dirt underneath and creating a <a class="mw-redirect" href="Turf.html" title="Turf">Turf</a> item.
+</li><li>Turf items can be placed down on bare dirt tiles to change the <a class="mw-redirect" href="Biome.html" title="Biome">biome</a>.
+</li><li>New art for the <a href="Rockyland.html" title="Rockyland">Rockyland</a> biome.
+</li><li>Minor bug fixes and tuning.
+</li></ul>
+<hr/>
+<h3><span class="mw-headline" id="January_11.2C_2013_-_Hotfix.29"><u>January 11, 2013  - Hotfix)</u></span></h3>
+<ul><li><a href="Butter_Muffin.html" title="Butter Muffin">Butter Muffin</a> is no longer invisible in the <a href="Crock_Pot.html" title="Crock Pot">Crock Pot</a>
+</li><li>Items drop from <a class="mw-redirect" href="Bee_Hive.html" title="Bee Hive">Bee Hives</a> when destroyed by <a href="Abigail.html" title="Abigail">Abigail</a>
+</li><li>Fixed some typos
+</li><li>Fixed <a href="Rabbit.html" title="Rabbit">Rabbits</a> not respawning from rabbit holes sometimes
+</li><li><a href="Mobs.html" title="Mobs">Mobs</a> keep their targets between save/loads
+</li><li><a href="Birds.html" title="Birds">Birds</a> render in the <a href="Bird_Trap.html" title="Bird Trap">Bird Trap</a> again
+</li><li>New items will try to stack into existing <a href="Backpack.html" title="Backpack">Backpack</a>/equipped stacks
+</li><li>Fixed an infinite <a href="Mandrake.html" title="Mandrake">Mandrake</a> exploit
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="December_19.2C_2012_.E2.80.93_Long_Live_the_Queen.5B12.5D"><span id="Long_Live_the_Queen"><b>December 19, 2012 – Long Live the Queen</b></span><sup class="reference" id="cite_ref-11"><a href="#cite_note-11.html">[12]</a></sup></span></h2>
+<p style="font-size:13px;"><figure class="article-thumb tright" style="width: 236px"> <a class="image" href="File:Long_Live_the_Queen.jpg.html"><img alt="Long Live the Queen" class="thumbimage" data-image-key="Long_Live_the_Queen.jpg" data-image-name="Long Live the Queen.jpg" height="438" src="img/236px-Long_Live_the_Queen.jpg" width="236"/></a> <figcaption> </figcaption> </figure></p>
+<p><b>New features</b>
+</p>
+<ul><li>Spider dens have a full life cycle. Tiers are more meaningful, and higher tiered dens will require strategy to overcome.
+</li><li>Spider queens come out of the highest-tier nests to wreak havoc and spread spideryness.
+</li><li>A new type of warrior spider protects high-level dens and the queen. They are resistant to kiting, so a frontal assault is not recommended.
+</li><li>Wilson can build fire darts, and light pretty much every creature on fire.
+</li><li>Wilson can build a spider hat from egg sacks that lets him control spiders. Just be careful when you take it off!
+</li><li>Wilson can build tooth traps and use them for defense or for guilt-free rabbit hunting.
+</li><li>There is a new, experimental map gen algorithm that you can use. It is a work in progress and is largely untested and unbalanced, so you may not live for very long! (Don’t worry, though - the old map gen is still the default!)
+</li><li>Pet Smallbirds will demand food when hungry, and can starve to death.
+</li><li>Wilson can build a warm hat. It... makes something happen.
+</li><li>New "epic fight" and "dawn" music.
+</li></ul>
+<p><b>Tuning</b>
+</p>
+<ul><li>High-level hound attacks are more intense.
+</li><li>Krampus is silent until you reach a certain threshold of naughtiness.
+</li><li>Farming takes longer.
+</li><li>Some fruits and cooked foods are a bit less potent.
+</li><li>Seeds drop less frequently.
+</li><li>The birdcage seed sorter is less reliable.
+</li><li>Pig houses wear out after a certain number of its pigs are killed.
+</li><li>Werepig monster meat threshold increased to 4, werepigs drop normal meat.
+</li></ul>
+<p><b>Fixes</b>
+</p>
+<ul><li>Stuff that falls out of bounds will disappear after a bit.
+</li><li>Most monsters will ignore things that are out of bounds.
+</li><li>Gobblers and Krampus try to avoid getting caught against the edge of the world.
+</li><li>Fireflies drop individually.
+</li><li>Mobs shouldn’t get stuck in sliding animations.
+</li></ul>
+<hr/>
+<h3><span class="mw-headline" id="December_20.2C_2012_-_Hotfix.5B13.5D"><u>December 20, 2012 - Hotfix</u><sup class="reference" id="cite_ref-12"><a href="#cite_note-12.html">[13]</a></sup></span></h3>
+<ul><li>Blank out attacks on spiders just after den spawn
+</li><li>Disable pighouse exhaustion (for now)
+</li><li>Warrior spider have somewhat random attack periods (so that they don't pounce you at the same time)
+</li><li>Fewer spiders are released when hitting a nest, and fewer of them are warriors
+</li><li>Warrior spider attacks less frequently, and does less damage
+</li><li>Seeds grow time and drop rates are a bit less nerfed
+</li><li>Fix gold getting stuck on pig king's head
+</li><li>Fix exploding beemine-in-backpack
+</li><li>Treeguards shouldn't spawn invisibly any more
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="December_11.2C_2012_.E2.80.93_Naughty_and_Nice.5B14.5D.5B15.5D"><span id="Naughty_and_Nice"><b>December 11, 2012 – Naughty and Nice</b></span><sup class="reference" id="cite_ref-13"><a href="#cite_note-13.html">[14]</a></sup><sup class="reference" id="cite_ref-14"><a href="#cite_note-14.html">[15]</a></sup></span></h2>
+<p style="font-size:13px;"><div class="floatright"><a class="image" href="File:Naughty_and_Nice.jpg.html"><img alt="Naughty and Nice" data-image-key="Naughty_and_Nice.jpg" data-image-name="Naughty and Nice.jpg" height="438" src="img/236px-Naughty_and_Nice.jpg" width="236"/></a></div></p>
+<p><b>NEW FEATURES</b>
+</p>
+<ul><li>Krampus will punish you if you are too naughty.
+</li><li>Don’t make the bees angry.
+</li><li>Spider nests are crawling with activity.
+</li><li>Bird and rabbit traps are more animal friendly.
+</li><li>You can build a bird cage.
+</li><li>You can hatch Tallbird eggs to gain a new friend.
+</li><li>Steam client runs at 60 Hz on fast computers.
+</li><li>Game saves on exit. It also auto-saves every morning.
+</li><li>Updated minimap art to make biomes more readable.
+</li></ul>
+<p><b>GENERAL FIXES:</b>
+</p>
+<ul><li>Traps should work properly again.
+</li><li>Dead pigs respawn more slowly
+</li><li>Tweaked the fire fuel values a bit (they were too high after the hot fixes)
+</li><li>Cooked mandrakes actually have effects now.
+</li><li>Tallbird eggs are no longer stackable.
+</li></ul>
+<p><b>FARMS</b>
+</p>
+<ul><li>Farm plots are fully fertilized when they are built
+</li><li>Farm plots have much higher fertilizer capacity (used to be 6, now is 10,20,30)
+</li><li>Manure fertilizes farms more efficiently and speeds crop growth more efficiently
+</li></ul>
+<p><b>DEPLOYING / BUILDING</b>
+</p>
+<ul><li>an unsuccessful deploy will not consume the deployable
+</li><li>chests can be placed closer together
+</li><li>non-colliding deployables can be placed closer together
+</li><li>twigs and grass do not become exhaustible until you transplant them (in existing saves, everything counts as not-yet-transplanted, because I wasn’t tracking this before)
+</li><li>transplanted grass is good for 20 cycles per poop
+</li></ul>
+<p><b>USING GRASS</b>
+</p>
+<ul><li>fillers (other than twigs and petals) can no longer be used in the crock pot
+</li><li>traps can be used 10 times instead of 5
+</li><li>recipe changes to reduce grass usage:
+<ul><li>Trap uses 2 less grass
+</li><li>Bugnet uses 1 less rope
+</li><li>farms cost less manure to make
+</li><li>Golden tools use 2 less gold
+</li><li>Panflute uses 1 less rope
+</li><li>rope uses 1 less grass
+</li><li>papyrus uses 2 less reeds
+</li><li>logsuit uses 2 less rope
+</li><li>spear uses 1 rope instead of 2 grass
+</li><li>strawhat uses 12 grass instead of 25
+</li><li>beefalo hat, beehat, tophat use no grass
+</li><li>football helmet uses 3 less pigskin, 1 less rope
+</li></ul>
+</li></ul>
+<p><b>PIGS</b>
+</p>
+<ul><li>pigs don’t eat off the ground as often
+</li><li>pigs don’t eat mandrakes
+</li><li>pigs can be given veggies more often, and will refuse them if you try to do it too often
+</li><li>pig houses take 3 days to rebuild a dead pig
+</li><li>pigs drop either a meat or a pigskin (75%-25% split)
+</li><li>pigs, spider, and hounds can eat pigskins
+</li></ul>
+<p><b>MISC</b>
+</p>
+<ul><li>Axe, pickaxe (and gold equivalents) last a bit longer
+</li><li>Minerhat lasts twice as long
+</li><li>Fire fueling values have been updated
+</li></ul>
+<hr/>
+<h3><span class="mw-headline" id="December_12.2C_2012_-_Hotfix.5B16.5D"><u>December 12, 2012 - Hotfix</u><sup class="reference" id="cite_ref-15"><a href="#cite_note-15.html">[16]</a></sup></span></h3>
+<p><b>Bug fixes</b>
+</p>
+<ul><li>Profile saving should work again on Chrome. Unfortunately, there's no way to get back any data that was lost to the bug while it was live.
+</li><li>The 1% phantom trap issue should be fixed.
+</li><li>There is a workaround available for those having trouble starting up with low-memory video cards (see below)
+</li></ul>
+<p><b>Tuning</b>
+</p>
+<ul><li>Krampus comes a little less frequently, and in smaller numbers.
+</li><li>Krampus will start to forgive naughtiness if you aren't naughty for a while. So you can still kill lots of bunnies with impunity if you pace yourself and diversify your food sources.
+</li><li>Krampus will target loose items on the ground before going after chests.
+</li><li>Krampus runs a little slower.
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="November_27.2C_2012.C2.A0.E2.80.93_The_Birds_and_the_Bees_.26_Dogs_That_Want_to_Kill_You"><span id="The_Birds_and_the_Bees_.26_Dogs_That_Want_to_Kill_You"><b>November 27, 2012 – The Birds and the Bees &amp; Dogs That Want to Kill You</b></span></span></h2>
+<p style="font-size:13px;"><figure class="article-thumb tright" style="width: 236px"> <a class="image" href="File:The_Birds_and_the_Bees_%26_Dogs_That_Want_to_Kill_You.jpg.html"><img alt="The Birds and the Bees &amp; Dogs That Want to Kill You" class="thumbimage" data-image-key="The_Birds_and_the_Bees_%26_Dogs_That_Want_to_Kill_You.jpg" data-image-name="The Birds and the Bees &amp;amp; Dogs That Want to Kill You.jpg" height="437" src="img/236px-The_Birds_and_the_Bees_%26_Dogs_That_Want_to_Kill_You.jpg" width="236"/></a> <figcaption> </figcaption> </figure></p>
+<p><br/>
+</p>
+<ul><li>10 more spaces in every chest built
+</li><li>Falling birds, for more opportunities for meat and feathers
+</li><li>Sleeping birds and Jackalopes for more opportunities for meat and feathers
+</li><li>Any kind of trap won't work
+</li><li>Jackalopes are invisible
+</li><li>Need pig skin to build pig houses (Not that bad)
+</li><li>Hounds are now added. They will attack every few days!
+</li><li>Dapper vest added.
+</li><li>Backpack to carry extra things.
+</li><li>Football Helmet to protect your braincase.
+</li><li>Amulet of Resurrection.
+</li><li>Blowdarts.
+</li><li>Bee mines.
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="Intel_Integrated_Graphics_Patch">Intel Integrated Graphics Patch</span></h2>
+<ul><li>Fixes the game to run without a graphics card
+</li><li>Backpacks
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="November_13.2C_2012_.E2.80.93_Enter_the_Gobbler.5B17.5D"><span id="Enter_the_Gobbler"><b>November 13, 2012 – Enter the Gobbler</b></span><sup class="reference" id="cite_ref-16"><a href="#cite_note-16.html">[17]</a></sup></span></h2>
+<dl><dt>New features
+</dt></dl>
+<ul><li>Character differences! Now it matters who you pick!
+</li><li>Pond fishing
+</li><li>Hammer time - use the hammer to break apart structures
+</li><li>Build and deploy preview interface  recipes to discover (5 of them!)
+</li><li>The Gobbler...
+</li></ul>
+<p><b>Tuning and Bug fixes</b>
+</p>
+<ul><li>Graves don't reset when you load
+</li><li>Never-closing chest now closes
+</li><li>Crafting interface doesn't close automatically when you build something
+</li><li>RMB drops deployables
+</li><li>Gold doesn't always drop from rocks
+</li><li>Fire now hurts you if you stand too close!
+</li><li>Max stack size is a little smaller
+</li></ul>
+<p style="font-size:13px;"><div style="clear:both"></div>
+</p>
+<h2><span class="mw-headline" id="October_2.2C_2012.5B18.5D"><b>October 2, 2012</b><sup class="reference" id="cite_ref-17"><a href="#cite_note-17.html">[18]</a></sup></span></h2>
+<ul><li>A new unlockable character!
+</li><li>Feeling stabby? You can craft a spear now! (Tools have been made less effective in combat).
+</li><li>Upgradable tools! You can now build extra durable golden tools.
+</li><li>Traps are reusable, but they wear out.
+</li><li>New bedroll item lets you skip through the night. Sleeping on it consumes the bedroll.
+</li><li>The tent now allows you to change your current character. This consumes the tent.
+</li><li>You can remove tree stumps with the shovel.
+</li><li>Tentacles can now be attacked and they can die.
+</li><li>Characters have shadows. Graphical!
+</li><li>Seeds dropped by birds can turn into pumpkins or carrots.
+</li><li>Low level spider dens do not drop egg sacks when they are destroyed.
+</li><li>Meat farming takes longer.
+</li><li>Bees are less aggressive. Their loot drops and combat behaviour have also been tuned.
+</li><li>You can build a beekeeper’s hat to protect yourself from bees.
+</li></ul>
+<h2><span class="mw-headline" id="Posters">Posters</span></h2>
+<div class="wikia-gallery wikia-gallery-position-center wikia-gallery-spacing-small wikia-gallery-border-small wikia-gallery-captions-center wikia-gallery-caption-size-medium" hash="9ed40aca03f8b83db5bca5294eb27157" id="gallery-0"><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="The_End_is_Nigh-jpg" style="position: relative; height:200px; width:108px;"><a class="image lightbox" href="File:The_End_is_Nigh.jpg.html" style="height:200px; width:108px;" title="The End is Nigh.jpg (123 KB)"><img alt="The End is Nigh" class="thumbimage" data-image-key="The_End_is_Nigh.jpg" data-image-name="The End is Nigh.jpg" src="img/108px-The_End_is_Nigh.jpg" style="" title="The End is Nigh.jpg (123 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#The_End_is_Nigh.html">The End is Nigh</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Doorway_to_Adventure-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:Doorway_to_Adventure.jpg.html" style="height:199px; width:107px;" title="Doorway to Adventure.jpg (608 KB)"><img alt="Doorway to Adventure" class="thumbimage" data-image-key="Doorway_to_Adventure.jpg" data-image-name="Doorway to Adventure.jpg" src="img/108px-Doorway_to_Adventure.jpg" style="" title="Doorway to Adventure.jpg (608 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Doorway_to_Adventure.html">Doorway to Adventure</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="A_Little_Rain_Must_Fall-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:A_Little_Rain_Must_Fall.jpg.html" style="height:199px; width:107px;" title="A Little Rain Must Fall.jpg (755 KB)"><img alt="A Little Rain Must Fall" class="thumbimage" data-image-key="A_Little_Rain_Must_Fall.jpg" data-image-name="A Little Rain Must Fall.jpg" src="img/108px-A_Little_Rain_Must_Fall.jpg" style="" title="A Little Rain Must Fall.jpg (755 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#A_Little_Rain_Must_Fall.html">A Little Rain Must Fall</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="A_Winter-27s_Tale-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:A_Winter%27s_Tale.jpg.html" style="height:199px; width:107px;" title="A Winter's Tale.jpg (725 KB)"><img alt="A Winter's Tale" class="thumbimage" data-image-key="A_Winter%27s_Tale.jpg" data-image-name="A Winter's Tale.jpg" src="img/108px-A_Winter%27s_Tale.jpg" style="" title="A Winter's Tale.jpg (725 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#A_Winter.27s_Tale.html">A Winter's Tale</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Insanity-21-jpg" style="position: relative; height:200px; width:108px;"><a class="image lightbox" href="File:Insanity!.jpg.html" style="height:200px; width:108px;" title="Insanity!.jpg (153 KB)"><img alt="Insanity!" class="thumbimage" data-image-key="Insanity%21.jpg" data-image-name="Insanity!.jpg" src="img/108px-Insanity%21.jpg" style="" title="Insanity!.jpg (153 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Insanity.21.html">Insanity!</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Progress-21-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:Progress!.jpg.html" style="height:199px; width:107px;" title="Progress!.jpg (745 KB)"><img alt="Progress!" class="thumbimage" data-image-key="Progress%21.jpg" data-image-name="Progress!.jpg" src="img/108px-Progress%21.jpg" style="" title="Progress!.jpg (745 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Progress.21.html">Progress!</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Spoiled_Rotten-jpg" style="position: relative; height:200px; width:108px;"><a class="image lightbox" href="File:Spoiled_Rotten.jpg.html" style="height:200px; width:108px;" title="Spoiled Rotten.jpg (183 KB)"><img alt="Spoiled Rotten" class="thumbimage" data-image-key="Spoiled_Rotten.jpg" data-image-name="Spoiled Rotten.jpg" src="img/108px-Spoiled_Rotten.jpg" style="" title="Spoiled Rotten.jpg (183 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Spoiled_Rotten.html">Spoiled Rotten</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Turf-21-jpg" style="position: relative; height:200px; width:138px;"><a class="image lightbox" href="File:Turf!.jpg.html" style="height:200px; width:138px;" title="Turf!.jpg (112 KB)"><img alt="Turf!" class="thumbimage" data-image-key="Turf%21.jpg" data-image-name="Turf!.jpg" src="img/138px-Turf%21.jpg" style="" title="Turf!.jpg (112 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Turf.21.html">Turf!</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Long_Live_the_Queen-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:Long_Live_the_Queen.jpg.html" style="height:199px; width:107px;" title="Long Live the Queen.jpg (166 KB)"><img alt="Long Live the Queen" class="thumbimage" data-image-key="Long_Live_the_Queen.jpg" data-image-name="Long Live the Queen.jpg" src="img/108px-Long_Live_the_Queen.jpg" style="" title="Long Live the Queen.jpg (166 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Long_Live_the_Queen.html">Long Live the Queen</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="The_Birds_and_the_Bees_-26_Dogs_That_Want_to_Kill_You-jpg" style="position: relative; height:200px; width:108px;"><a class="image lightbox" href="File:The_Birds_and_the_Bees_%26_Dogs_That_Want_to_Kill_You.jpg.html" style="height:200px; width:108px;" title="The Birds and the Bees &amp; Dogs That Want to Kill You.jpg (604 KB)"><img alt="The Birds and the Bees &amp; Dogs That Want to Kill You" class="thumbimage" data-image-key="The_Birds_and_the_Bees_%26amp%3B_Dogs_That_Want_to_Kill_You.jpg" data-image-name="The Birds and the Bees &amp;amp; Dogs That Want to Kill You.jpg" src="img/108px-The_Birds_and_the_Bees_%26_Dogs_That_Want_to_Kill_You.jpg" style="" title="The Birds and the Bees &amp; Dogs That Want to Kill You.jpg (604 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#The_Birds_and_the_Bees_.26_Dogs_That_Want_to_Kill_You.html">The Birds and the Bees &amp; Dogs That Want to Kill You</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Naughty_and_Nice-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:Naughty_and_Nice.jpg.html" style="height:199px; width:107px;" title="Naughty and Nice.jpg (256 KB)"><img alt="Naughty and Nice" class="thumbimage" data-image-key="Naughty_and_Nice.jpg" data-image-name="Naughty and Nice.jpg" src="img/108px-Naughty_and_Nice.jpg" style="" title="Naughty and Nice.jpg (256 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Naughty_and_Nice.html">Naughty and Nice</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="x1369315780_ds_updateposter_caves-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:1369315780_ds_updateposter_caves.jpg.html" style="height:199px; width:107px;" title="1369315780 ds updateposter caves.jpg (48 KB)"><img alt="1369315780 ds updateposter caves" class="thumbimage" data-image-key="Underground.jpg" data-image-name="Underground.jpg" src="img/107px-Underground.jpg" style="" title="1369315780 ds updateposter caves.jpg (48 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Caves.21.html">Underground</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Ds_updatePoster_StrangeNewPowers-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:Ds_updatePoster_StrangeNewPowers.jpg.html" style="height:199px; width:107px;" title="Ds updatePoster StrangeNewPowers.jpg (50 KB)"><img alt="Ds updatePoster StrangeNewPowers" class="thumbimage" data-image-key="Strange_New_Powers.jpg" data-image-name="Strange New Powers.jpg" src="img/108px-Strange_New_Powers.jpg" style="" title="Ds updatePoster StrangeNewPowers.jpg (50 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#Strange_New_Powers.html">Strange New Powers</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Ds_updatePoster_TheStuffOfNightmares_copy-jpg" style="position: relative; height:199px; width:107px; top:0.5px;"><a class="image lightbox" href="File:Ds_updatePoster_TheStuffOfNightmares_copy.jpg.html" style="height:199px; width:107px;" title="Ds updatePoster TheStuffOfNightmares copy.jpg (4.89 MB)"><img alt="Ds updatePoster TheStuffOfNightmares copy" class="thumbimage" data-image-key="The_Stuff_Of_Nightmares.jpg" data-image-name="The Stuff Of Nightmares.jpg" src="img/108px-The_Stuff_Of_Nightmares.jpg" style="" title="Ds updatePoster TheStuffOfNightmares copy.jpg (4.89 MB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#The_Stuff_of_Nightmares.html">The Stuff of Nightmares</a></div></div><div class="wikia-gallery-item" style="width:202px; "><div class="thumb" style="height:202px;"><div class="gallery-image-wrapper accent" id="Post-209228-0-06541800-1378847610-jpg" style="position: relative; height:200px; width:108px;"><a class="image lightbox" href="File:Post-209228-0-06541800-1378847610.jpg.html" style="height:200px; width:108px;" title="Post-209228-0-06541800-1378847610.jpg (162 KB)"><img alt="Post-209228-0-06541800-1378847610" class="thumbimage" data-image-key="A_Moderately_Friendly_Update.jpg" data-image-name="A Moderately Friendly Update.jpg" src="img/108px-A_Moderately_Friendly_Update.jpg" style="" title="Post-209228-0-06541800-1378847610.jpg (162 KB)"/></a></div></div><div class="lightbox-caption" style="width:200px;"><a href="#A_Moderately_Friendly_Update.html">A Moderately Friendly Update</a></div></div></div><script>JSSnippetsStack.push({dependencies:["/extensions/wikia/WikiaPhotoGallery/js/WikiaPhotoGallery.view.js","/extensions/wikia/WikiaPhotoGallery/css/gallery.scss"],callback:function(json){WikiaPhotoGalleryView.init(json)},id:"WikiaPhotoGalleryView.init"})</script>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<div class="references-small">
+<ol class="references"><li id="cite_note-0"><a href="#cite_ref-0.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?25734-Hungry-For-Your-Hunger-Release-Notes-(Hotfix-July-26th-2013).html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?25734-Hungry-For-Your-Hunger-Release-Notes-(Hotfix-July-26th-2013)</a></span>
+</li>
+<li id="cite_note-1"><a href="#cite_ref-1.html">↑</a> <span class="reference-text"><a class="external free" href="2265953.html" rel="nofollow">http://www.twitch.tv/riptidepow/c/2265953</a></span>
+</li>
+<li id="cite_note-2"><a href="#cite_ref-2.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?16180-We-re-Live.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?16180-We-re-Live</a>!</span>
+</li>
+<li id="cite_note-3"><a href="#cite_ref-3.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?17220-4-29-Hotfix.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?17220-4-29-Hotfix</a></span>
+</li>
+<li id="cite_note-4"><a href="#cite_ref-4.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?17366-5-1-Hotfix-Default-Plus.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?17366-5-1-Hotfix-Default-Plus</a>!</span>
+</li>
+<li id="cite_note-5"><a href="#cite_ref-5.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?17366-5-1-Hotfix-Default-Plus.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?17366-5-1-Hotfix-Default-Plus</a>!</span>
+</li>
+<li id="cite_note-6"><a href="#cite_ref-6.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?9147-Don-t-Starve-Update-Trailer-Insanity.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?9147-Don-t-Starve-Update-Trailer-Insanity</a></span>
+</li>
+<li id="cite_note-7"><a href="#cite_ref-7.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?8262-Jan-29th-Update-Progress.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?8262-Jan-29th-Update-Progress</a>!</span>
+</li>
+<li id="cite_note-8"><a href="#cite_ref-8.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?7223-Spoiled-Rotten-%28Jan-15-Update%29.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?7223-Spoiled-Rotten-%28Jan-15-Update%29</a></span>
+</li>
+<li id="cite_note-9"><a href="#cite_ref-9.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?7354-Jan-16-HotFix.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?7354-Jan-16-HotFix</a></span>
+</li>
+<li id="cite_note-10"><a href="#cite_ref-10.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?6761-Jan-9-Update-Turf.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?6761-Jan-9-Update-Turf</a>!</span>
+</li>
+<li id="cite_note-11"><a href="#cite_ref-11.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?5144-Dec-19-Long-Live-the-Queen-Release-Notes.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?5144-Dec-19-Long-Live-the-Queen-Release-Notes</a></span>
+</li>
+<li id="cite_note-12"><a href="#cite_ref-12.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?5220-Dec-19-Hotfix-%28balancing-issues%29.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?5220-Dec-19-Hotfix-%28balancing-issues%29</a></span>
+</li>
+<li id="cite_note-13"><a href="#cite_ref-13.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?4015-Update-Notes-Naughty-amp-Nice.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?4015-Update-Notes-Naughty-amp-Nice</a></span>
+</li>
+<li id="cite_note-14"><a href="#cite_ref-14.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?4016-Dec-11-Update-Naughty-amp-Nice-Release-Notes.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?4016-Dec-11-Update-Naughty-amp-Nice-Release-Notes</a>!</span>
+</li>
+<li id="cite_note-15"><a href="#cite_ref-15.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?4214-Dec-12-Hotfix.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?4214-Dec-12-Hotfix</a></span>
+</li>
+<li id="cite_note-16"><a href="#cite_ref-16.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?1501-Nov-13-build-Enter-the-Gobbler.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?1501-Nov-13-build-Enter-the-Gobbler</a>!</span>
+</li>
+<li id="cite_note-17"><a href="#cite_ref-17.html">↑</a> <span class="reference-text"><a class="external free" href="showthread.php?615-Release-Notes-67096.html" rel="nofollow">http://forums.kleientertainment.com/showthread.php?615-Release-Notes-67096</a></span>
+</li></ol></div>
+<!-- 
+NewPP limit report
+Preprocessor node count: 618/300000
+Post‐expand include size: 493/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<!-- Saved in parser cache with key dontstarvegame:pcache:idhash:5966-0!*!0!!en!2!* -->
+<section class="RelatedForumDiscussion" id="RelatedForumDiscussion">
+<h2>
+<a class="button forum-new-post" href="Topic:Version_History?openEditor=1.html" title="Start a new discussion about Version History">Start a Discussion</a>
+		Discussions about Version History	</h2>
+<div class="forum-content">
+<ul class="forum-discussions">
+<li class="forum-thread">
+<img class="sprite talk-two" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D">
+<h4>
+<a class="forum-thread-title" href="Thread:67283.html">
+							update ideas :)						</a>
+</h4>
+<div class="forum-total-replies">4 messages</div>
+<ul class="forum-replies">
+<li class="forum-reply">
+<img class="forum-user-avatar" src="img/50px-Avatar.jpg">
+<div class="forum-user-name">
+<a href="70.185.204.15.html">An anonymous contributor</a>
+</div>
+<div class="forum-message-body">
+		and also please add cats :)
+
+
+
+matt		<time class="forum-timestamp timeago" datetime="2013-09-22T17:52:44Z">2013-09-22T17:52:44Z</time>
+</div>
+</img></li>
+<li class="forum-reply">
+<img class="forum-user-avatar" src="img/50px-Avatar.jpg">
+<div class="forum-user-name">
+<a href="70.185.204.15.html">An anonymous contributor</a>
+</div>
+<div class="forum-message-body">
+		70.185.204.15 wrote:The next update should have heat, so willow can be immune and so you dont waste winter stuff (I do that alot :-D ). Ple...		<time class="forum-timestamp timeago" datetime="2013-09-22T17:53:59Z">2013-09-22T17:53:59Z</time>
+</div>
+</img></li>
+</ul>
+</img></li>
+</ul>
+<div class="forum-see-more">
+<a href="Topic:Version_History.html">See more discussions &gt;</a>
+</div>
+</div>
+</section>
+<noscript><link href="http://slot1.images.wikia.nocookie.net/__cb1402702339/common/extensions/wikia/ImageLazyLoad/css/ImageLazyLoadNoScript.css" rel="stylesheet"/></noscript><noscript><link href="http://slot1.images.wikia.nocookie.net/__cb1402702339/common/extensions/wikia/TOCimprovements/TOCNoScript.css" rel="stylesheet"/></noscript></div>

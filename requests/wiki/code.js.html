@@ -1,0 +1,54 @@
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><p>/**
+</p>
+<pre>* 11:36, October 16, 2013 (UTC)
+* External images loader
+* Enables Usage of images from other sites
+* <a class="free" href="code.js.html">http://dev.wikia.com/wiki/ExternalImageLoader/code.js</a>
+* @author: UltimateSupreme (<a class="free" href="User:UltimateSupreme.html">http://dev.wikia.com/wiki/User:UltimateSupreme</a>)
+* @License: CC-BY-SA - <a class="external free exitstitial" href=".html" rel="nofollow">http://creativecommons.org/licenses/by-sa/3.0/</a>
+*/
+</pre>
+// <div class="mw-geshi mw-content-ltr" dir="ltr"><div class="javascript source-javascript"><pre class="de1">jQuery<span class="br0">(</span><span class="kw1">function</span> <span class="br0">(</span>$<span class="br0">)</span> <span class="br0">{</span>
+    <span class="st0">'use strict'</span><span class="sy0">;</span>
+    <span class="co1">// Look for [[Template:ExternalImageLoader]]</span>
+    $<span class="br0">(</span><span class="st0">'.WikiaArticle .user-image-hotlink, #mw-content-text .user-image-hotlink'</span><span class="br0">)</span>.<span class="me1">each</span><span class="br0">(</span><span class="kw1">function</span> <span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+        <span class="kw1">var</span> $this <span class="sy0">=</span> $<span class="br0">(</span><span class="kw1">this</span><span class="br0">)</span><span class="sy0">,</span>
+            w <span class="sy0">=</span> $this.<span class="me1">data</span><span class="br0">(</span><span class="st0">'width'</span><span class="br0">)</span><span class="sy0">,</span>
+            h <span class="sy0">=</span> $this.<span class="me1">data</span><span class="br0">(</span><span class="st0">'height'</span><span class="br0">)</span><span class="sy0">,</span>
+            alt <span class="sy0">=</span> $this.<span class="me1">data</span><span class="br0">(</span><span class="st0">'alt'</span><span class="br0">)</span><span class="sy0">,</span>
+            align <span class="sy0">=</span> $this.<span class="me1">data</span><span class="br0">(</span><span class="st0">'align'</span><span class="br0">)</span> <span class="sy0">||</span> <span class="st0">'left'</span><span class="sy0">,</span>
+            caption <span class="sy0">=</span> $this.<span class="me1">data</span><span class="br0">(</span><span class="st0">'caption'</span><span class="br0">)</span><span class="sy0">,</span>
+            href <span class="sy0">=</span> $this.<span class="me1">text</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">,</span>
+            link <span class="sy0">=</span> $this.<span class="me1">data</span><span class="br0">(</span><span class="st0">'link'</span><span class="br0">)</span> <span class="sy0">||</span> href<span class="sy0">,</span>
+            $figure <span class="sy0">=</span> $<span class="br0">(</span><span class="st0">'&lt;figure&gt;&lt;a&gt;&lt;img&gt;&lt;/a&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;'</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+        <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">!</span>href<span class="br0">)</span> <span class="br0">{</span>
+            <span class="kw1">return</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        $figure.<span class="me1">addClass</span><span class="br0">(</span><span class="st0">'thumb t'</span> <span class="sy0">+</span> align <span class="sy0">+</span> <span class="st0">' thumbinner'</span><span class="br0">)</span>
+            .<span class="me1">find</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span>.<span class="me1">attr</span><span class="br0">(</span><span class="st0">'href'</span><span class="sy0">,</span> link<span class="br0">)</span>.<span class="me1">addClass</span><span class="br0">(</span><span class="st0">'image'</span><span class="br0">)</span>
+            .<span class="me1">find</span><span class="br0">(</span><span class="st0">'img'</span><span class="br0">)</span>.<span class="me1">attr</span><span class="br0">(</span><span class="st0">'src'</span><span class="sy0">,</span> href<span class="br0">)</span><span class="sy0">;</span>
+ 
+        <span class="kw1">if</span> <span class="br0">(</span>alt<span class="br0">)</span> <span class="br0">{</span> $figure.<span class="me1">find</span><span class="br0">(</span><span class="st0">'img'</span><span class="br0">)</span>.<span class="me1">attr</span><span class="br0">(</span><span class="br0">{</span><span class="st0">'alt'</span><span class="sy0">:</span> alt<span class="sy0">,</span> <span class="st0">'title'</span><span class="sy0">:</span> alt<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span>
+        <span class="kw1">if</span> <span class="br0">(</span>w<span class="br0">)</span> <span class="br0">{</span> $figure.<span class="me1">find</span><span class="br0">(</span><span class="st0">'img'</span><span class="br0">)</span>.<span class="me1">attr</span><span class="br0">(</span><span class="st0">'width'</span><span class="sy0">,</span> <span class="sy0">+</span>w<span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span>
+        <span class="kw1">if</span> <span class="br0">(</span>h<span class="br0">)</span> <span class="br0">{</span> $figure.<span class="me1">find</span><span class="br0">(</span><span class="st0">'img'</span><span class="br0">)</span>.<span class="me1">attr</span><span class="br0">(</span><span class="st0">'height'</span><span class="sy0">,</span> <span class="sy0">+</span>h<span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span>
+        <span class="kw1">if</span> <span class="br0">(</span>caption<span class="br0">)</span> <span class="br0">{</span>
+            <span class="kw1">if</span> <span class="br0">(</span>w<span class="br0">)</span> <span class="br0">{</span> $figure.<span class="me1">width</span><span class="br0">(</span><span class="sy0">+</span>w <span class="sy0">+</span> <span class="nu0">2</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span>
+            $figure.<span class="me1">find</span><span class="br0">(</span><span class="st0">'figcaption'</span><span class="br0">)</span>.<span class="me1">text</span><span class="br0">(</span>caption<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+ 
+        $this.<span class="me1">replaceWith</span><span class="br0">(</span>$figure<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="co1">//</span></pre></div></div>
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/300000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+<!-- Saved in parser cache with key dontstarvegame:pcache:idhash:76007-0!*!*!*!*!*!* -->
+<noscript><link href="http://slot1.images.wikia.nocookie.net/__cb1402702339/common/extensions/wikia/ImageLazyLoad/css/ImageLazyLoadNoScript.css" rel="stylesheet"/></noscript><noscript><link href="http://slot1.images.wikia.nocookie.net/__cb1402702339/common/extensions/wikia/TOCimprovements/TOCNoScript.css" rel="stylesheet"/></noscript></div>
