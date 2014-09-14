@@ -39,5 +39,5 @@ for i in range(3):
     t.left(120)
 
 d3(600,(-300,-300),t,5)
-t.speed(0)
+t.speed(10)
 wn.exitonclick()

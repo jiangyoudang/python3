@@ -1,4 +1,7 @@
+import functools
+
 def minus(f):
+    @functools.wraps(f)
     def a(*args):
         return 'c'+f(*args)
     return a
