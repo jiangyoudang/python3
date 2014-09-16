@@ -13,3 +13,8 @@ print(word.split())
 word += 's'
 print(word)
 print(word1)
+
+
+a = ['xxx0']
+a = a[:2]
+print(a[0][:2])
