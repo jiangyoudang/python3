@@ -32,9 +32,11 @@ class Solution:
         if num[pos_i]==0:
             if len(num)-pos_i>=3 and num[pos_i+1]==0 and num[pos_i+2]==0:
                 res.add((0,0,0))
-        result = [list(t) for t in res]
-        # return result
-        return sorted(result, key= lambda x:x[0])
+        # result = [list(t) for t in res]
+
+
+        return map(list, res)
+        # return sorted(result, key= lambda x:x[0])
 
 t1 = time.time()
 test = Solution()
@@ -46,7 +48,8 @@ a = [7,-1,14,-12,-8,7,2,-15,8,8,-8,-14,-4,-5,7,9,11,-4,-15,-6,1,-14,4,
 a = [6,-5,-6,-1,-2,8,-1,4,-10,-8,-10,-2,-4,-1,-8,-2,8,9,-5,-2,-8,-9,-3,-5]
 a = [-1,-3,4]
 res = test.threeSum(a)
-print(res)
+for r in res:
+    print(r)
 
 t2 = time.time()
 print(t2-t1)
