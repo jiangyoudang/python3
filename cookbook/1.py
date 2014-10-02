@@ -6,3 +6,6 @@ current.append(3)
 
 print(current.popleft())
 print(current)
+
+a = [1,2]
+print(a[3:])

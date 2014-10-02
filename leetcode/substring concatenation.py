@@ -3,7 +3,7 @@ class Solution:
     # @param L, a list of string
     # @return a list of integer
     def findSubstring(self, S, L):
-        ## hash()神算法
+        ## hash()算法
         n = len(L) #num words
         w = len(L[0])  #length of each word
         t = n*w    # total length
