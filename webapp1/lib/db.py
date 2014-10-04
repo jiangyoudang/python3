@@ -1,49 +1,50 @@
 import logging, threading, functools
+import mysql.connector
 
-from Dict import Dict
+from webapp1.lib.Dict import Dict
 
 class DBError(Exception):
     pass
 
 
-class _Engine():
+class _Engine(object):
     def __init__(self, connection):
         self._connection = connection
 
     def connection(self):
-        return self._connection
+        return self._connection()
 
 #global
 engine = None
 
-def create_engine(usr, psw, database, host = '127.0.0.1', port = 3306, **kwargs):
+def create_engine(usr, psw, database, host='127.0.0.1', port=3306, **kwargs):
     import mysql.connector
     global engine
     if engine is not None:
         raise DBError('engine is already exist')
     params = dict(user=usr, password=psw, database=database, host=host, port=port)
     defaults = dict(use_unicode=True, charset='utf8', collation='utf8_general_ci', autocommit=False)
-    for k, v in defaults.iteritems():
+    for k, v in defaults.items():
         params[k] = kwargs.pop(k, v)
     params.update(kwargs)
     params['buffered'] = True
     engine = _Engine(lambda: mysql.connector.connect(**params))
     # test connection...
-    logging.info('Init mysql engine <%s> ok.' % hex(id(engine)))
+    logging.info('Init mysql engine <{}> ok.'.format( hex(id(engine))))
 
-class _LazyConnection():
+class _LazyConnection(object):
     def __init__(self):
         self.connection = None
 
-    def cursor(self, sql):
+    def cursor(self):
         if self.connection is None:
-            connection = engine.connection
+            connection = engine.connection()
             logging.info('open connection {}'.format(hex(id(connection))))
             self.connection = connection
 
         return self.connection.cursor()
 
-    def conmit(self):
+    def commit(self):
         self.connection.commit()
 
     def rollback(self):
@@ -66,22 +67,25 @@ class _Db_local(threading.local):
         return not self.connection is None
 
     def init(self):
+        logging.info('open lazy connection...')
         self.connection = _LazyConnection()
         self.transitions = 0
 
     def cleanup(self):
         self.connection.cleanup()
+        self.connection = None
 
 #global
 _dbcnx = _Db_local()
 
-class _Connection():
+class _Connection(object):
     def __enter__(self):
         global _dbcnx
         self.should_clean = False
         if not _dbcnx.is_init():
             _dbcnx.init()
             self.should_clean = True
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         global _dbcnx
@@ -93,7 +97,7 @@ def connection():
 
 
 def with_connection(func):
-    @functools.wraps()
+    @functools.wraps(func)
     def wrapper(*args, **kwargs):
         with _Connection():
             return func(*args, **kwargs)
@@ -107,10 +111,9 @@ def _select(sql, one, *args):
     sql = sql.replace('?', '%s')
     logging.info('sql: {}, args: {}'.format(sql, args))
 
-
     try:
         cursor = _dbcnx.connection.cursor()
-        cursor.execute(sql, *args)
+        cursor.execute(sql, args)
         col_name = None
         if cursor.description:
             col_name = [i[0] for i in cursor.description]
@@ -137,15 +140,19 @@ def select_one(sql, *args):
 def select(sql, *args):
     return _select(sql, False, *args)
 
+@with_connection
 def _update(sql, *args):
     global _dbcnx
     cursor = None
     sql = sql.replace('?', '%s')
     logging.info('sql: {}, args: {}'.format(sql, args))
+    print(sql)
+    print(args)
+
 
     try:
         cursor = _dbcnx.connection.cursor()
-        cursor.execute(sql, *args)
+        cursor.execute(sql, args)
         _dbcnx.connection.commit()
     # except:
     #     _dbcnx.connection.rollback()
@@ -156,17 +163,15 @@ def _update(sql, *args):
 
 
 
-@with_connection
 def insert(table, **kwargs):
     col, value = zip(*kwargs.items())
-    sql = 'insert into {}({}) values ({})'.format(
+    sql = 'insert into `{}`({}) values ({})'.format(
                                             table ,
                                             ','.join(['{}'.format(i) for i in col]),
                                             ','.join(['?' for i in value]))
 
     return _update(sql, *value)
 
-@with_connection
 def update(sql, *args):
     return _update(sql, *args)
 
@@ -174,3 +179,7 @@ def update(sql, *args):
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     create_engine('root', 'a11', 'test')
+    update('drop table if exists user')
+    update('create table user (id int primary key, name text, email text, passwd text, last_modified real)')
+    # with connection():
+    insert('user', id=4, name = 'test4')
