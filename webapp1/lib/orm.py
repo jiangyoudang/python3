@@ -1,6 +1,6 @@
 import logging
 
-from webapp1.lib import db
+from . import db
 
 class Field(object):
 

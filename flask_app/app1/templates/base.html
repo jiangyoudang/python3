@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="uk-height-1-1">
+<head lang="en">
+    <meta charset="UTF-8">
+    {% if title %}
+    <title> {{ title }} first app</title>
+    {% else %}
+    <title> Welcome to my first app</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="/static/uikit/css/uikit.css" />
+    <script src="/static/jquery.js"></script>
+    <script src="/static/uikit/js/uikit.js"></script>
+</head>
+<body class="uk-height-1-1">
+
+<nav class="uk-navbar">
+    <div class="uk-container uk-container-center">
+        <ul class="uk-navbar-nav uk-width-medium-7-10">
+            <li><a href="/"><i class="uk-icon-home uk-icon-medium uk-button-link">Home</i></a></li>
+
+        </ul>
+
+     <div class="uk-navbar-flip uk-width-medium-3-10">
+        <ul class="uk-navbar-nav uk-float-right">
+            <li><a class="uk-button" href="/login"><i class="uk-icon-sign-in uk-icon-medium">Login </i></a></li>
+            <li><a href=""><i class="uk-icon-sign-out uk-icon-medium">Logout </i></a></li>
+        </ul>
+     </div>
+    </div>
+</nav>
+
+<div class="uk-container uk-panel-box uk-container-center uk-height-1-1">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="uk-list uk-list-striped">
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content%} {%endblock%}
+</div>
+</body>
+</html>

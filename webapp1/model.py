@@ -1,7 +1,7 @@
 
 import time
 
-from webapp1.lib.orm import Model, StringField, BooleanField, FloatField
+from .lib.orm import Model, StringField, BooleanField, FloatField
 
 class User(Model):
 
