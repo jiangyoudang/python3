@@ -18,3 +18,12 @@ if 'b' in d:
     d['c'] = 'exist_c'
 
 print(d)
+
+a = b = c = 1
+l = []
+l[0:0] = [3]
+
+print(l)
+b = 2
+if 1 < b < 3:
+    print(a, b, c )

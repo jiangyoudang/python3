@@ -1,7 +1,7 @@
 import logging, threading, functools
 import mysql.connector
 
-from .Dict import Dict
+from Dict import Dict
 
 class DBError(Exception):
     pass
