@@ -9,8 +9,8 @@ class Solution:
     # @param newInterval, a Interval
     # @return a list of Interval
     def insert(self, intervals, newInterval):
-        if not intervals:
-            return [newInterval]
+        # if not intervals:
+        #     return [newInterval]
         start_interval = 0
         end_interval = len(intervals)
         start = newInterval.start
