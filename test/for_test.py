@@ -25,5 +25,8 @@ l[0:0] = [3]
 
 print(l)
 b = 2
-if 1 < b < 3:
-    print(a, b, c )
+if 1 < b < 3: print(a, b, c )
+
+l = []
+
+print('/'+'/'.join(l))
