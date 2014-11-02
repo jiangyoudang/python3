@@ -25,7 +25,7 @@ l[0:0] = [3]
 
 print(l)
 b = 2
-if 1 < b < 3: print(a, b, c )
+if int(None) < b < 3: print(a, b, c )
 
 l = []
 
