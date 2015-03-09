@@ -1,4 +1,5 @@
 import functools
+import copy
 
 def minus(f):
     @functools.wraps(f)
@@ -12,10 +13,23 @@ def xxx(x):
     return 'b'+ x
 
 
+def partition(s):
 
-def a(l=[1]):
-    print(l)
-    l.append(1)
+    res = []
+    temp = []
 
-a()
-a()
+    def isPalindrome(s):
+        return s==s[::-1]
+
+    def partPalindrome(s, temp, res):
+        if not s:
+            res.append(temp[:])
+        for i in range(len(s)):
+            if isPalindrome(s[:i+1]):
+                temp.append(s[:i+1])
+                partPalindrome(s[i+1:], temp, res)
+                temp.pop()
+    partPalindrome(s,temp,res)
+    return res
+s = 'aab'
+print(partition(s))

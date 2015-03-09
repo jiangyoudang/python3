@@ -15,13 +15,13 @@ def main():
     password = '5jWUDFn7rGEF'
     en_password = '+6.H>x>!pZy='
 
-    #data_json = sys.argv[1]
-    # device = sys.argv[2]
-    device = '10.255.253.93'
-    data_json = '{"name":"BAS-1070J-08-C3550-C.SJC","selectedGroupIp":"198.200.48.0","groupIpmask":"24",' \
-                '"interfaceName":"f0\/26","type":"C3550",' \
-                '"gatewayArray":[{"ip":"192.74.228.182","mask":"255.255.255.248"},' \
-                '{"ip":"198.200.48.254","mask":"255.255.255.0"},{"ip":"199.188.177.166","mask":"255.255.255.248"}]}'
+    data_json = sys.argv[1]
+    device = sys.argv[2]
+    # device = '10.255.253.93'
+    # data_json = '{"name":"BAS-1070J-08-C3550-C.SJC","selectedGroupIp":"198.200.48.0","groupIpmask":"24",' \
+    #             '"interfaceName":"f0\/26","type":"C3550",' \
+    #             '"gatewayArray":[{"ip":"192.74.228.182","mask":"255.255.255.248"},' \
+    #             '{"ip":"198.200.48.254","mask":"255.255.255.0"},{"ip":"199.188.177.166","mask":"255.255.255.248"}]}'
 
 
     data = json.loads(data_json)
@@ -69,7 +69,7 @@ def main():
 
     if type=='NonGroup':
         child.sendline('conf t')
-        child.expect_exact('(conf)#')
+        child.expect_exact(')#')
         child.sendline('int {}'.format(interfaceName))
         child.expect_exact(')#')
         child.sendline('ip add {} {}'.format(ips[0], masks[0]))
@@ -77,6 +77,8 @@ def main():
         for i in range(1, len(ips)):
             child.sendline('ip add {ip} {mask} se'.format(ip=ips[i], mask=masks[i]))
             child.expect_exact(')#')
+        child.sendline('no shut')
+        child.expect_exact(')#')
         child.sendline('end')
         child.expect_exact('#')
         child.sendline('wr')
@@ -99,7 +101,7 @@ def main():
 
     elif type=='S50N':
         child.sendline('conf t')
-        child.expect_exact('(conf)#')
+        child.expect_exact(')#')
         child.sendline('ip pre c2o')
         child.expect_exact('prefixl)#')
         child.sendline('permit {}/{}'.format(groupIp, groupMask))
@@ -111,6 +113,8 @@ def main():
         child.sendline('ip add {} {}'.format(ips[0], masks[0]))
         child.expect_exact(')#')
         child.sendline('ip add {ip} {mask} se'.format(ip=ips[1], mask=masks[1]))
+        child.expect_exact(')#')
+        child.sendline('no shut')
         child.expect_exact(')#')
         child.sendline('end')
         child.expect_exact('#')
@@ -133,7 +137,7 @@ def main():
 
     elif type=='C3550':
         child.sendline('conf t')
-        child.expect_exact('(conf)#')
+        child.expect_exact(')#')
         child.sendline('ip pre c2o permit {}/{}'.format(groupIp, groupMask))
         child.expect_exact('config)#')
         child.sendline('int {}'.format(interfaceName))
@@ -141,6 +145,40 @@ def main():
         child.sendline('ip add {} {}'.format(ips[0], masks[0]))
         child.expect_exact(')#')
         child.sendline('ip add {ip} {mask} se'.format(ip=ips[1], mask=masks[1]))
+        child.expect_exact(')#')
+        child.sendline('no shut')
+        child.expect_exact(')#')
+        child.sendline('end')
+        child.expect_exact('#')
+        child.sendline('wr')
+        i = child.expect_exact(['#', pexpect.TIMEOUT])
+        if i==1:
+            print(timeout_error)
+            print(child.before, child.after)
+            print(str(child))
+            sys.exit(1)
+        print('\nconfigration start\n')
+        child.sendline('show run int {}'.format(interfaceName))
+        child.expect_exact('#')
+        # time.sleep(10)
+        child.sendline('!')
+        child.expect_exact('#')
+        print('\nconfigration end\n')
+        child.sendline('exit')
+        child.expect(pexpect.EOF)
+
+    elif type == '4948':
+        child.sendline('conf t')
+        child.expect_exact(')#')
+        child.sendline('ip pre c2o permit {}/{}'.format(groupIp, groupMask))
+        child.expect_exact('config)#')
+        child.sendline('int {}'.format(interfaceName))
+        child.expect_exact(')#')
+        child.sendline('ip add {} {}'.format(ips[0], masks[0]))
+        child.expect_exact(')#')
+        child.sendline('ip add {ip} {mask} se'.format(ip=ips[1], mask=masks[1]))
+        child.expect_exact(')#')
+        child.sendline('no shut')
         child.expect_exact(')#')
         child.sendline('end')
         child.expect_exact('#')

@@ -14,6 +14,12 @@ def fibonacci(num):
         result_list.append(a)
     return result_list
 
+def fibonacci_gen(num):
+    a, b = 1, 1
+    while a < num:
+        yield a
+        a , b = b, a+b
+
 
 def is_prime(num):
     if num < 2:

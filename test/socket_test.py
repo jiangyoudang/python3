@@ -19,6 +19,6 @@ print(string)
 # client.send('hello')
 
 # print(conn.recv(1024))
-# print(server.getsockname())
+print(server.getsockname())
 print(client.getsockname())
 # print(server.recv(1024))

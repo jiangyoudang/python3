@@ -1,32 +1,55 @@
-import collections
-current = collections.deque()
-current.append(10)
-current.append(14)
-current.append(3)
 
-print(current.popleft())
-print(current)
+def combinationSum(candidates, target):
+        candidates.sort()
+        stack = [candidates[0]]
+        curr_total = sum(stack)
+        res = []
+        while stack:
+            if curr_total < target:
+                stack.append(stack[-1])
+                curr_total += stack[-1]
 
-a = [1,2]
-print(a[3:])
+            elif curr_total >= target:
+                if curr_total == target:
+                    res.append(stack[:])
+                curr_total -= stack[-1]
+                stack.pop()
+                if not stack:
+                    break
+                next_index = candidates.index(stack[-1]) + 1
+                while next_index == len(candidates):
+                    curr_total -= stack.pop()
+                    if not stack:
+                        break
+                    next_index = candidates.index(stack[-1]) + 1
+
+                else:
+                    stack[-1] = candidates[next_index]
+                    curr_total += stack[-1] - candidates[next_index-1]
+
+        return res
+def combinationSum2(candidates, target):
+    dp = {}
+    for i in range(1, target+1):
+        for j in candidates:
+            curr = i-j
+            if curr == 0:
+                dp[i] = [i]
+            elif curr > 0:
+                if curr >=j and curr in dp:
+                    dp[i] = dp.get(curr, [])[:]
+    return dp
 
 
+def perm(temp, avail, res):
 
-d = {'a':'test_a', 'b':'test_b'}
+    if len(avail) == 1:
+        res.append((temp+avail)[:])
+        return
 
-if 'b' in d:
-    d['c'] = 'exist_c'
+    for e in avail[:]:
+        temp.append(e)
+        avail.remove(e)
+        perm(temp, avail, res)
+        avail.append(temp.pop())
 
-print(d)
-
-a = b = c = 1
-l = []
-l[0:0] = [3]
-
-print(l)
-b = 2
-if int(None) < b < 3: print(a, b, c )
-
-l = []
-
-print('/'+'/'.join(l))

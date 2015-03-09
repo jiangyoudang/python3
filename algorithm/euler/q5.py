@@ -57,7 +57,7 @@ time0 = time.time()
 # print(smulti(range(1, 20)))
 # print(sum_sq_di(range(1,11)))
 print(get_prime(10001))
-
+print(get_primes(10))
 time1 = time.time()
 
 print(time1 - time0)
