@@ -4,16 +4,18 @@ wn = turtle.Screen()             # Set up the window and its attributes
 wn.screensize(800,600,'lightgreen')
 
 def tree(branchlen,t):
-    rand = random.randint(10,25)
+    # rand = random.randint(10,25)
 
     if branchlen >5:
         pen.pensize(branchlen/10)
         head = t.heading()
         t.forward(branchlen)
-        t.right(random.randint(20,45))
+        # t.right(random.randint(20,45))
+        t.right(random.randint(5,20))
         tree(branchlen-random.randint(10,15),t)
         t.setheading(head)
-        t.left(random.randint(20,45))
+        t.left(random.randint(5,20))
+        # t.left(random.randint(20,45))
         tree(branchlen-random.randint(10,15),t)
         t.setheading(head)
         t.backward(branchlen)

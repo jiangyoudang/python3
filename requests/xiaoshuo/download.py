@@ -1,11 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-f = open('kunlun.txt','w')
+f = open('50 grey.pdf','w')
 
 url = 'http://www.sbkk8.cn'
 
-page  ='/wangluo/kunlun/162561.html'
+# page  ='/wangluo/kunlun/162561.html'
+page  ='/mingzhu/waiguowenxuemingzhu/wushiduhui/119062.html'
+
 nextpage = page
 
 while(nextpage):
@@ -13,7 +15,7 @@ while(nextpage):
     r.encoding = 'gb2312'
     soup = BeautifulSoup(r.text)
     article = soup.find('div','f_article').find_all('p')
-    title = soup.find('div',{'id':'f_title'})
+    title = soup.find('div',{'id':'f_title1'})
     nextpage_div = soup.find('div','mingzhuPage')
     nextpage = nextpage_div.find('a','nextPage')
     if nextpage:

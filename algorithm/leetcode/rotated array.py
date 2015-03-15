@@ -1,3 +1,38 @@
+def rotate(nums, k):
+    '''
+    rotate nums k steps in place
+    :param nums: a list of int
+    :param k: num of steps
+    :return:
+    '''
+    if not nums:
+        return
+
+    n = len(nums)
+
+    def _rotate(nums, l, r):
+        mid = (r-l+1) // 2
+        for i in range(mid):
+            temp = nums[l+i]
+            nums[l+i] = nums[r-i]
+            nums[r-i] = temp
+
+    k = k % n
+    if k==0:
+        return
+
+    _rotate(nums, 0, n-k-1)
+    _rotate(nums, n-k, n-1)
+    _rotate(nums, 0, n-1)
+
+
+
+
+
+
+
+
+
 class Solution:
     # @param A, a list of integers
     # @param target, an integer to be searched
