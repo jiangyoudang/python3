@@ -27,12 +27,6 @@ def rotate(nums, k):
 
 
 
-
-
-
-
-
-
 class Solution:
     # @param A, a list of integers
     # @param target, an integer to be searched
@@ -87,3 +81,38 @@ class Solution:
             else:
                 l += 1
         return min_num
+
+
+# another method
+def findMin(num):
+    l = 0
+    r = len(num) - 1
+
+    while l < r:
+        mid = l + (r-l)//2
+        if num[mid] > num[mid+1]:
+            return num[mid+1]
+        if num[l] < num[mid]:
+            l = mid + 1
+        else:
+            r = mid
+    return num[0]
+
+
+def findMin2(num):
+    l = 0
+    r = len(num) - 1
+    res = num[0]
+
+    while l < r:
+        mid = l + (r-l)//2
+        if num[mid] > num[mid+1]:
+            return num[mid+1]
+        if num[l] < num[mid]:
+            l = mid + 1
+        elif num[l] > num[mid]:
+            r = mid
+        else:
+            l += 1
+            res = min(res, num[l])
+    return res
