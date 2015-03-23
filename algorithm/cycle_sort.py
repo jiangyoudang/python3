@@ -1,6 +1,4 @@
 
-l = [1,3,2,0,4,6,5]
-
 def cyclesort_simple(l):
     # last_value = 0
     for i in range(len(l)):
@@ -27,8 +25,27 @@ def cycle_sort(l):
                 n = tmp
             l[i] = n
 
+def find_cycle(l):
+    visited = set()
+    cycles = []
+    for i in range(len(l)):
+        if i != l[i] and i not in visited:
+            cycle = [i]
+            next_i = l[i]
+            while next_i != i:
+                cycle.append(next_i)
+                next_i = l[next_i]
+            cycles.append(cycle)
+            visited |= set(cycle)
 
-cycle_sort(l)
+    return cycles
+
+
+# l = [1,3,2,0,4,6,5]
+
+l = [4,0,5,1,6,2,7,3]
+
+# cycle_sort(l)
 # cyclesort_simple(l)
+print(find_cycle(l))
 
-print(l)
