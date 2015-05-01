@@ -2,7 +2,7 @@ from collections import defaultdict
 
 def topo_traversal(graph, visited, start_v, res):
 
-    # BFS with stack
+    # DFS with stack
     visited[start_v] = True
 
     for v in graph[start_v]:

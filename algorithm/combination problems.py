@@ -29,5 +29,28 @@ def combi_num(M, N):
     helper(N, M, [], res)
     return res
 
+def all_fac(primes):
+    def dfs(i, cur):
+        if i == len(primes):
+            print(cur)
+            return
+        dfs(i+1, cur)
+        dfs(i+1, cur*primes[i])
 
-print(combi_num(5,9))
+    dfs(0, 1)
+
+def all_fac2(primes, level, num):
+    if level == 3:
+        print(num)
+        return
+    for i in range(2):
+        if i==1:
+            num *= primes[level]
+        all_fac2(primes, level+1, num)
+
+all_fac([2,3,7])
+print('------------********-----------')
+all_fac2([2,3,7], 0, 1)
+
+
+# print(combi_num(5,9))

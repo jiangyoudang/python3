@@ -1,4 +1,5 @@
 #  O(1) Space
+from lib.prettyBST import prettyBST
 class treeNode():
     def __init__(self, val):
         self.val = val
@@ -51,9 +52,9 @@ def inorder(root):
             curr = curr.right
         else:
             pre = curr.left
-            while pre and pre.right != curr:
+            while pre.right and pre.right != curr:
                 pre = pre.right
-            if not pre:
+            if not pre.right:
                 pre.right = curr
                 curr = curr.left
             else:
@@ -63,5 +64,39 @@ def inorder(root):
 
     return res
 
+def preorder_stack(root):
+    if not root:
+        return root
+
+    stack = [root]
+    res = []
+    while stack:
+        curr = stack.pop()
+        res.append(curr.val)
+        if curr.right:
+            stack.append(curr.right)
+        if curr.left:
+            stack.append(curr.left)
+    return res
+
+def inorder_stack(root):
+    if not root:
+        return root
+    stack = []
+    res = []
+    curr = root
+    while curr or stack:
+        if not curr:
+            curr = stack.pop()
+            res.append(curr.val)
+            curr = curr.right
+        else:
+            stack.append(curr)
+            curr = curr.left
+
+    return res
+
 root = test_tree()
-print(preorder(root))
+prettyBST(root)
+print(inorder(root))
+print(inorder_stack(root))

@@ -1,4 +1,5 @@
 
+lalala = '--------------------lalala--------------------'
 class treeNode():
 
     def __init__(self, val):
@@ -31,7 +32,7 @@ def dep(root):
     return max(dep(root.left), dep(root.right)) + 1
 
 
-def pretty_BST(root, sep = ' '):
+def prettyBST(root, sep = ' '):
     if not root:
         return ''
     curr_level = [root]
@@ -63,10 +64,32 @@ def pretty_BST(root, sep = ' '):
         curr_level = next_level
         next_level = []
 
+def levelTravese(root, lel, num, res, num_len):
+    # num: [&]
+    if not root:
+        return
+    if lel == len(res):
+        res.append('')
+    levelTravese(root.left, lel+1, num, res, num_len)
+    str_node = str(root.val)
+    res[lel] = res[lel] + ' '* (num_len * num[0] - len(res[lel])) + str_node
+    num[0] += 1
+    levelTravese(root.right, lel + 1, num, res, num_len)
+
+def treePrint(root, num_len = 2):
+    res = []
+    levelTravese(root, 0, [0], res, num_len)
+    for line in res:
+        print(line)
+
 if __name__ == '__main__':
 
     root = test_tree()
-    pretty_BT(root)
+    treePrint(root)
+    print(lalala)
+    treePrint(root, 1)
+    print(lalala)
+    prettyBST(root)
 
 
 

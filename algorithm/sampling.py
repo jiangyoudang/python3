@@ -5,7 +5,7 @@ sampling algorithm
 
 from random import randint, seed
 
-n = 5
+n = 10
 m = 3
 
 i = 0
