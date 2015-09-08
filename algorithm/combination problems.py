@@ -48,9 +48,9 @@ def all_fac2(primes, level, num):
             num *= primes[level]
         all_fac2(primes, level+1, num)
 
-all_fac([2,3,7])
-print('------------********-----------')
-all_fac2([2,3,7], 0, 1)
+# all_fac([2,3,7])
+# print('------------********-----------')
+# all_fac2([2,3,7], 0, 1)
 
 
-# print(combi_num(5,9))
+print(combi_num(3,5))

@@ -170,8 +170,9 @@ V = [26,59,30,19,66,85,94,8,3,44,5,1,41,82,76,1,12,81,73,32,74,54,62,41,19,10,65
 # print('-----------')
 # print(knapsack_r(m, A))
 # print(knapsack_Value(m, A, V))
-print(knapsack_value_dp(m, A, V))
-print(knapsack_value_dp2(m, A, V))
+
+# print(knapsack_value_dp(m, A, V))
+# print(knapsack_value_dp2(m, A, V))
 
 def comb_sum_helper(nums, target, temp, res):
     if target == 0 :
@@ -179,7 +180,7 @@ def comb_sum_helper(nums, target, temp, res):
         return
 
     for num in nums:
-        if not temp or temp and temp[-1] <= num:
+        if not temp or temp[-1] <= num:
             if target < num:
                 break
             temp.append(num)
@@ -254,3 +255,4 @@ def perm(temp, avail, res):
         avail.append(temp.pop())
 
 
+print(comb_sum([1,2,3], 10))
