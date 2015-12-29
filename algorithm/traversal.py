@@ -4,7 +4,7 @@ from algorithm.lib.pretty_tree import prettyBST
 import unittest
 
 
-class treeNode():
+class treeNode:
   def __init__(self, val):
     self.val = val
     self.left = None
