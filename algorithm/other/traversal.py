@@ -79,10 +79,10 @@ def preorder_stack(root):
 
 
 def inorder_stack(root):
-  stack = [root]
+  stack = []
   res = []
-  while stack:
-    curr = stack[-1]
+  curr = root
+  while stack or curr:
     if not curr:
       curr = stack.pop()
       res.append(curr.val)
