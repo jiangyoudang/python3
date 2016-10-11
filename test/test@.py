@@ -29,7 +29,7 @@ def partition(s):
                 temp.append(s[:i+1])
                 partPalindrome(s[i+1:], temp, res)
                 temp.pop()
-    partPalindrome(s,temp,res)
+    partPalindrome(s, temp, res)
     return res
 s = 'aab'
 print(partition(s))

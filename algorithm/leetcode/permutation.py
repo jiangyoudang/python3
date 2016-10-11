@@ -37,9 +37,9 @@ def permute3(num, permutation, res):
         permutation.pop()
 
 
-test_case = [1,1,2,3]
+test_case = [1,2,3,1]
 # res = Solution().permute(test_case)
 # res = permute2(test_case)
 res= []
-permute3(test_case, [], res)
+permute3(sorted(test_case), [], res)
 print(res)

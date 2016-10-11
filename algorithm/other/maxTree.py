@@ -1,4 +1,4 @@
-from lib.pretty_tree import treeNode, prettyBST, treePrint, lalala
+from algorithm.lib.pretty_tree import treeNode, prettyBST, treePrint, lalala
 from random import shuffle
 
 def make_test():
