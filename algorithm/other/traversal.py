@@ -1,10 +1,18 @@
 #  O(1) Space
 from algorithm.lib.pretty_tree import prettyBST
-from algorithm.lib.data_structure import TreeNode
+
 import unittest
 
+
+class treeNode:
+  def __init__(self, val):
+    self.val = val
+    self.left = None
+    self.right = None
+
+
 def test_tree():
-  tree = {i: TreeNode(i) for i in range(1, 11)}
+  tree = {i: treeNode(i) for i in range(1, 11)}
   tree[1].left = tree[2]
   tree[1].right = tree[3]
   tree[2].left = tree[4]
@@ -17,27 +25,29 @@ def test_tree():
 
   return tree[1]
 
-def preorder(root):
-  pre = None
-  curr = root
-  res = []
 
-  while curr:
-    if curr.left:
-      pre = curr.left
-      while pre.right and pre.right != curr:
-        pre = pre.right
-      if not pre.right:
-        res.append(curr.val)
-        pre.right = curr
-        curr = curr.left
-      else:
-        curr = curr.right
-        pre.right = None
-    else:
-      res.append(curr.val)
-      curr = curr.right
-  return res
+# def preorder(root):
+#   curr = root
+#   res = []
+#   while curr:
+#
+#     if not curr.left:
+#       res.append(curr.val)
+#       curr = curr.right
+#     else:
+#       predecessor = curr.left
+#       while predecessor.right and predecessor.right != curr:
+#         predecessor = predecessor.right
+#       if not predecessor.right:
+#         res.append(curr.val)
+#         predecessor.right = curr
+#         curr = curr.left
+#       else:
+#         predecessor.right = None
+#         curr = curr.right
+#
+#   return res
+
 
 def inorder(root):
   curr = root
@@ -79,10 +89,12 @@ def preorder_stack(root):
 
 
 def inorder_stack(root):
+  if not root:
+    return []
   stack = []
   res = []
   curr = root
-  while stack or curr:
+  while curr or stack:
     if not curr:
       curr = stack.pop()
       res.append(curr.val)
@@ -93,6 +105,32 @@ def inorder_stack(root):
 
   return res
 
+def preorder(root):
+  pre = None
+  curr = root
+  res = []
+
+  while curr:
+    if curr.left:
+      pre = curr.left
+      while pre.right and pre.right != curr:
+        pre = pre.right
+      if not pre.right:
+        res.append(curr.val)
+        pre.right = curr
+        curr = curr.left
+      else:
+        curr = curr.right
+        pre.right = None
+    else:
+      res.append(curr.val)
+      curr = curr.right
+
+
+
+
+
+  return res
 
 class Test(unittest.TestCase):
 
@@ -107,7 +145,7 @@ class Test(unittest.TestCase):
 
   def test_normal(self):
 
-    tree = {i: TreeNode(i) for i in range(1, 11)}
+    tree = {i: treeNode(i) for i in range(1, 11)}
     tree[1].left = tree[2]
     tree[1].right = tree[3]
     tree[2].left = tree[4]

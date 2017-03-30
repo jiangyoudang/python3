@@ -48,7 +48,7 @@ def most_sig(n):
     return (n,m)
 
 def count_num(n,k):
-    #not include 0
+    # not include 0
     if 0 <= n < 10:
         if k <= n:
             return 1
