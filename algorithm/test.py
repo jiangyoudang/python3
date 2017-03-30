@@ -1,8 +1,5 @@
-ISLANDS = 0
+a = {'accounts': {'3','21','9','0'}}
 
-def add():
-  global ISLANDS
-  ISLANDS += 1
+a['accounts'] = ', '.join(a['accounts'])
 
-add()
-print(ISLANDS)
+print(a)
