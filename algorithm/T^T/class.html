@@ -1,0 +1,46 @@
+<script>
+
+
+    class A {
+        constructor(name) {
+            this.name = name;
+        }
+
+        get name1() {
+            return this._name1;
+        }
+
+        set name1(value) {
+            this._name1 = value;
+        }
+    }
+
+
+    // a = new A('test');
+    //
+    //
+    // console.info(a);
+    // console.info(a.name);
+    // console.info(a.name1);
+    // a.name1 = 'reset';
+    // console.info(a.name1);
+    //
+    //
+    //
+
+
+    function B(name) {
+        this.name = name;
+    }
+
+    B.prototype.getName = function () {
+        return this.name;
+    };
+
+    b = Object.create(B);
+
+    console.dir(b);
+    console.info(b.prototype);
+
+</script>
+
